@@ -1,0 +1,114 @@
+{
+  "beetle": {
+    "figmaNode": "2:7",
+    "file": "beetle.png",
+    "exportScale": 3,
+    "pixelWidth": 72,
+    "pixelHeight": 73
+  },
+  "compass": {
+    "figmaNode": "2:25",
+    "file": "compass.png",
+    "exportScale": 3,
+    "pixelWidth": 60,
+    "pixelHeight": 60
+  },
+  "navigation": {
+    "figmaNode": "2:33",
+    "file": "navigation.png",
+    "exportScale": 3,
+    "pixelWidth": 41,
+    "pixelHeight": 41
+  },
+  "camera": {
+    "figmaNode": "2:47",
+    "file": "camera.png",
+    "exportScale": 3,
+    "pixelWidth": 60,
+    "pixelHeight": 54
+  },
+  "sparkle": {
+    "figmaNode": "2:55",
+    "file": "sparkle.png",
+    "exportScale": 3,
+    "pixelWidth": 50,
+    "pixelHeight": 50
+  },
+  "psychology": {
+    "figmaNode": "2:62",
+    "file": "psychology.png",
+    "exportScale": 3,
+    "pixelWidth": 34,
+    "pixelHeight": 35
+  },
+  "handshake": {
+    "figmaNode": "2:70",
+    "file": "handshake.png",
+    "exportScale": 3,
+    "pixelWidth": 67,
+    "pixelHeight": 60
+  },
+  "verified": {
+    "figmaNode": "2:78",
+    "file": "verified.png",
+    "exportScale": 3,
+    "pixelWidth": 50,
+    "pixelHeight": 48
+  },
+  "community": {
+    "figmaNode": "2:85",
+    "file": "community.png",
+    "exportScale": 3,
+    "pixelWidth": 42,
+    "pixelHeight": 21
+  },
+  "kakao": {
+    "figmaNode": "2:96",
+    "file": "kakao.png",
+    "exportScale": 3,
+    "pixelWidth": 60,
+    "pixelHeight": 60
+  },
+  "naver": {
+    "figmaNode": "2:101",
+    "file": "naver.png",
+    "exportScale": 3,
+    "pixelWidth": 48,
+    "pixelHeight": 48
+  },
+  "apple": {
+    "figmaNode": "2:106",
+    "file": "apple.png",
+    "exportScale": 3,
+    "pixelWidth": 48,
+    "pixelHeight": 48
+  },
+  "arrow": {
+    "figmaNode": "2:121",
+    "file": "arrow.png",
+    "exportScale": 3,
+    "pixelWidth": 32,
+    "pixelHeight": 32
+  },
+  "security": {
+    "figmaNode": "2:126",
+    "file": "security.png",
+    "exportScale": 3,
+    "pixelWidth": 30,
+    "pixelHeight": 38
+  },
+  "shield": {
+    "figmaNode": "2:132",
+    "file": "shield.png",
+    "exportScale": 3,
+    "pixelWidth": 30,
+    "pixelHeight": 38
+  },
+  "bolt": {
+    "figmaNode": "2:138",
+    "file": "bolt.png",
+    "exportScale": 3,
+    "pixelWidth": 30,
+    "pixelHeight": 38
+  }
+}

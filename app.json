@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "곤충맵",
+    "slug": "bugmap",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#FAF8FF",
+    "ios": { "supportsTablet": true },
+    "android": { "adaptiveIcon": { "backgroundColor": "#FAF8FF" } },
+    "web": { "name": "곤충맵", "bundler": "metro", "output": "single" }
+  }
+}
