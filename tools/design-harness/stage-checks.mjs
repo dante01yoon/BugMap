@@ -1,3 +1,4 @@
+import { verifyFigma } from './figma.mjs';
 import { refs, wireframes, design, viewports } from './contracts.mjs';
 import { designMarkdown, renderWireframe } from './documents.mjs';
 import { read, hashes, verifyEvidence, pngSize, sha256, same } from './io.mjs';
@@ -34,6 +35,8 @@ export function inspectStage(base, stage, approvals) {
       const { inputs } = design(base);
       verifyEvidence(base, '05-design-system/design-md.json', 'design-md', inputs, ['05-design-system/DESIGN.md']);
       if (read(base, '05-design-system/DESIGN.md').toString() !== designMarkdown(base)) throw new Error('DESIGN.md differs from source JSON');
+    } else if (stage.id === 'figma') {
+      verifyFigma(base);
     } else if (stage.id === 'validation') {
       const { html, inputs } = webInputs(base);
       const sizes = viewports(base);

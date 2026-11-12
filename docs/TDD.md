@@ -392,3 +392,9 @@ LIMIT :page_size;
 ## 11. 데이터베이스 제안 근거
 
 PostgreSQL + PostGIS를 기본 DB로 권장한다. `sightings.public_location`의 GiST 공간 인덱스와 `ST_Intersects`를 조합하면 현재 지도 영역의 기록을 조회할 수 있다. 기록·사진·대화방·분양 글의 외래 키와 트랜잭션도 같은 관계형 DB에 둘 수 있다. [PostGIS 공간 인덱스 안내](https://postgis.net/documentation/faq/spatial-indexes/), [NestJS 데이터베이스 통합 안내](https://docs.nestjs.com/data/overview)
+
+## 12. 디자인 하네스 Figma 안전장치 · 2026-11-13
+
+사용자 요청으로 CLI 0.3.0에 lint:figma와 Codex 플러그인 훅을 채택했다. Node 20·외부 런타임 의존성 없음은 유지한다. 대상 설정 control/figma.json을 공통 승인 해시에 포함하고 PreToolUse는 기존 check의 유효한 시스템 승인과 정확한 대상 파일을 요구한다. PostToolUse는 새 노드 내보내기를 안내하고 Stop은 동일 check를 읽기 전용으로 실행한다. 사람 대기에서 자동 재개하지 않는다.
+
+내보낸 노드와 매핑·토큰·와이어프레임의 SHA-256을 보고서에 기록하고 check에서 전체 결과를 재계산한다. 조작된 로컬 JSON/원격 최신성·실제 바인딩·시각 품질은 이 구조만으로 인증할 수 없다. 훅도 지원되는 이름의 Figma 도구 경로에 한정되며 OS 보안 경계가 아니다. 배포/설치·계약은 [Figma 안내](../tools/design-harness/FIGMA.md), 단계 기준은 [하네스](design-harness.md)를 따른다.

@@ -1,6 +1,6 @@
 # design-harness
 
-Node 20+ ESM CLI. 외부 npm 런타임 의존성 없이 단계별 파일·해시·캡처·웹 규칙·사람 리뷰를 검사한다. [전체 설계](../../docs/design-harness.md)를 따른다. 앱의 Node 22.13+ 요구사항과는 별개다.
+Node 20+ ESM CLI. 외부 npm 런타임 의존성 없이 단계별 파일·해시·캡처·웹 규칙·사람 리뷰를 검사한다. [전체 설계](https://github.com/jungjeongml/BugMap/blob/main/docs/design-harness.md)를 따른다. 앱의 Node 22.13+ 요구사항과는 별개다.
 
 ```sh
 # 저장소 루트에서 설치 없이
@@ -25,9 +25,13 @@ design-harness check --project bugmap --json
 
 `refs:capture`, `wireframe`, `lint:web`는 설치된 Chrome/Chromium이 필요하다. macOS의 Google Chrome/Chromium, Linux의 통상 설치 경로를 찾고, 다른 위치는 `--browser /absolute/path/to/chromium`으로 지정한다. 사용자 로그인 프로필과 별개의 임시 headless 프로필을 사용하며 종료 시 제거한다. Chromium CDP pipe를 Node 기본 모듈로 제어하므로 npm 브라우저 패키지를 설치하지 않는다. 이 구현의 지원 플랫폼은 macOS·Linux다.
 
+## Figma 안전장치와 플러그인
+
+[설치 두 명령·훅·노드 내보내기·lint:figma 계약](FIGMA.md)을 따른다. 소스 CLI와 설치 플러그인은 같은 구현이다. 실제 Figma 연결이나 사람 승인을 대신하지 않는다.
+
 ## 공통 입력과 단계 판정
 
-공통 파일은 `README.md`, `control/project.json`, `control/decisions.md`다. `project.json` 예:
+공통 파일은 `README.md`, `control/project.json`, `control/decisions.md`다. `control/figma.json`이 있으면 공통 승인 입력에 포함하고 Figma 단계부터는 필수로 검사한다. `project.json` 예:
 
 ```json
 {
@@ -134,7 +138,7 @@ design-harness approve validation --by "수진"
 
 `review`는 단계 폴더 `reviews.json`에 UUID·승인자 기입 이름·UTC 시각·0~5 점수·필수 메모·현재 단계까지 파일 SHA-256을 추가한다. 자기 reviews.json만 스냅샷에서 제외해 순환 해시를 피한다. 모든 단계에 리뷰를 남길 수 있고, validation에서는 **최신 리뷰**가 현재 입력과 일치하며 최소 점수를 넘어야 통과한다. 리뷰 전후에 파일이 바뀌면 다시 리뷰해야 한다. 낮은 점수도 기록하되 검사에서 실패한다. 리뷰는 승인을 자동 생성하지 않는다.
 
-`approve`는 앞 단계 통과와 현재 단계 검사 성공을 확인한다. `control/approvals.json` 형식은 `{ "version": 1, "approvals": [] }`이며 이력에 id·stage·by·at·files·upstreamApprovals를 추가한다. files는 공통 입력 3개와 현재 단계까지 폴더 전체를 포함해 선택 파일의 추가/수정/삭제도 감지한다. 단계별 마지막 승인만 비교한다. 선행 재승인은 새 UUID를 만들므로 하위 승인이 무효화된다. 파일과 선행 승인 ID를 정확히 예전 상태로 복원하면 내용 기반 승인이 다시 일치할 수 있다.
+`approve`는 앞 단계 통과와 현재 단계 검사 성공을 확인한다. `control/approvals.json` 형식은 `{ "version": 1, "approvals": [] }`이며 이력에 id·stage·by·at·files·upstreamApprovals를 추가한다. files는 공통 입력(대상 Figma 설정 포함)과 현재 단계까지 폴더 전체를 포함해 선택 파일의 추가/수정/삭제도 감지한다. 단계별 마지막 승인만 비교한다. 선행 재승인은 새 UUID를 만들므로 하위 승인이 무효화된다. 파일과 선행 승인 ID를 정확히 예전 상태로 복원하면 내용 기반 승인이 다시 일치할 수 있다.
 
 손상된 리뷰·승인 이력은 초기화하거나 덮어쓰지 않는다. 승인/리뷰 각각 배타적 잠금과 임시 파일 rename으로 저장한다. 강제 종료 후 잠금이 남으면 실행 프로세스가 없음을 확인한 뒤 `control/.approvals.lock` 또는 `.reviews-<단계>.lock`을 제거한다. 생성 도구와 편집기는 이 잠금에 참여하지 않으므로 승인·리뷰·생성 중 파일 편집을 멈춘다. --by는 인증이 아닌 자기 기입 이름이며 로컬 보고서도 전자서명은 아니다.
 
@@ -144,6 +148,6 @@ design-harness approve validation --by "수진"
 
 ## 테스트와 캡처 비교
 
-`npm test`는 CLI/계약/승인 회귀 테스트와 Chromium 통합 테스트를 실행한다. Chromium이 없으면 브라우저 테스트만 skip하며, `DESIGN_HARNESS_BROWSER`로 실행 파일을 지정할 수 있다. localhost 서버 및 headless 프로세스 실행 권한이 필요하다. 브라우저 테스트는 시스템 temp의 `bugmap-design-harness-qa/`에 시각 검토용 캡처를 남긴다.
+`npm test`는 CLI/계약/승인 회귀 테스트와 Chromium 통합 테스트를 실행한다. 플러그인 설치 테스트에는 Codex CLI가 필요하며 임시 설정 디렉터리만 사용한다. Chromium이 없으면 브라우저 테스트만 skip하며, `DESIGN_HARNESS_BROWSER`로 실행 파일을 지정할 수 있다. localhost 서버 및 headless 프로세스 실행 권한이 필요하다. 브라우저 테스트는 시스템 temp의 `bugmap-design-harness-qa/`에 시각 검토용 캡처를 남긴다.
 
 사용자 요청으로 [Playwright 비교 스크립트](qa/README.md)를 별도 제공한다. 검증용 Playwright/pngjs는 임시 설치할 수 있고 CLI 런타임 의존성에 포함하지 않는다. 비교 결과는 실제 차이 픽셀 수·비율과 expected/actual/diff PNG로 남긴다. 서로 다른 렌더링 경로의 작은 글리프 차이도 숨기지 않고 보고한다.

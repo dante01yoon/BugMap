@@ -1,3 +1,4 @@
+import { lintFigma } from '../figma.mjs';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { deflateSync } from 'node:zlib';
@@ -42,5 +43,9 @@ export function fillPipeline(base) {
   put(capture, png());
   put('07-validation/web-lint.json', proof('lint:web', ['05-design-system/tokens.json', '05-design-system/components.json', '05-design-system/copy.json', 'control/project.json', '06-figma/web/index.html'], [capture],
     { minTarget: 44, runs: [{ html: '06-figma/web/index.html', viewport: { width: 390, height: 844 }, capture, issues: [] }] }));
+  put('control/figma.json', { fileKey: 'DemoFile', pageId: '0:1' });
+  put('06-figma/node-map.json', { nodes: [{ screen: 'map', state: 'default', nodeId: '1:1' }] });
+  put('06-figma/nodes.json', { version: 1, fileKey: 'DemoFile', pageId: '0:1', exportedAt: '2026-11-13T00:00:00Z', nodes: [{ id: '1:1', type: 'FRAME', name: 'Map', width: 390, height: 844, layoutMode: 'VERTICAL', fills: [] }] });
+  lintFigma(base);
   recordReview(base, 'validation', { by: '수진', score: '4', notes: '사람 검토 fixture' });
 }

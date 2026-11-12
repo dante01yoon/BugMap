@@ -1,0 +1,64 @@
+import { json, object, hashes, stringify, writeBundle } from './io.mjs';
+import { design, designInputs, normalize, wireframes, text } from './contracts.mjs';
+
+export const figmaFiles = ['control/figma.json', '06-figma/node-map.json', '06-figma/nodes.json'];
+export function figmaTarget(base) {
+  const target = json(base, 'control/figma.json');
+  if (!object(target) || typeof target.fileKey !== 'string' || typeof target.pageId !== 'string' || !/^[A-Za-z0-9_-]+$/.test(target.fileKey ?? '') || !/^\d+:\d+$/.test(target.pageId ?? '')) throw new Error('control/figma.json requires fileKey and pageId');
+  return target;
+}
+export function inspectFigma(base) {
+  const target = figmaTarget(base), exported = json(base, '06-figma/nodes.json'), map = json(base, '06-figma/node-map.json');
+  if (!object(exported) || exported.version !== 1 || exported.fileKey !== target.fileKey || exported.pageId !== target.pageId
+    || typeof exported.exportedAt !== 'string' || !Number.isFinite(Date.parse(exported.exportedAt)) || !Array.isArray(exported.nodes) || !exported.nodes.length) throw new Error('Invalid Figma export or wrong target file/page');
+  const { tokens, sizes, copy, components } = design(base);
+  const issues = [], ids = new Set();
+  const colorHex = value => { let s = value.slice(1).toLowerCase(); if (s.length <= 4) s = [...s].map(c => c + c).join(''); return s.length === 6 ? `${s}ff` : s; };
+  const colors = new Set(Object.values(tokens.colors).map(colorHex));
+  function visit(node) {
+    if (!object(node) || !/^\d+:\d+$/.test(node.id ?? '') || ids.has(node.id) || !text(node.type) || !text(node.name)
+      || !['width', 'height'].every(k => Number.isFinite(node[k]) && node[k] >= 0)) throw new Error('Invalid or duplicate Figma node');
+    ids.add(node.id);
+    const issue = (rule, detail) => issues.push({ nodeId: node.id, rule, detail });
+    if (node.type === 'TEXT') {
+      if (typeof node.characters !== 'string' || !Number.isFinite(node.fontSize)) throw new Error(`Incomplete TEXT export: ${node.id}`);
+      if (!Object.values(sizes).includes(node.fontSize)) issue('font-size', String(node.fontSize));
+      for (const term of copy.forbidden) if (normalize(node.characters).includes(normalize(term))) issue('forbidden-copy', term);
+    }
+    if (!Array.isArray(node.fills)) throw new Error(`Missing fills: ${node.id}`);
+    for (const fill of node.fills) {
+      if (!object(fill) || typeof fill.type !== 'string') throw new Error('Invalid fill');
+      if (fill.visible === false) continue;
+      if (fill.type !== 'SOLID') { issue('unsupported-fill', fill.type); continue; }
+      if (!object(fill.color) || !['r', 'g', 'b'].every(k => Number.isFinite(fill.color[k]) && fill.color[k] >= 0 && fill.color[k] <= 1)
+        || (fill.opacity !== undefined && (!Number.isFinite(fill.opacity) || fill.opacity < 0 || fill.opacity > 1))) throw new Error('Invalid solid color');
+      const hex = [...['r', 'g', 'b'].map(k => fill.color[k]), fill.opacity ?? 1].map(n => Math.round(n * 255).toString(16).padStart(2, '0')).join('');
+      if (!colors.has(hex)) issue('color', `#${hex}`);
+    }
+    if (node.type === 'FRAME' && !['HORIZONTAL', 'VERTICAL'].includes(node.layoutMode)) issue('auto-layout', 'FRAME needs HORIZONTAL or VERTICAL');
+    if (node.componentName !== undefined && !Object.hasOwn(components, node.componentName)) issue('component', node.componentName);
+    if ((node.interactive === true || /button/i.test(node.name)) && (node.width < 44 || node.height < 44)) issue('touch-target', `${node.width}x${node.height}`);
+    if (node.children !== undefined && !Array.isArray(node.children)) throw new Error('Invalid children');
+    for (const child of node.children ?? []) visit(child);
+  }
+  exported.nodes.forEach(visit);
+  const roots = new Set(exported.nodes.map(n => n.id)), screens = wireframes(base), seen = new Set(), mapped = new Set();
+  if (!object(map) || !Array.isArray(map.nodes) || !map.nodes.length) throw new Error('node-map.json requires nodes');
+  for (const entry of map.nodes) {
+    const key = `${entry.screen}/${entry.state}`;
+    if (!screens.some(s => `${s.id}/${s.state}` === key) || seen.has(key) || !roots.has(entry.nodeId) || mapped.has(entry.nodeId)) throw new Error('Invalid node-map coverage');
+    seen.add(key); mapped.add(entry.nodeId);
+  }
+  if (seen.size !== screens.length || mapped.size !== roots.size) throw new Error('Incomplete node-map coverage');
+  return { version: 1, command: 'lint:figma', inputs: hashes(base, [...figmaFiles, ...designInputs, '04-wireframes/wireframes.json']), issues, nodeCount: ids.size };
+}
+export function lintFigma(base, options = {}) {
+  const report = inspectFigma(base);
+  writeBundle(base, { '07-validation/figma-lint.json': stringify(report) }, options.force);
+  return report;
+}
+export function verifyFigma(base) {
+  const expected = inspectFigma(base), actual = json(base, '07-validation/figma-lint.json');
+  if (JSON.stringify(actual) !== JSON.stringify(expected)) throw new Error('Stale or invalid lint:figma report');
+  if (expected.issues.length) throw new Error(`Figma lint failed: ${expected.issues.map(i => i.rule).join(', ')}`);
+}

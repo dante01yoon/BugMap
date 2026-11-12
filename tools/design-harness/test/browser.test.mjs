@@ -73,6 +73,7 @@ test('real browser captures refs and SVG, lints cascade/viewport/copy, then hand
   put('06-figma/web/style.css', goodCSS);
   put('06-figma/web/index.html', '<!doctype html><html lang="ko"><meta charset="utf-8"><link rel="stylesheet" href="style.css"><h1>발견 지도</h1><p>곤충 관찰</p><button id="save">기록 저장</button></html>');
   await success('lint:web', '--force');
+  await success('lint:figma', '--force');
   await success('review', 'validation', '--by', '수진', '--score', '4', '--notes', '모바일·데스크톱 검토');
   for (const stage of ['1', '4', '5', '7']) await success('approve', stage, '--by', '수진');
   await success('handoff');

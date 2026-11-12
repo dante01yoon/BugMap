@@ -1,6 +1,6 @@
 import { stages } from './stage-definitions.mjs';
 import { designInputs } from './contracts.mjs';
-import { filesUnder, hashes } from './io.mjs';
+import { filesUnder, hashes, safeStat } from './io.mjs';
 export function findStage(value) {
   const stage = stages.find((s, i) => s.id === value || String(i + 1) === value);
   if (!stage) throw new Error(`Unknown stage: ${value}`);
@@ -8,7 +8,7 @@ export function findStage(value) {
 }
 export function snapshot(base, stage, omit = []) {
   const end = stages.indexOf(findStage(stage));
-  const paths = ['README.md', 'control/project.json', 'control/decisions.md',
+  const paths = [...(safeStat(`${base}/control/figma.json`) ? ['control/figma.json'] : []), 'README.md', 'control/project.json', 'control/decisions.md',
     ...stages.slice(0, end + 1).flatMap(s => filesUnder(base, s.dir))];
   return hashes(base, paths.filter(path => !omit.includes(path)));
 }

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design flow"
+  short_description: "단계별 담당과 독립 비평을 조정하고 사람의 직접 승인에서 멈추는 디자인 흐름"
+  default_prompt: "$design-flow로 현재 하네스 상태부터 다음 사람 승인 지점까지 진행해 줘."

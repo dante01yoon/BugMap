@@ -1,0 +1,8 @@
+{
+  "description": "Design harness: Figma approval/target guard, export reminder, end-of-turn check.",
+  "hooks": {
+    "PreToolUse": [{ "matcher": "[Ff][Ii][Gg][Mm][Aa]", "hooks": [{ "type": "command", "command": "node \"${PLUGIN_ROOT}/hooks/run.mjs\" PreToolUse", "timeout": 30 }] }],
+    "PostToolUse": [{ "matcher": "[Ff][Ii][Gg][Mm][Aa]", "hooks": [{ "type": "command", "command": "node \"${PLUGIN_ROOT}/hooks/run.mjs\" PostToolUse", "timeout": 30 }] }],
+    "Stop": [{ "hooks": [{ "type": "command", "command": "node \"${PLUGIN_ROOT}/hooks/run.mjs\" Stop", "timeout": 30 }] }]
+  }
+}

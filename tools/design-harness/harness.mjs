@@ -70,6 +70,7 @@ export function check(base) {
   for (const file of ['README.md', 'control/project.json', 'control/decisions.md']) {
     inspectFile(base, join(base, file), common, commonIssues);
   }
+  if (safeStat(join(base, 'control/figma.json'))) inspectFile(base, join(base, 'control/figma.json'), common, commonIssues);
   const files = { ...common };
   const upstreamApprovals = {};
   let priorPassed = commonIssues.length === 0;
@@ -107,7 +108,7 @@ export function check(base) {
   });
   return { currentStage: results.find(stage => stage.status !== 'passed')?.stage ?? null,
     complete: results.every(stage => stage.status === 'passed'),
-    scope: 'Artifact, capture, token, web lint and human-review checks; product behavior and Figma verification remain manual.', stages: results };
+    scope: 'Artifact, capture, token, web lint and human-review checks; exported Figma node lint; product behavior and visual Figma verification remain manual.', stages: results };
 }
 
 export function approve(base, stageName, by) {
