@@ -1,0 +1,7 @@
+default_permissions = "bugmap-git"
+
+[permissions.bugmap-git]
+extends = ":workspace"
+
+[permissions.bugmap-git.filesystem]
+"/Users/mac/Documents/BugMap/.git" = "write"

@@ -23,6 +23,10 @@ npm run export:web
 
 ## 파일 구성
 
+- `docs/DESIGN.md`: 공통 디자인 지침과 토큰.
+- `docs/screens/`: 메인 지도·기록 작성·로그인 화면 명세.
+- `docs/design-harness.md`: AI 디자인 플러그인의 단계·산출물·승인 설계.
+
 - `App.tsx`, `index.ts`: 앱 진입점, 상태바·안전 영역 설정.
 - `src/features/auth/LoginScreen.tsx`: 브랜드, 소셜 버튼, 보조 동작·안내.
 - `src/features/auth/FeatureCarousel.tsx`: 가로 소개 카드와 페이지 표시.

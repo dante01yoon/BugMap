@@ -1,7 +1,7 @@
 # 작업 규칙
 
 - 프로젝트 목적·기능·범위는 `docs/PRD.md`를 참고한다.
-- 디자인 작업은 `docs/DESIGN.md`를 읽고 따른다.
+- 디자인 작업은 공통 지침 `docs/DESIGN.md`와 해당 화면 명세 `docs/screens/`를 읽고 따른다. AI 디자인 하네스의 작업 절차는 `docs/design-harness.md`를 참고한다.
 - UI 아이콘은 Figma에서 복사·내보내지 않고, [Lucide](https://lucide.dev/icons)에서 의미가 맞는 아이콘을 골라 프로젝트의 Lucide 컴포넌트로 사용한다.
 - 기술 의사결정·구조·구현 설계는 `docs/TDD.md`를 읽고 따른다.
 - 문서의 확정 사항과 권장안·미결정을 구분한다. 현재 사용자 지시를 우선하며, 중요한 충돌이나 누락은 알린다.
