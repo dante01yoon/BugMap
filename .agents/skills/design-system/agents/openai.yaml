@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design system"
+  short_description: "승인된 구조에서 토큰·컴포넌트·문구와 생성 DESIGN.md를 만드는 담당"
+  default_prompt: "$design-system으로 승인된 와이어프레임의 디자인 시스템과 대표 화면을 준비해 줘."

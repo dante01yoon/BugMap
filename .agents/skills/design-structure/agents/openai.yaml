@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design structure"
+  short_description: "요구사항을 화면·상태·흐름과 와이어프레임으로 연결하는 구조 설계 담당"
+  default_prompt: "$design-structure로 승인된 요구사항의 화면·상태·와이어프레임을 정리해 줘."

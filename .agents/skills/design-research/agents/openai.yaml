@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design research"
+  short_description: "참조 캡처를 직접 보고 관찰·가져올 점·피할 점을 구분하는 디자인 리서치"
+  default_prompt: "$design-research로 승인된 요구사항에 맞는 레퍼런스 캡처를 직접 보고 분석해 줘."

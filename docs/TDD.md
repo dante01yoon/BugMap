@@ -35,6 +35,7 @@
 | TD-11 | **채택:** UI 아이콘은 `lucide-react-native` 컴포넌트로 표시하고 `react-native-svg`를 렌더러로 사용한다. 아이콘 모양 선택은 [Lucide 아이콘 카탈로그](https://lucide.dev/icons)를 기준으로 한다. | 사용자가 Figma 아이콘을 사용하지 말고 Lucide를 기준으로 선택하라고 요청했다. 트리 셰이킹되는 React Native 컴포넌트로 개별 아이콘만 불러온다. | 실제 Expo 호환성은 네트워크가 복구된 뒤 설치 및 번들로 검증한다. |
 | TD-12 | **채택:** 디자인 하네스 CLI는 `tools/design-harness`의 별도 Node 20+ ESM 패키지, 외부 의존성 없음. | 사용자 지정 런타임을 Expo 앱의 Node 22.13+ 요구사항과 분리한다. `node:fs`·`node:crypto`로 검사·SHA-256 승인을 처리하고 `node:test`로 검증한다. | 전체 디자인 품질 검증·Figma 자동화·신원 인증은 후속 범위. [사용법](../tools/design-harness/README.md) |
 | TD-13 | **채택:** 단계별 CLI는 JSON 계약·입출력 SHA-256·사람 리뷰와 Chromium CDP pipe 검사로 진행한다. Playwright는 선택 QA에만 사용한다. | Node 20 런타임의 외부 npm 의존성 없이 실제 CSS/크기/캡처를 검사하고, 보고서·리뷰가 현재 입력과 일치하는지 확인한다. | viewport 기본 390×844, 리뷰 최소 점수 기본 4/5(프로젝트 설정 가능). 브라우저 명령은 설치된 Chromium·localhost 실행 권한 필요. Figma/네이티브 동작 검증은 별도다. |
+| TD-14 | **채택:** 프로젝트 역할 5개는 .codex/agents의 독립 TOML, 조정/역할 스킬 6개는 .agents/skills에 둔다. | 사용자 요청의 단계 소유권·새 맥락 비평·사람 직접 승인 경계를 재사용한다. 상위 모델/권한을 상속하며 전역 설정과 CLI는 변경하지 않는다. | 사람 인증/서명은 추가하지 않는다. 읽기 전용과 사람 명령 금지는 행동 지침이며, 독립 맥락이 없는 runtime에서는 새 세션이 필요하다. [안내](design-agents.md) |
 
 ### 프론트 초기 구현 상태 · 2026-11-09
 

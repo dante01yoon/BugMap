@@ -82,3 +82,10 @@
 - 검증: Node 20.20.2의 전체 npm test 26개 통과(브라우저 테스트 skip 0). 실제 localhost/Chrome으로 캡처·CSS 상속·반응형·가상 요소·분할된 금지 문구·승인된 전달 흐름을 확인했다. Node 22의 단계/승인 테스트 및 앱 타입 검사, 로컬 문서 링크 12개, diff 검사를 통과했다. 독립 검토의 captures 화면 ID 오판과 visibility:visible 자식 검사 누락을 수정했다. visibility 문제는 실제 브라우저의 실패→성공을 확인했고, captures 회귀 테스트는 기존 잘못된 휴리스틱을 일시 복구하면 실패하고 수정 코드에서는 통과함을 별도 확인했다.
 - Playwright: 사용자 요청에 따라 [별도 QA 비교 스크립트](../tools/design-harness/qa/README.md)를 추가했다. Playwright 1.65.0은 저장소 의존성을 바꾸지 않고 임시 설치했다. 390×844 [실제 캡처](/private/tmp/design-harness-qa/playwright-web/actual.png)·[diff](/private/tmp/design-harness-qa/playwright-web/diff.png)에서 하네스 캡처와 234픽셀(0.07109%) 차이를 확인했으며 일부 글리프 주변에 차이가 보인다. 같은 Playwright 설정의 재캡처는 [차이 0개](/private/tmp/design-harness-qa/playwright-repeat/comparison.json)였다. 와이어프레임 PNG도 열어 한글·배치·잘림을 확인했다. 이들은 테스트용 임시 산출물이며 곤충맵 실제 디자인 검증이 아니다.
 - 남은 일: 클릭 후 상태·키보드 흐름·닫힌 shadow DOM·이미지 픽셀·네이티브·실제 Figma 및 요구사항/화면 커버리지 검증, stages.json 영속화·버전 사본·인증된 검토자·조건부 승인 정책은 별도 구현이다.
+
+## 2026-11-13 — 단계별 에이전트·스킬과 사람 직접 승인 흐름
+
+- 완료: [design-flow](../.agents/skills/design-flow/SKILL.md)와 리서치·구조/와이어프레임·시스템·Figma·새 맥락 비평가의 역할 스킬 5개, [.codex/agents](../.codex/agents/)의 역할 TOML 5개를 추가했다. 리서치는 실제 캡처의 관찰·가져올 점·피할 점·해석/미검증을 구분하고, 비평은 매번 새 인스턴스/새 맥락에서 원본·캡처를 확인한다. 전체 담당·경로·재개는 [안내](../docs/design-agents.md)에 정리했다.
+- 승인: 모든 AI 역할이 approve/review 실행과 사람 승인/점수 JSON 대행을 하지 않도록 명시했다. 채팅의 승인 요청에도 사람이 직접 명령을 실행해야 하며 1·4·5·7·8의 유효 승인이 없으면 후속 역할을 시작하지 않고 멈춘다. AI 비평은 critique.md, 재개 메모는 control/flow.md에 둔다. 실제 CLI·전역 설정·모델·권한은 바꾸지 않았다.
+- 검증: 스킬 없는 기준 행동에서 채팅 승인을 CLI에 대신 기록하려는 행동을 확인했다. 스킬 적용 후 6개 대표 사례에서 대행 금지·승인 대기·이미지 직접 열람·상태 설계·시스템 충돌 반환·Figma 미연결 차단·새 맥락 비평을 확인했다. [평가 기록](../docs/design-agent-evals.md)에 기준/적용 결과와 한계를 남겼다. Codex CLI 0.167.0에서 역할 5개·스킬 6개 실제 카탈로그 발견을 확인했고, YAML 파싱·UI 메타데이터·로컬 참조 및 독립 검토를 통과했다. Python quick_validate는 PyYAML 부재로 실행되지 않아 기존 js-yaml 파싱·실제 Codex 로드로 대체했다. 제품 UI 변경이 없어 새 제품 캡처나 브라우저 회귀 테스트는 수행하지 않았다.
+- 남은 일: 실제 프로젝트에 $design-flow를 적용해 사람의 직접 승인과 함께 순차 실행하기. 이번 작업은 에이전트/스킬 추가이며 제품 디자인 실행·실제 Figma 작업·사람 승인/점수 기록은 수행하지 않았다. 읽기 전용/사람 전용 규칙은 행동 지침이고 별도 OS 권한·신원 인증/전자서명을 구현한 것은 아니다.

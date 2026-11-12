@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Figma"
+  short_description: "승인된 시스템을 실제 Figma 노드·캡처와 검증용 HTML로 연결하는 담당"
+  default_prompt: "$design-figma로 승인된 화면을 지정 Figma 범위에 구성하고 노드·캡처를 검증해 줘."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design critic"
+  short_description: "작성 대화를 물려받지 않고 원본·캡처로 판단하는 읽기 전용 독립 비평가"
+  default_prompt: "$design-critic로 현재 산출물을 새 맥락에서 비평하고 근거와 미검증을 구분해 줘."
