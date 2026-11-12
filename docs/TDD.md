@@ -2,14 +2,14 @@
 
 | 항목 | 내용 |
 |---|---|
-| 문서 상태 | 설계 초안 v0.2 · 로그인 화면 코드 작성, 실행 검증 전 |
+| 문서 상태 | 설계 초안 v0.2 · 로그인 웹 화면·번들·타입 검사 검증 완료, 기기 검증 전 |
 | 작성일 | 2026-11-06 |
 | 연결 요구사항 | [PRD](./PRD.md) |
 | 결정 상태 | React Native·NestJS는 사용자 선택; DB와 나머지 기술 선택은 **권장안**이며 구현 전 |
 
 ## 1. 설계 범위와 원칙
 
-사용자가 직접 요청한 것은 사진 필수 곤충 발견·채집 기록, 지도 마커와 타인의 조회, 작성자 채팅, 자유게시판, 무료·유료 분양 게시판이다. 첫 출시 플랫폼은 모바일 앱이며 프론트엔드는 React Native, 백엔드는 NestJS로 정했다. iOS·Android를 동시에 출시할지는 미정이다. 현재 작업 폴더에는 로그인 UI와 Expo 설정 파일이 있으며, 설치·실행·네이티브 검증은 미완료다. 백엔드와 기존 인프라는 없으므로 DB·API·스키마의 세부 내용은 **구현을 위한 제안**이다.
+사용자가 직접 요청한 것은 사진 필수 곤충 발견·채집 기록, 지도 마커와 타인의 조회, 작성자 채팅, 자유게시판, 무료·유료 분양 게시판이다. 첫 출시 플랫폼은 모바일 앱이며 프론트엔드는 React Native, 백엔드는 NestJS로 정했다. iOS·Android를 동시에 출시할지는 미정이다. 현재 작업 폴더에는 로그인 UI와 Expo 설정 파일이 있으며 웹 번들과 타입 검사는 완료했다. 실제 기기 실행·캡처는 미검증이다. 백엔드와 기존 인프라는 없으므로 DB·API·스키마의 세부 내용은 **구현을 위한 제안**이다.
 
 설계의 중심은 다음 네 가지다.
 
@@ -31,16 +31,18 @@
 | TD-07 | **권장:** 유료 분양은 가격 표시 + 채팅 문의 | 사용자가 요청한 게시판 범위를 충족한다. | 결제·배송·정산은 별도 제품/운영 결정 후 설계. |
 | TD-08 | **권장:** 앱 전용 세션 + OS 보안 저장소 | 앱 토큰을 브라우저 쿠키나 일반 앱 저장소에 의존하지 않는다. | 웹 버전을 만들 때는 별도 쿠키 세션 설계. |
 | TD-09 | **권장:** 카카오·Google 공통, iOS에 Apple 추가 | 두 OS에서 같은 제공자로 다시 로그인할 수 있고 iOS 로그인 선택지도 마련한다. | 출시 OS와 대상 사용자층이 정해지면 버튼 수를 조정. |
-| TD-10 | **프론트 초기 선택:** Expo SDK 58 + TypeScript, React 19.3 / React Native 0.88.1 | 2026-11-09 로그인 UI 작업에서 공식 SDK 표·템플릿 기준으로 설정했다. Expo Go·웹에서 공통 화면을 확인할 기반이며 사용자 확정 기술인 React Native를 유지한다. | npm 접속 실패로 실제 설치·호환성·실행은 미검증. 설치 후 `npx expo install --check`, 타입 검사·웹 번들을 먼저 확인한다. |
+| TD-10 | **프론트 초기 선택:** Expo SDK 58 + TypeScript, React 19.3 / React Native 0.88.1 | 2026-11-09 로그인 UI 작업에서 공식 SDK 표·템플릿 기준으로 설정했다. Expo Go·웹에서 공통 화면을 확인할 기반이며 사용자 확정 기술인 React Native를 유지한다. | 웹 번들·타입 검사는 통과했다. 네이티브 기기 실행은 미검증이며 Expo 호환성 확인은 오프라인 로컬 맵에서 SVG 패치 버전 차이를 보고했다. |
+| TD-11 | **채택:** UI 아이콘은 `lucide-react-native` 컴포넌트로 표시하고 `react-native-svg`를 렌더러로 사용한다. 아이콘 모양 선택은 [Lucide 아이콘 카탈로그](https://lucide.dev/icons)를 기준으로 한다. | 사용자가 Figma 아이콘을 사용하지 말고 Lucide를 기준으로 선택하라고 요청했다. 트리 셰이킹되는 React Native 컴포넌트로 개별 아이콘만 불러온다. | 실제 Expo 호환성은 네트워크가 복구된 뒤 설치 및 번들로 검증한다. |
 
 ### 프론트 초기 구현 상태 · 2026-11-09
 
 - 루트 `package.json`·`app.json`·`tsconfig.json`·`index.ts`·`App.tsx`에 Expo 앱 설정과 실행 명령을 작성했다. 네이티브 폴더는 아직 생성하지 않았다. 서버는 이번 UI 요청에 포함하지 않는다.
-- `src/features/auth`에 선택 Figma `2:3`의 로그인 UI와 소개 카드, `src/theme/tokens.ts`에 화면 토큰을 둔다. `assets/login/sources.json`은 Figma 원본 아이콘 16개의 출처·픽셀 치수를 기록한다.
+- `src/features/auth`에 선택 Figma `2:3`의 로그인 UI와 소개 카드, Lucide 아이콘 매핑 및 `src/theme/tokens.ts`의 화면 토큰을 둔다. 화면에서 사용하는 아이콘 에셋은 로컬 Figma 이미지가 아니라 Lucide 컴포넌트다.
 - 안전 영역은 `react-native-safe-area-context`로 처리하고 시스템 상태바를 사용한다. 화면 전체를 세로 스크롤하도록 구성해 작은 화면에서 입력 동작이 잘리는 것을 피한다. 실제 기기 검증은 후속 과제다.
 - 소셜·이메일·비회원 버튼은 미연동 및 접근성 비활성 상태다. 인증 SDK·API·토큰 저장·비회원 탐색은 구현하지 않았다. 약관도 실제 정책 문서로 연결하지 않았다.
 - 선택 시안의 네이버 제공자는 TD-09의 권장 Google과 다르다. 이번 화면 작업은 시안의 버튼을 재현했으며 인증 제공자 결정이나 PRD 범위 변경으로 간주하지 않는다.
-- `npm run check:assets`로 로컬 자산과 참조를 검사한다. `npm run typecheck`, `npm run export:web`를 정상 설치 후 실행해야 한다. 현재 npm 접속 `ENOTFOUND`·오프라인 캐시 `ENOTCACHED`로 설치가 실패했고 lockfile이 없다. 전체 타입 검사는 미설치 모듈/Expo 설정을 찾지 못해 실패했으며 `npm run web`도 Expo CLI가 없어 실행되지 않았다. TypeScript 문법 검사는 전체 타입 검사와 구분한다.
+- 현재 설치 버전은 `lucide-react-native@1.70.0`, `react-native-svg@15.16.0`이다. `npm run typecheck`, `npm run export:web`, `npx expo install --check`는 2026-11-09에 통과했다. Expo 의존성 검사는 오프라인 로컬 호환성 표를 사용했다. Ego Browser로 `http://127.0.0.1:8081` 모바일 화면을 확인하고 [구현 캡처](../design/login/implementation.png)를 저장했다. 소개 인디케이터의 스크롤과 수정 후 개발 모드 앱 콘솔 오류 0건을 확인했다. 실제 기기 실행은 미검증이다.
+- 장식 아이콘 접근성은 플랫폼별로 처리한다. 웹 SVG에는 `aria-hidden`, 네이티브에는 `accessible={false}`를 전달한다. 네이티브 전용 `accessible` 값을 웹 DOM에 전달하면 React의 비 boolean DOM 속성 오류가 발생한다.
 - 버전 근거: [Expo SDK 호환 표](https://docs.expo.dev/versions/latest/), [SDK 58 템플릿](https://github.com/expo/expo/blob/sdk-58/templates/expo-template-blank-typescript/package.json), [안전 영역 설정](https://docs.expo.dev/versions/latest/sdk/safe-area-context/).
 
 지도 제공자, iOS·Android 출시 순서, 호스팅 및 객체 저장소 공급자는 미정이다. 아래 인터페이스는 공급자 교체가 가능하도록 정의한다. Redis는 초기 필수 저장소가 아니다. 채팅의 다중 인스턴스 이벤트 전달이나 캐시가 실제로 필요해질 때 추가한다.

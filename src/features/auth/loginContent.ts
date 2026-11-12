@@ -1,22 +1,3 @@
-export const loginIcons = {
-  beetle: require('../../../assets/login/beetle.png'),
-  compass: require('../../../assets/login/compass.png'),
-  navigation: require('../../../assets/login/navigation.png'),
-  camera: require('../../../assets/login/camera.png'),
-  sparkle: require('../../../assets/login/sparkle.png'),
-  psychology: require('../../../assets/login/psychology.png'),
-  handshake: require('../../../assets/login/handshake.png'),
-  verified: require('../../../assets/login/verified.png'),
-  community: require('../../../assets/login/community.png'),
-  kakao: require('../../../assets/login/kakao.png'),
-  naver: require('../../../assets/login/naver.png'),
-  apple: require('../../../assets/login/apple.png'),
-  arrow: require('../../../assets/login/arrow.png'),
-  security: require('../../../assets/login/security.png'),
-  shield: require('../../../assets/login/shield.png'),
-  bolt: require('../../../assets/login/bolt.png'),
-} as const;
-
 // Visual sample copy from Figma, not live counts or implemented capabilities.
 export const features = [
   {
@@ -67,4 +48,3 @@ export const features = [
 ] as const;
 
 export type Feature = (typeof features)[number];
-export type IconName = keyof typeof loginIcons;

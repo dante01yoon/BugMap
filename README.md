@@ -16,20 +16,19 @@ npm run web
 
 ```sh
 npm run typecheck
-npm run check:assets
 npm run export:web
 ```
 
-2026-11-09 현재 작성 환경에서 npm 접속이 `ENOTFOUND`로 실패했고, 오프라인 설치도 캐시 부족(`ENOTCACHED`)으로 실패했습니다. 따라서 lockfile은 아직 없으며 설치·전체 타입 검사·Expo 번들·실제 화면 캡처 검증은 미완료입니다. 정상 네트워크에서 설치 후 위 검증을 먼저 수행해야 합니다. 부모 폴더에 있는 다른 프로젝트의 React를 이 앱의 설치 결과로 취급하지 않습니다.
+의존성은 설치되어 있으며 lockfile에 기록되어 있습니다. 2026-11-09에 타입 검사·웹 번들·Expo 의존성 검사(오프라인 로컬 호환성 표 기준)가 통과했습니다. `react-native-svg`는 Expo 권장 버전 15.16.0입니다. [구현 화면 캡처](design/login/implementation.png)에서 모바일 레이아웃과 Lucide SVG 렌더링을 확인했고, 개발 모드에서 앱 콘솔 오류가 없음을 확인했습니다. 실제 기기 검증은 미완료입니다.
 
 ## 파일 구성
 
 - `App.tsx`, `index.ts`: 앱 진입점, 상태바·안전 영역 설정.
 - `src/features/auth/LoginScreen.tsx`: 브랜드, 소셜 버튼, 보조 동작·안내.
 - `src/features/auth/FeatureCarousel.tsx`: 가로 소개 카드와 페이지 표시.
-- `src/features/auth/loginContent.ts`: 시안 문구와 로컬 아이콘 연결.
+- `src/features/auth/loginContent.ts`: 소개 카드 문구.
+- `src/features/auth/AppIcon.tsx`: Lucide 아이콘 이름과 화면 사용 위치 연결.
 - `src/theme/tokens.ts`: 선택 화면의 색상·치수.
-- `assets/login/`: Figma 원본 아이콘 16개, `sources.json` 출처·치수.
 - `design/login/reference/2:2.png`: 배경을 포함한 **Figma 참조 캡처**. 앱 실행 결과가 아닙니다.
 
 ## 현재 동작과 범위
@@ -41,3 +40,5 @@ npm run export:web
 - 배경 `#FAF8FF`, 제공자 고유색은 현재 선택 시안을 우선했습니다. 기기 시스템 글꼴을 사용하며, Figma의 작은 고정 텍스트 프레임을 그대로 복제해 글자를 자르지 않도록 자연스러운 줄 높이를 사용했습니다.
 
 Expo 버전 조합은 [SDK 호환 표](https://docs.expo.dev/versions/latest/)와 [SDK 58 TypeScript 템플릿](https://github.com/expo/expo/blob/sdk-58/templates/expo-template-blank-typescript/package.json), 안전 영역은 [공식 문서](https://docs.expo.dev/versions/latest/sdk/safe-area-context/)를 기준으로 작성했습니다. 실제 설치 호환성은 아직 확인하지 못했습니다.
+
+UI 아이콘은 Figma에서 복사하지 않고 [Lucide 아이콘](https://lucide.dev/icons)을 `lucide-react-native` 컴포넌트로 사용합니다. React Native 렌더링은 `react-native-svg`에 의존합니다.

@@ -1,28 +1,29 @@
 import { useRef, useState } from 'react';
-import { Image, Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Platform, Pressable, ScrollView, StyleSheet, Text, View, type ScrollViewInstance } from 'react-native';
 import { colors, layout } from '../../theme/tokens';
-import { features, loginIcons, type Feature } from './loginContent';
+import { AppIcon } from './AppIcon';
+import { features, type Feature } from './loginContent';
 
 function FeatureCard({ feature, width }: { feature: Feature; width: number }) {
   return (
     <View style={[styles.card, { width }]}>
       <View style={styles.cardTop}>
         <View style={styles.iconBadge}>
-          <Image accessible={false} source={loginIcons[feature.icon]} style={{ width: feature.iconWidth, height: feature.iconHeight }} />
+          <AppIcon name={feature.icon} size={20} color={colors.primary} />
         </View>
         <View style={styles.tag}><Text style={styles.tagText}>{feature.badge}</Text></View>
       </View>
       <View style={styles.descriptionGroup}>
         <View style={styles.titleRow}>
           <Text style={styles.title}>{feature.title}</Text>
-          <Image accessible={false} source={loginIcons[feature.titleIcon]} style={{ width: feature.titleIconWidth, height: feature.titleIconHeight }} />
+          <AppIcon name={feature.titleIcon} size={16} color={colors.primary} />
         </View>
         <Text style={styles.description}>{feature.description}</Text>
       </View>
       <View style={styles.metadataRow}>
         <View style={styles.metadataLabel}>
           {feature.metadataIcon ? (
-            <Image accessible={false} source={loginIcons[feature.metadataIcon]} style={feature.metadataIcon === 'psychology' ? styles.psychologyIcon : styles.communityIcon} resizeMode="contain" />
+            <AppIcon name={feature.metadataIcon} size={14} color={colors.primary} />
           ) : <View style={styles.liveDot} />}
           <Text style={styles.metadata}>{feature.metadata}</Text>
         </View>
@@ -33,7 +34,7 @@ function FeatureCard({ feature, width }: { feature: Feature; width: number }) {
 }
 
 export function FeatureCarousel({ width }: { width: number }) {
-  const carousel = useRef<ScrollView>(null);
+  const carousel = useRef<ScrollViewInstance>(null);
   const [active, setActive] = useState(0);
   const cardWidth = Math.min(width * 0.82, 320);
   const stride = cardWidth + layout.cardGap;
@@ -86,8 +87,6 @@ const styles = StyleSheet.create({
   metadataRow: { marginTop: 12, paddingTop: 8, borderTopWidth: 1, borderColor: colors.divider, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', gap: 4 },
   metadataLabel: { flexDirection: 'row', alignItems: 'center', gap: 6, flexShrink: 1 },
   metadata: { color: colors.primary, fontSize: 11, lineHeight: 21, fontWeight: '500', flexShrink: 1 },
-  psychologyIcon: { width: 11.09, height: 11.667 },
-  communityIcon: { width: 14, height: 7 },
   liveDot: { width: 8, height: 8, borderRadius: 4, backgroundColor: colors.primary },
   caption: { color: colors.quiet, fontSize: 11, lineHeight: 21, fontFamily: Platform.select({ ios: 'Menlo', default: 'monospace' }) },
   indicators: { height: 44, marginTop: -12, flexDirection: 'row', alignItems: 'center', justifyContent: 'center' },

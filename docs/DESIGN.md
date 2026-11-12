@@ -200,6 +200,8 @@ The shape language features an extra-rounded, soft silhouette. Cards, sheets, an
 ## Components
 
 ### Iconography
+All UI icons must be selected from the [Lucide icon catalog](https://lucide.dev/icons) and used as `lucide-react-native` components. Figma icon nodes, exported vectors, or rasterized copies are not UI icon sources. Select the closest semantic Lucide icon; provider buttons may use generic Lucide symbols instead of provider marks.
+
 All system icons adhere strictly to the Lucide icon guidelines:
 - **Geometry:** 24x24 pixel grid with uniform 2px stroke width (`stroke-width: 2`).
 - **Style:** Clean lines, rounded caps and joins (`stroke-linecap: round`, `stroke-linejoin: round`), with no solid fills or decorative drop shadows.
@@ -268,7 +270,7 @@ All system icons adhere strictly to the Lucide icon guidelines:
 - 활성 항목은 `#EAF3EC`의 둥근 배경과 `#15803D` 아이콘·라벨로 표시한다. 비활성 항목은 `#6B7280`을 사용한다. 각 항목은 최소 44px 터치 영역을 확보한다.
 - 현재 시안은 Pretendard 대신 문서에서 허용한 Inter 대체 폰트를 사용했다. 지역명은 16px Bold, 기록명·검색·주요 동작은 14px, 기록 시각은 11px를 적용했다.
 - 시안의 일부 보조 문구·내비게이션 라벨은 10px이며 기존 공통 최소 라벨 11px와 차이가 있다. 구현 시 공통 크기로 조정하고 한글 가독성·잘림을 다시 검수한다.
-- 시안에는 기존 로그인 화면에서 재사용한 곤충·카메라·악수·채팅 아이콘이 섞여 있다. 브랜드 곤충 표식은 유지하되, 일반 시스템 아이콘은 구현 시 기존 Lucide 24px·2px 선 규칙에 맞춘다.
+- 시안의 기존 곤충·카메라·악수·채팅 아이콘은 Figma 출처와 관계없이 앱 구현에서 사용하지 않는다. 구현할 때 각 의미에 맞는 Lucide 아이콘을 고르고 24px·2px 선 규칙을 적용한다.
 - 로딩·빈 결과·검색 결과·위치 권한 거부·네트워크 오류 상태와 상세 전환은 이번 기본 화면 시안에 포함되지 않았다.
 
 ## Record Entry — 발견·채집 기록 작성
@@ -297,7 +299,7 @@ All system icons adhere strictly to the Lucide icon guidelines:
 
 - 2026-11-09 구현 기준은 기존 `01 · 로그인 / iOS`가 아니라, 사용자가 현재 선택한 `Container` **노드 `2:3`(390×804.75)** 이다. 배경은 부모 `2:2`의 `#FAF8FF`를 따른다. [배경 포함 참조 캡처](../design/login/reference/2:2.png).
 - 브랜드 헤더 → 가로 소개 카드 3개·페이지 표시 → 카카오/네이버/Apple → 이메일/비회원 보조 동작 → 안내 필·약관 문구 순서다. 16px 여백, 32px 모서리, 48px 소셜 버튼과 제공자 고유색을 재현한다. 이 선택 화면의 배경·제공자 고유색은 일반 UI 색상 원칙의 화면별 예외다.
-- 아이콘은 원본 Figma 노드를 3배 PNG로 내보내 `assets/login/`에 저장했다. 화면 전체를 이미지로 대체하지 않는다. 부모의 가로 클리핑 때문에 일부 아이콘이 잘려 처음 내보내졌으나, 임시 복제본을 독립 위치에서 내보낸 완전한 자산으로 교체하고 임시 복제본은 삭제했다. 출처·픽셀 치수는 `sources.json`에 있다.
+- 아이콘은 Figma에서 가져오지 않는다. `src/features/auth/AppIcon.tsx`에서 의미가 맞는 Lucide 아이콘을 React Native 컴포넌트로 매핑한다. 로그인 화면은 곤충에 `Bug`, 지도에 `Compass`·`Navigation`, 촬영에 `Camera`, 소개에 `Sparkles`·`Brain`·`Handshake`·`BadgeCheck`·`UsersRound`, 제공자 버튼에 `MessageCircle`·`Search`·`Smartphone`을 사용한다. 제공자 표식은 Lucide의 일반 기호로 대체한다.
 - 구현은 `src/features/auth/LoginScreen.tsx`·`FeatureCarousel.tsx`, 토큰은 `src/theme/tokens.ts`에 있다. 시스템 글꼴과 자연스러운 줄 높이를 사용하며, Figma의 작은 고정 텍스트 프레임으로 인해 글자를 자르지 않는다. 실제 화면의 폰트·줄바꿈·기하 비교는 실행 환경이 복구된 뒤 검수해야 한다.
 - 사용자 요청에 따라 인증·이메일·비회원 이동·정책 페이지 기능은 연결하지 않았다. 버튼은 제공자 스타일을 유지하면서 접근성 비활성 상태를 전달한다. 소개 카드의 스크롤·페이지 선택 UI만 코드로 구성했으며 런타임 동작은 미검증이다.
 - 페이지 표시의 점은 원본 크기를 유지하고, 선택 버튼의 터치 영역·간격은 공통 기준에 맞게 각각 44×44로 확대했다. 원본의 좁은 점 간격에 대한 접근성 보정이며, 표시 행 높이와 로그인 섹션 여백을 함께 조정했다.
