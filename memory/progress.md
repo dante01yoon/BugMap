@@ -74,3 +74,11 @@
 - 문서: [사용법·JSON 계약·복구 절차](../tools/design-harness/README.md), [하네스 설계](../docs/design-harness.md), [기술 결정](../docs/TDD.md), [구현 계획](../docs/superpowers/plans/2026-11-13-design-harness-cli.md)을 갱신했다. 앱의 Node 22.13+ 요구사항과 CLI의 Node 20+ 요구사항을 분리했다.
 - 검증: 초기 미구현 테스트 실패 확인 후 구현. Node 22.17.0 `npm test` 및 Node 20.20.2 직접 실행에서 각각 15개 통과. 승인 변경·상하위 의존성·손상 기록 보존·경로 탈출·심볼릭 링크·쓰기 잠금을 검사했다. 독립 검토도 중요 문제 없이 15개 테스트 통과. 앱 타입 검사, 로컬 문서 링크 11개, `git diff --check` 통과. 실제 저장소 check는 아직 `work/bugmap`이 없어 PRD 누락 및 종료 코드 1을 반환함을 확인했다. UI 변경이 없어 캡처는 수행하지 않았다.
 - 남은 일: 의미·디자인 품질·실제 Figma 검증, 조건부 승인 정책, `stages.json` 영속화·원본 입력 추적·산출물 버전 사본 보관·승인자 인증은 후속 구현이다. 현재 `passed`는 구조 검사 범위의 통과다.
+
+## 2026-11-13 — 단계별 생성·검사 및 Playwright 캡처 비교
+
+- 완료: [CLI 0.2.0 사용법](../tools/design-harness/README.md)에 맞춰 `refs:capture`(레퍼런스 PNG·출처/viewport/해시), `wireframe`(JSON→편집 가능한 SVG·실제 PNG), `design-md`(tokens/components/copy→DESIGN.md), `lint:web`(실제 계산된 색·글자 크기·44px 버튼·금지 문구), `review`(사람 점수/메모·입력 해시), `handoff`(승인 버전·구현 메모·미해결 항목→HANDOFF.md/manifest)를 구현했다. check/approve가 필수 산출물·현재 입력/출력 해시·lint 위반·최신 리뷰를 검사한다. 기존 파일 재생성은 --force가 필요하고, 루트 DESIGN.md·제품 UI는 변경하지 않았다.
+- 기술: Node 20·외부 npm 런타임 의존성 없음. 캡처/웹 검사는 설치된 Chromium의 별도 임시 프로필과 CDP pipe를 사용한다. [기술 결정](../docs/TDD.md)·[설계](../docs/design-harness.md)·[구현 계획](../docs/superpowers/plans/2026-11-13-design-harness-stages.md)을 갱신했다. 리뷰 최소 점수는 구현 기본 4/5이며 프로젝트 설정으로 조정한다.
+- 검증: Node 20.20.2의 전체 npm test 26개 통과(브라우저 테스트 skip 0). 실제 localhost/Chrome으로 캡처·CSS 상속·반응형·가상 요소·분할된 금지 문구·승인된 전달 흐름을 확인했다. Node 22의 단계/승인 테스트 및 앱 타입 검사, 로컬 문서 링크 12개, diff 검사를 통과했다. 독립 검토의 captures 화면 ID 오판과 visibility:visible 자식 검사 누락을 수정했다. visibility 문제는 실제 브라우저의 실패→성공을 확인했고, captures 회귀 테스트는 기존 잘못된 휴리스틱을 일시 복구하면 실패하고 수정 코드에서는 통과함을 별도 확인했다.
+- Playwright: 사용자 요청에 따라 [별도 QA 비교 스크립트](../tools/design-harness/qa/README.md)를 추가했다. Playwright 1.65.0은 저장소 의존성을 바꾸지 않고 임시 설치했다. 390×844 [실제 캡처](/private/tmp/design-harness-qa/playwright-web/actual.png)·[diff](/private/tmp/design-harness-qa/playwright-web/diff.png)에서 하네스 캡처와 234픽셀(0.07109%) 차이를 확인했으며 일부 글리프 주변에 차이가 보인다. 같은 Playwright 설정의 재캡처는 [차이 0개](/private/tmp/design-harness-qa/playwright-repeat/comparison.json)였다. 와이어프레임 PNG도 열어 한글·배치·잘림을 확인했다. 이들은 테스트용 임시 산출물이며 곤충맵 실제 디자인 검증이 아니다.
+- 남은 일: 클릭 후 상태·키보드 흐름·닫힌 shadow DOM·이미지 픽셀·네이티브·실제 Figma 및 요구사항/화면 커버리지 검증, stages.json 영속화·버전 사본·인증된 검토자·조건부 승인 정책은 별도 구현이다.

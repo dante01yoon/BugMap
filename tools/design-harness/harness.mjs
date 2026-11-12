@@ -1,40 +1,15 @@
-import { lstatSync, readdirSync, readFileSync, openSync, closeSync, writeFileSync, renameSync, unlinkSync, realpathSync } from 'node:fs';
+import { inspectStage } from './stage-checks.mjs';
+import { safeStat } from './io.mjs';
+import { readdirSync, readFileSync, openSync, closeSync, writeFileSync, renameSync, unlinkSync, realpathSync } from 'node:fs';
 import { resolve, join, relative, sep } from 'node:path';
 import { createHash, randomUUID } from 'node:crypto';
 
-// Directory requirements end in '/'. All files in each stage enter its snapshot,
-// including optional files, so additions and removals change approval validity.
-export const stages = [
-  { id: 'prd', dir: '01-prd', approval: true, files: ['PRD.md', 'requirements.csv'] },
-  { id: 'research', dir: '02-research', files: ['sources.md', 'findings.md', 'recommendations.md'] },
-  { id: 'structure', dir: '03-structure', files: ['screens.csv', 'flows.mmd', 'states.csv'] },
-  { id: 'wireframes', dir: '04-wireframes', approval: true, files: ['review.md', 'captures/'] },
-  { id: 'design-system', dir: '05-design-system', approval: true, files: ['tokens.json', 'components.md', 'icons.csv', 'preview.svg', 'captures/'] },
-  { id: 'figma', dir: '06-figma', files: ['node-map.json', 'change-log.md', 'captures/'] },
-  { id: 'validation', dir: '07-validation', approval: true, files: ['coverage.csv', 'report.md', 'issues.csv', 'captures/'] },
-  { id: 'handoff', dir: '08-handoff', approval: true, files: ['README.md', 'implementation-notes.md', 'assets/', 'manifest.json', 'open-items.md'] },
-];
+import { stages } from './stage-definitions.mjs';
+export { stages };
 
 export function projectPath(root, project) {
   if (!/^[a-zA-Z0-9][a-zA-Z0-9_-]*$/.test(project)) throw new Error('Invalid project ID');
   return join(realpathSync(resolve(root)), 'work', project);
-}
-
-// Check each component, including work/project/control, before reading or writing.
-function safeStat(path) {
-  const absolute = resolve(path);
-  const parts = absolute.split(sep).filter(Boolean);
-  let current = sep;
-  for (const part of parts) {
-    current = join(current, part);
-    let stat;
-    try { stat = lstatSync(current); }
-    catch (error) { if (error.code === 'ENOENT') return null; throw error; }
-    if (stat.isSymbolicLink()) throw new Error(`symlink not allowed: ${current}`);
-    if (current === absolute) return stat;
-    if (!stat.isDirectory()) throw new Error(`Not a directory: ${current}`);
-  }
-  return lstatSync(absolute);
 }
 
 function inspectFile(base, path, hashes, issues) {
@@ -108,9 +83,7 @@ export function check(base) {
         if (!Object.keys(hashes).some(path => path.startsWith(key))) issues.push(`Empty or missing directory: ${key}`);
       } else if (!(key in hashes)) issues.push(`Missing file: ${key}`);
     }
-    if (stage.id === 'wireframes' && !Object.keys(hashes).some(path => /^04-wireframes\/[^/]+\/[^/]+\.svg$/.test(path) && !path.startsWith('04-wireframes/captures/'))) {
-      issues.push('Missing wireframe: 04-wireframes/<screen>/<state>.svg');
-    }
+    issues.push(...inspectStage(base, stage, upstreamApprovals));
     Object.assign(files, hashes);
     const structurallyReady = issues.length === 0;
     const latest = [...log.approvals].reverse().find(entry => entry.stage === stage.id);
@@ -134,7 +107,7 @@ export function check(base) {
   });
   return { currentStage: results.find(stage => stage.status !== 'passed')?.stage ?? null,
     complete: results.every(stage => stage.status === 'passed'),
-    scope: 'Structural checks only; content, design and Figma verification remain manual.', stages: results };
+    scope: 'Artifact, capture, token, web lint and human-review checks; product behavior and Figma verification remain manual.', stages: results };
 }
 
 export function approve(base, stageName, by) {

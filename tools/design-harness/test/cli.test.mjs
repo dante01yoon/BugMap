@@ -1,25 +1,15 @@
+import { fillPipeline } from './fixtures.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtempSync, mkdirSync, writeFileSync, readFileSync, rmSync, existsSync, symlinkSync } from 'node:fs';
+import { realpathSync, mkdtempSync, mkdirSync, writeFileSync, readFileSync, rmSync, existsSync, symlinkSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
 
 const cli = fileURLToPath(new URL('../bin/design-harness', import.meta.url));
-// Literal fixtures deliberately do not import production stage definitions.
-const artifacts = [
-  ['01-prd/PRD.md', '01-prd/requirements.csv'],
-  ['02-research/sources.md', '02-research/findings.md', '02-research/recommendations.md'],
-  ['03-structure/screens.csv', '03-structure/flows.mmd', '03-structure/states.csv'],
-  ['04-wireframes/map/default.svg', '04-wireframes/captures/map.png', '04-wireframes/review.md'],
-  ['05-design-system/tokens.json', '05-design-system/components.md', '05-design-system/icons.csv', '05-design-system/preview.svg', '05-design-system/captures/map.png'],
-  ['06-figma/node-map.json', '06-figma/change-log.md', '06-figma/captures/map.png'],
-  ['07-validation/coverage.csv', '07-validation/report.md', '07-validation/issues.csv', '07-validation/captures/map.png'],
-  ['08-handoff/README.md', '08-handoff/implementation-notes.md', '08-handoff/assets/map.svg', '08-handoff/manifest.json', '08-handoff/open-items.md'],
-];
 function fixture(t) {
-  const root = mkdtempSync(join(tmpdir(), 'design-harness-'));
+  const root = mkdtempSync(join(realpathSync(tmpdir()), 'design-harness-'));
   t.after(() => rmSync(root, { recursive: true, force: true }));
   const project = join(root, 'work', 'demo');
   function put(path, content = path.endsWith('.json') ? '{}' : 'evidence\n') {
@@ -38,10 +28,7 @@ function fixture(t) {
     const result = run('approve', String(stage), '--by', '민수');
     assert.equal(result.status, 0, result.stderr);
   }
-  function fill() {
-    put('README.md'); put('control/project.json', '{"id":"demo"}'); put('control/decisions.md');
-    for (const paths of artifacts) for (const path of paths) put(path);
-  }
+  function fill() { fillPipeline(project); }
   return { root, project, put, run, check, approve, fill };
 }
 
@@ -71,6 +58,7 @@ test('all mandatory approvals are needed before completion; check is read only',
   const f = fixture(t); f.fill();
   for (const n of [1, 4, 5, 7]) f.approve(n);
   assert.equal(f.check().currentStage, 'handoff');
+  assert.equal(f.run('handoff', '--force').status, 0);
   f.approve(8);
   const before = readFileSync(join(f.project, 'control/approvals.json'), 'utf8');
   assert.equal(f.check().currentStage, null);
@@ -104,7 +92,7 @@ test('empty required files, malformed JSON and empty capture directories do not 
   f.put('01-prd/PRD.md', '   ');
   assert.notEqual(f.run('approve', '1', '--by', '민수').status, 0);
   f.put('01-prd/PRD.md'); f.approve(1);
-  rmSync(join(f.project, '04-wireframes/captures/map.png'));
+  rmSync(join(f.project, '04-wireframes/captures/map/default.png'));
   assert.ok(f.check().stages[3].issues.some(s => s.includes('captures')));
   f.put('05-design-system/tokens.json', '{');
   assert.ok(f.check().stages[4].issues.some(s => s.includes('tokens.json')));

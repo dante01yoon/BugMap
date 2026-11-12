@@ -1,50 +1,67 @@
 #!/usr/bin/env node
 import { check, approve, projectPath } from '../harness.mjs';
+import { createDesignMD } from '../documents.mjs';
+import { recordReview } from '../reviews.mjs';
+import { createHandoff } from '../handoff.mjs';
+import { captureRefs, createWireframes, lintWeb } from '../browser-commands.mjs';
 
-const usage = `design-harness check [--project <ID>] [--root <repository>] [--json]
-design-harness approve <1..8|stage-ID> --by <name> [--project <ID>] [--root <repository>]
-Stage IDs: prd, research, structure, wireframes, design-system, figma, validation, handoff
-Defaults: --project bugmap, --root current directory`;
+const commands = {
+  check: ['--json'], approve: ['--by'], 'refs:capture': ['--browser', '--force', '--json'],
+  wireframe: ['--browser', '--force', '--json'], 'design-md': ['--force', '--json'],
+  'lint:web': ['--browser', '--force', '--json'], review: ['--by', '--score', '--notes', '--json'],
+  handoff: ['--force', '--json'],
+};
+const usage = `design-harness <command> [options]\nCommands:
+  check [--json]
+  approve <1..8|stage-ID> --by <name>
+  refs:capture [--browser <Chromium executable>] [--force]
+  wireframe [--browser <Chromium executable>] [--force]
+  design-md [--force]
+  lint:web [--browser <Chromium executable>] [--force]
+  review <1..8|stage-ID> --by <name> --score <0..5> --notes <text>
+  handoff [--force]
+All commands: --project <ID> (default bugmap), --root <repository> (default cwd)
+Stage IDs: prd, research, structure, wireframes, design-system, figma, validation, handoff`;
 try {
   const args = process.argv.slice(2);
-  if (!args.length || (args.length === 1 && ['--help', '-h'].includes(args[0]))) {
-    console.log(usage);
-  } else {
+  if (!args.length || (args.length === 1 && ['--help', '-h'].includes(args[0]))) console.log(usage);
+  else {
     const command = args.shift();
-    if (!['check', 'approve'].includes(command)) throw new Error(`Unknown command: ${command}`);
-    const stage = command === 'approve' ? args.shift() : undefined;
-    if (command === 'approve' && (!stage || stage.startsWith('-'))) throw new Error('Stage is required');
-    const options = { root: process.cwd(), project: 'bugmap' };
-    const seen = new Set();
+    if (!Object.hasOwn(commands, command)) throw new Error(`Unknown command: ${command}`);
+    const staged = ['approve', 'review'].includes(command);
+    const stage = staged ? args.shift() : undefined;
+    if (staged && (!stage || stage.startsWith('-'))) throw new Error('Stage is required');
+    const options = { root: process.cwd(), project: 'bugmap' }, seen = new Set();
     while (args.length) {
       const flag = args.shift();
-      if (!['--root', '--project', ...(command === 'approve' ? ['--by'] : ['--json'])].includes(flag) || seen.has(flag)) {
-        throw new Error(`Unknown or duplicate option: ${flag}`);
-      }
+      if (!['--root', '--project', ...commands[command]].includes(flag) || seen.has(flag)) throw new Error(`Unknown or duplicate option: ${flag}`);
       seen.add(flag);
-      if (flag === '--json') { options.json = true; continue; }
+      if (['--json', '--force'].includes(flag)) { options[flag.slice(2)] = true; continue; }
       const value = args.shift();
       if (!value?.trim() || value.startsWith('--')) throw new Error(`Value required: ${flag}`);
       options[flag.slice(2)] = value;
     }
     const base = projectPath(options.root, options.project);
-    if (command === 'approve') {
-      const result = approve(base, stage, options.by);
-      console.log(`Approved ${result.stage} by ${result.by} (${result.id})`);
-    } else {
+    if (command === 'check') {
       const report = check(base);
       if (options.json) console.log(JSON.stringify(report, null, 2));
       else {
-        console.log(`Project: ${options.project}\nCurrent stage: ${report.currentStage ?? 'complete (structural)'}\n${report.scope}`);
+        console.log(`Project: ${options.project}\nCurrent stage: ${report.currentStage ?? 'complete (configured checks)'}\n${report.scope}`);
         for (const stage of report.stages) {
           console.log(`${stage.number}. ${stage.stage}: ${stage.status}`);
           for (const issue of stage.issues) console.log(`   - ${issue}`);
         }
       }
       process.exitCode = report.complete ? 0 : 1;
+    } else if (command === 'approve') {
+      const entry = approve(base, stage, options.by);
+      console.log(`Approved ${entry.stage} by ${entry.by} (${entry.id})`);
+    } else {
+      const actions = { 'refs:capture': captureRefs, wireframe: createWireframes, 'design-md': createDesignMD,
+        'lint:web': lintWeb, handoff: createHandoff, review: (base, options) => recordReview(base, stage, options) };
+      const result = await actions[command](base, options);
+      console.log(options.json ? JSON.stringify(result, null, 2) : `${command}: ${JSON.stringify(result)}`);
+      if (command === 'lint:web' && result.runs.some(run => run.issues.length)) process.exitCode = 1;
     }
   }
-} catch (error) {
-  console.error(`design-harness: ${error.message}`);
-  process.exitCode = 2;
-}
+} catch (error) { console.error(`design-harness: ${error.message}`); process.exitCode = 2; }
