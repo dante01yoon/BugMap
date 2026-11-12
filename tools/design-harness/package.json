@@ -1,0 +1,9 @@
+{
+  "name": "design-harness",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "bin": { "design-harness": "bin/design-harness" },
+  "scripts": { "test": "node --test test/*.test.mjs" }
+}

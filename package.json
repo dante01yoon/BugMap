@@ -7,6 +7,8 @@
     "node": ">=22.13.0"
   },
   "scripts": {
+    "design-harness": "node tools/design-harness/bin/design-harness",
+    "test": "node --test tools/design-harness/test/*.test.mjs",
     "start": "expo start",
     "ios": "expo start --ios",
     "android": "expo start --android",

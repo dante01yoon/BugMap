@@ -33,6 +33,7 @@
 | TD-09 | **권장:** 카카오·Google 공통, iOS에 Apple 추가 | 두 OS에서 같은 제공자로 다시 로그인할 수 있고 iOS 로그인 선택지도 마련한다. | 출시 OS와 대상 사용자층이 정해지면 버튼 수를 조정. |
 | TD-10 | **프론트 초기 선택:** Expo SDK 58 + TypeScript, React 19.3 / React Native 0.88.1 | 2026-11-09 로그인 UI 작업에서 공식 SDK 표·템플릿 기준으로 설정했다. Expo Go·웹에서 공통 화면을 확인할 기반이며 사용자 확정 기술인 React Native를 유지한다. | 웹 번들·타입 검사는 통과했다. 네이티브 기기 실행은 미검증이며 Expo 호환성 확인은 오프라인 로컬 맵에서 SVG 패치 버전 차이를 보고했다. |
 | TD-11 | **채택:** UI 아이콘은 `lucide-react-native` 컴포넌트로 표시하고 `react-native-svg`를 렌더러로 사용한다. 아이콘 모양 선택은 [Lucide 아이콘 카탈로그](https://lucide.dev/icons)를 기준으로 한다. | 사용자가 Figma 아이콘을 사용하지 말고 Lucide를 기준으로 선택하라고 요청했다. 트리 셰이킹되는 React Native 컴포넌트로 개별 아이콘만 불러온다. | 실제 Expo 호환성은 네트워크가 복구된 뒤 설치 및 번들로 검증한다. |
+| TD-12 | **채택:** 디자인 하네스 CLI는 `tools/design-harness`의 별도 Node 20+ ESM 패키지, 외부 의존성 없음. | 사용자 지정 런타임을 Expo 앱의 Node 22.13+ 요구사항과 분리한다. `node:fs`·`node:crypto`로 검사·SHA-256 승인을 처리하고 `node:test`로 검증한다. | 전체 디자인 품질 검증·Figma 자동화·신원 인증은 후속 범위. [사용법](../tools/design-harness/README.md) |
 
 ### 프론트 초기 구현 상태 · 2026-11-09
 

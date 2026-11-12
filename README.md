@@ -26,6 +26,7 @@ npm run export:web
 - `docs/DESIGN.md`: 공통 디자인 지침과 토큰.
 - `docs/screens/`: 메인 지도·기록 작성·로그인 화면 명세.
 - `docs/design-harness.md`: AI 디자인 플러그인의 단계·산출물·승인 설계.
+- `tools/design-harness/`: Node 20+ 독립 CLI. [사용법과 승인 계약](tools/design-harness/README.md).
 
 - `App.tsx`, `index.ts`: 앱 진입점, 상태바·안전 영역 설정.
 - `src/features/auth/LoginScreen.tsx`: 브랜드, 소셜 버튼, 보조 동작·안내.
@@ -46,3 +47,15 @@ npm run export:web
 Expo 버전 조합은 [SDK 호환 표](https://docs.expo.dev/versions/latest/)와 [SDK 58 TypeScript 템플릿](https://github.com/expo/expo/blob/sdk-58/templates/expo-template-blank-typescript/package.json), 안전 영역은 [공식 문서](https://docs.expo.dev/versions/latest/sdk/safe-area-context/)를 기준으로 작성했습니다. 실제 설치 호환성은 아직 확인하지 못했습니다.
 
 UI 아이콘은 Figma에서 복사하지 않고 [Lucide 아이콘](https://lucide.dev/icons)을 `lucide-react-native` 컴포넌트로 사용합니다. React Native 렌더링은 `react-native-svg`에 의존합니다.
+
+## 디자인 하네스 CLI
+
+하네스만 실행할 때는 Node 20 이상이면 되고 `npm install`이 필요하지 않습니다. 앱의 Node 22.13 이상 요구사항은 그대로입니다.
+
+```sh
+npm run design-harness -- check --project bugmap
+npm run design-harness -- approve prd --by "검토자 이름" --project bugmap
+npm test
+```
+
+`check`는 `work/<프로젝트>/`의 누락 파일과 현재 단계를 출력합니다. 승인한 파일이나 상위 입력이 바뀌면 승인은 유효하지 않게 됩니다. 아직 산출물을 작성하지 않은 프로젝트는 첫 단계의 누락 목록을 출력하고 종료 코드 1을 반환합니다. 실제 디자인 품질·Figma 검증은 별도로 수행해야 합니다.

@@ -67,3 +67,10 @@
 - 반영: 공통·화면별 디자인 문서 분리와 [디자인 하네스 명세](../docs/design-harness.md), AGENTS·README 안내, [.codex/config.toml](../.codex/config.toml)의 프로젝트 Git 쓰기 권한 설정을 함께 커밋한다. 앞선 커밋 실패 기록의 후속 작업이다.
 - 검증: 로컬 문서 링크 56개와 `git diff --check` 통과. 설정 내용은 직접 검토했으나 시스템 Python에 `tomllib`이 없어 TOML 파서 검증은 수행하지 못했다. 앱 코드·UI 변경이 없어 실행·캡처 검증은 수행하지 않았다.
 - 남은 일: 하네스 플러그인 구현과 기존 기기 검증 항목은 별도 후속 작업이다.
+
+## 2026-11-13 — design-harness CLI 뼈대
+
+- 완료: [독립 Node 20 패키지](../tools/design-harness/package.json), [검사·승인 코어](../tools/design-harness/harness.mjs), [CLI](../tools/design-harness/bin/design-harness), [통합 테스트](../tools/design-harness/test/cli.test.mjs)를 작성했다. `check`는 현재 단계·누락·오류·승인 유효성을 읽기 전용으로 판정한다. `approve <단계> --by <이름>`은 `work/<프로젝트>/control/approvals.json`에 SHA-256·승인자·UTC 시각·선행 승인 ID를 추가하며, 파일 추가·수정·삭제와 선행 재승인 시 승인이 무효화된다. 외부 의존성은 추가하지 않았다.
+- 문서: [사용법·JSON 계약·복구 절차](../tools/design-harness/README.md), [하네스 설계](../docs/design-harness.md), [기술 결정](../docs/TDD.md), [구현 계획](../docs/superpowers/plans/2026-11-13-design-harness-cli.md)을 갱신했다. 앱의 Node 22.13+ 요구사항과 CLI의 Node 20+ 요구사항을 분리했다.
+- 검증: 초기 미구현 테스트 실패 확인 후 구현. Node 22.17.0 `npm test` 및 Node 20.20.2 직접 실행에서 각각 15개 통과. 승인 변경·상하위 의존성·손상 기록 보존·경로 탈출·심볼릭 링크·쓰기 잠금을 검사했다. 독립 검토도 중요 문제 없이 15개 테스트 통과. 앱 타입 검사, 로컬 문서 링크 11개, `git diff --check` 통과. 실제 저장소 check는 아직 `work/bugmap`이 없어 PRD 누락 및 종료 코드 1을 반환함을 확인했다. UI 변경이 없어 캡처는 수행하지 않았다.
+- 남은 일: 의미·디자인 품질·실제 Figma 검증, 조건부 승인 정책, `stages.json` 영속화·원본 입력 추적·산출물 버전 사본 보관·승인자 인증은 후속 구현이다. 현재 `passed`는 구조 검사 범위의 통과다.

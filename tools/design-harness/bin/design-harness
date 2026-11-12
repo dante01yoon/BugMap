@@ -1,0 +1,50 @@
+#!/usr/bin/env node
+import { check, approve, projectPath } from '../harness.mjs';
+
+const usage = `design-harness check [--project <ID>] [--root <repository>] [--json]
+design-harness approve <1..8|stage-ID> --by <name> [--project <ID>] [--root <repository>]
+Stage IDs: prd, research, structure, wireframes, design-system, figma, validation, handoff
+Defaults: --project bugmap, --root current directory`;
+try {
+  const args = process.argv.slice(2);
+  if (!args.length || (args.length === 1 && ['--help', '-h'].includes(args[0]))) {
+    console.log(usage);
+  } else {
+    const command = args.shift();
+    if (!['check', 'approve'].includes(command)) throw new Error(`Unknown command: ${command}`);
+    const stage = command === 'approve' ? args.shift() : undefined;
+    if (command === 'approve' && (!stage || stage.startsWith('-'))) throw new Error('Stage is required');
+    const options = { root: process.cwd(), project: 'bugmap' };
+    const seen = new Set();
+    while (args.length) {
+      const flag = args.shift();
+      if (!['--root', '--project', ...(command === 'approve' ? ['--by'] : ['--json'])].includes(flag) || seen.has(flag)) {
+        throw new Error(`Unknown or duplicate option: ${flag}`);
+      }
+      seen.add(flag);
+      if (flag === '--json') { options.json = true; continue; }
+      const value = args.shift();
+      if (!value?.trim() || value.startsWith('--')) throw new Error(`Value required: ${flag}`);
+      options[flag.slice(2)] = value;
+    }
+    const base = projectPath(options.root, options.project);
+    if (command === 'approve') {
+      const result = approve(base, stage, options.by);
+      console.log(`Approved ${result.stage} by ${result.by} (${result.id})`);
+    } else {
+      const report = check(base);
+      if (options.json) console.log(JSON.stringify(report, null, 2));
+      else {
+        console.log(`Project: ${options.project}\nCurrent stage: ${report.currentStage ?? 'complete (structural)'}\n${report.scope}`);
+        for (const stage of report.stages) {
+          console.log(`${stage.number}. ${stage.stage}: ${stage.status}`);
+          for (const issue of stage.issues) console.log(`   - ${issue}`);
+        }
+      }
+      process.exitCode = report.complete ? 0 : 1;
+    }
+  }
+} catch (error) {
+  console.error(`design-harness: ${error.message}`);
+  process.exitCode = 2;
+}
