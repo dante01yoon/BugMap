@@ -1,0 +1,5 @@
+name,purpose,catalog_url,source
+Bug,브랜드와 곤충 기록,https://lucide.dev/icons/bug,lucide-react-native1.70.0
+Camera,사진 기록 가치,https://lucide.dev/icons/camera,lucide-react-native1.70.0
+MapPin,위치 기록 가치,https://lucide.dev/icons/map-pin,lucide-react-native1.70.0
+LoaderCircle,버튼밖 진행상태,https://lucide.dev/icons/loader-circle,lucide-react-native1.70.0

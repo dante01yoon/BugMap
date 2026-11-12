@@ -96,3 +96,51 @@
 - 완료: lint:figma는 화면/상태 매핑·노드 계약·색/글자 크기·금지 문구·44px 조작 영역·자동 레이아웃·기록된 컴포넌트를 검사한다. check가 현재 입력으로 재계산하므로 보고서 누락/변경/위반은 후속 승인·handoff를 막는다. [플러그인](../tools/design-harness/plugin.json)과 [마켓플레이스](../.agents/plugins/marketplace.json)에 CLI·스킬·역할 지침을 묶었다. 설치 두 명령은 FIGMA.md에 있다.
 - 검증: 실패 테스트 확인 후 구현. Node 22 전체 35/35 통과(실제 Chromium 포함, skip 0). Node 20 승인/단계 회귀 33/33 및 최신 Figma/설치 테스트 9/9 통과(중복 포함). 임시 Codex 설정에서 marketplace add → plugin add 및 설치본 CLI/세 훅 명령을 확인했다. 타입 검사·번들 일치·문서 로컬 링크·diff 검사 통과. 독립 검토 Important/Critical 없음. 숫자 파일 키/시각 거부도 실패→수정→통과 확인했다. UI 변경이 없어 새 제품 캡처 검수는 해당하지 않는다.
 - 남은 일/한계: 사용하는 환경에 플러그인 설치·활성화 후 사용자가 훅을 직접 검토/신뢰해야 작동한다. 실제 원격 Figma 작업·노드 재내보내기·시각 검수·사용자 환경 신뢰 승인은 이번에 수행하지 않았다. 로컬 JSON은 원격 진위/최신성·실제 변수 바인딩·동작을 인증하지 않는다. 사람 승인/리뷰 대행·전역 설정 변경·원격 push는 하지 않았다.
+
+## 2026-11-13 — 로그인 화면 하네스 첫 실행 · PRD 승인 대기
+
+- 진행: 사용자 요청의 현재 Figma 페이지 로그인 재디자인을 [bugmap-login 실행](../work/bugmap-login/README.md)으로 시작했다. 참조 대화를 read_thread로 읽고 실제 연결 BugMap/Page 1(0:1) 및 기존 로그인 1:2·2:2를 조회했다. [현재 원격 캡처](../work/bugmap-login/01-prd/baseline/) 두 개를 새로 저장하고 직접 열었다. 기존 Figma 노드/앱 코드는 변경하지 않았다.
+- 준비: [로그인 PRD](../work/bugmap-login/01-prd/PRD.md), 요구사항 CSV, 원본 문서 SHA-256·대상 파일/보존 범위·제안/충돌 기록·[재개 메모](../work/bugmap-login/control/flow.md)를 작성했다. 새 맥락 design_critic의 [비평 원문](../work/bugmap-login/01-prd/critique.md)을 보존했다. 판정 ready, 약관/정책 동작 CSV 추적성 경미 지적 1건은 구조 단계 대응 필요로 남겼다.
+- 검증: check는 prd=awaiting_approval/canApprove=true, 후속 단계 blocked. 원본 문서 해시 일치 및 diff 검사 통과. [직접 정책 함수 진단](../work/bugmap-login/control/harness-diagnostic.json)에서 시스템 미승인 Figma 쓰기 deny와 Stop 현재 단계 반환을 확인했다. 실제 MCP 쓰기 시도나 자동 runtime 훅 차단 검증은 하지 않았다. 플러그인 목록 installed=[]로 현재 자동 훅 적용은 확인되지 않았다. 브리지의 읽기 도구 일부도 쓰기로 분류되는 보완점을 기록했다.
+- 남은 일: 사람이 로그인 범위·제공자·브랜드 공식 자산 예외를 검토하고 approve prd --project bugmap-login --by 본인명 실행. 유효 승인 후 research부터 순차 진행하고 4·5·7·8 사람 승인도 지킨다. 새 로그인 디자인/Figma 편집·최신 브랜드 리서치·노드 lint·최종 전달은 미완료다. 사람 승인/리뷰 대행, 훅 자동 신뢰, 전역 설치, 커밋은 수행하지 않았다.
+
+## 2026-11-13 — 로그인 리서치·구조·와이어프레임 · 4단계 승인 대기
+
+- 확인: 사용자 직접 PRD 승인(jungmin, ID 20dc1b08-a6d8-487f-87cb-9c6c9464ce9b)이 현재 입력 해시와 일치해 passed임을 확인하고 순차 재개했다. 사람 승인/리뷰를 에이전트가 생성·수정하지 않았다.
+- 완료: [공식 자료 리서치](../work/bugmap-login/02-research/sources.md), 실제 PNG 3개·실패 보존 1개, 관찰·추천·한계를 작성했다. 새 맥락 비평 ready 및 기계 검사 통과. 승인 PRD의 일반 UI Lucide/브랜드 공식 자산 예외를 [공통 기준](../docs/DESIGN.md)·[로그인 기준](../docs/screens/login.md)에 반영했다. 착수 해시는 보존하고 변경 후 해시·승인 근거를 control/flow.md에 기록했다.
+- 준비: [두 크기·10상태 전체 비교](../work/bugmap-login/04-wireframes/index.html), [행동·요구사항 추적](../work/bugmap-login/03-structure/behavior.md), SVG 20개·실제 PNG 20개·검수/해시를 작성했다. 상태 문구에서 기술 주석을 분리했다. 새 맥락 비평가가 20 PNG를 모두 직접 확인했다. 정책 검토판 전이 CSV 두 셀의 경미 불일치를 수정한 뒤 다른 새 맥락 비평에서 ready를 확인했다. [최초 비평](../work/bugmap-login/04-wireframes/critique.md)·[변경 범위 비평](../work/bugmap-login/04-wireframes/critique-transition.md) 원문을 보존했다. 상태표의 지원정보 분기 요약 명료화는 비차단 경미 제안으로 남으며 상세 flows/behavior가 구현 기준이다.
+- 검증: prd/research/structure passed, wireframes awaiting_approval/canApprove=true. PNG·SVG 40개 증거 해시 일치, CSV·JSON 20상태쌍 대조, 버튼 48px·조작 영역 44px 이상·두 화면 경계, 비교 페이지 로컬 링크 63개 및 diff 검사 통과. 조정자도 대표 기본/컴팩트·로딩·오류·미지원·정책 캡처를 직접 열었다. 제품 코드 변경이 없어 앱 테스트는 반복하지 않았다.
+- 남은 일: 사람이 wireframes 승인을 직접 실행한 뒤 시스템 단계로 진행한다. 공식 브랜드 원본 자산·한국어 Apple·최종 색/폰트·실제 Figma 새 프레임은 아직 미작성이다. 인증 SDK·동적 스크롤·실기기 접근성·정책 링크·최종 검증은 미완료다. 자동 훅 설치/신뢰, 원격 Figma 쓰기·기존 노드 변경·커밋은 수행하지 않았다. [재개 메모](../work/bugmap-login/control/flow.md)에 사람 명령과 미검증 항목을 남겼다.
+
+## 2026-11-13 — 로그인 디자인 시스템 · 5단계 승인 대기
+
+- 확인: jungmin의 와이어프레임 승인(ID df0fd77a-a4a2-4800-b7e3-a9392d037a8b)이 현재 산출물과 일치한다. 1~4단계 passed를 확인한 뒤 05-design-system만 진행했다.
+- 준비: [시스템·상태 검토 페이지](../work/bugmap-login/05-design-system/index.html), [대표 화면](../work/bugmap-login/05-design-system/captures/390x844-default.png), [컴포넌트 보드](../work/bugmap-login/05-design-system/captures/components-board.png), tokens/components/copy JSON·생성 DESIGN.md·실제 PNG 23개를 작성했다. 카카오·네이버는 사용자 제공 원본, Apple은 공식 한국어 버튼 API 원본을 사용했다. 네이버는 검정 문구의 공식 흰색형을 선택하고 녹색형의 3.09:1 대비 한계를 분리했다. [출처·배율](../work/bugmap-login/05-design-system/asset-sources.md)과 [자체 검수](../work/bugmap-login/05-design-system/self-check.md)에 실제 대체 폰트·한계를 기록했다.
+- 검토: 전체 새 맥락 비평 ready에서 발견한 복구 버튼의 2px 너비 차이를 최소 CSS 수정으로 해결했다. 390px에서 173/173×48px, 360px에서 158/158×48px를 재렌더로 확인했다. 사용량 제한으로 중단된 변경 범위 비평을 새 맥락에서 재개해 ready/수정 필요 없음으로 완료했다. [전체 비평](../work/bugmap-login/05-design-system/critique.md)·[변경 범위 비평](../work/bugmap-login/05-design-system/critique-recovery.md) 원문을 보존했다.
+- 검증: 20상태 렌더 검사 이슈 0, 로컬 HTML의 실제 클릭 전이 3개 통과. 입력/산출물 해시 149개 일치와 사용자 원본 78개 변경 없음을 조정자도 확인했다. 수정된 오류 화면 두 크기를 직접 열었다. 기계 check는 design-system awaiting_approval/canApprove=true, 이후 단계 blocked다. 제품 코드 변경이 없어 앱 테스트는 반복하지 않았다.
+- 남은 일: 사람이 시스템 시각 방향을 승인해야 Figma 단계로 진행한다. 자동 훅 설치/신뢰·브리지 읽기 도구 분류·공식 PNG의 IMAGE-fill lint 지원은 후속 과제이며 아직 해결됐다고 주장하지 않는다. 실제 Figma 편집·최종 검증·인증 SDK·실기기 접근성·정책 연결은 미완료다. 사람 승인/리뷰 대행·사용자 자산 변경·기존 Figma 노드 변경·커밋은 수행하지 않았다. 재개 명령과 사람 승인 명령은 [flow.md](../work/bugmap-login/control/flow.md)에 있다.
+# 2026-11-13 — 정식 Figma 대상 확인·준비 코드 보완
+
+- 사용자 URL의 정식 파일 키 `LynbxdW8Qf7TavCrPLd2nY`를 공식 Figma get_metadata로 확인. 기존5루트 ID/위치/크기 일치. 응답: `work/bugmap-login/06-figma/official-metadata.xml`.
+- CLI/플러그인0.3.1: manifest 기반 공식 PNG 이미지 매핑 검사, 회전/불투명도/비율 검사, 브리지 조회 도구 분류, Finder 일반 `.DS_Store` 해시 제외. 사람 로그는 변경하지 않음.
+- 검증: npm test39/39(skip0, 실제 Chromium 포함), bundle-skills --check, git diff --check 통과. 독립 코드 검토와 수정: `work/bugmap-login/06-figma/prerequisite-review.md`.
+- 정식 대상 등록은 실제 공통 입력 변경이므로1·4·5 사람 재승인 대기. 기존 승인 대비 차이는 `control/figma.json`만 확인(`06-figma/target-check.json`). 이전 설정/변경 이유/재개 명령은 control/history/·figma-target-update.md·flow.md. 05 시스템 원본과 기존 승인 로그 유지.
+- 남은 일: 사람 재승인 확인 뒤 새 Figma 프레임·실제 원격 노드/캡처·대응HTML·lint·독립 비평·사람 검증7. 원격 쓰기0건. 자동 훅 설치/신뢰도 아직 미확인. 전체 디자인 작업 완료 아님.
+
+## 2026-11-13 — 로그인 Figma 생성, 검증은 호출 한도로 중단
+
+- 사용자 재승인 후 실제 check에서1~5 passed를 확인했다. 정식 BugMap Page1에 새 로그인20프레임(두크기×10상태), 토큰76·텍스트스타일7·컴포넌트/세트를 공식 Figma 도구로 생성했다. 기본390: https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-26 / 기본360: node-id=72-631. 기존5루트는쓰기범위에서제외했다.
+- 증거: work/bugmap-login/06-figma/README.md·change-log.md·screen-ledger.json·node-map.json. 공식PNG2개와기존bridge원격PNG20개를저장. 담당자와새맥락비평가는20상태모두직접열었다. 조정자는기본/오류/로딩/미지원/정책대표를직접열었다. 상세raw는8/20만재조회(nodes.partial.json).
+- 차단: 공식서버Starter MCP호출한도(quota-blocker.json). 미완료raw를nodes.json으로위장하지않았다. 복구버튼390의172/174→173/173(360목표158/158)·로딩아이콘회색보정도남음. 준비한pending-repair.js는미실행. 전체Figma lint/웹lint·실제인증·프로토타입·기기접근성·사람검증7미완료. 추가승인은현재필요없다.
+- 비평: critique-partial.md원문blocked,시각잘림/브랜드왜곡중요발견없음. 매핑20행/capture/HTML경로존재와rawExported8/12를조정자확인해critique-response.md에별도기록. 수정/전체내보내기뒤새맥락재검토필요.
+- 코드검증: 실제가드의work일반파일ENOTDIR와native인스턴스자손ID지원문제를실패테스트후수정. 전체npm test41/41(skip0),bundle검사,diff검사통과. 독립코드리뷰Important/Critical없음(prerequisite-review.md). 자동가드플러그인설치/신뢰는미확인,쓰기는매번로컬정책검사후수행했다. 과금변경·사람기록대행·기존bridge쓰기없음.
+- 재개: control/flow.md와change-log.md순서대로한도/대상/승인확인→실제보정→20루트원격raw·이미지매핑·캡처갱신→lint/새비평→사람검증7. 단계6과전체프로젝트를완료로기록하지않는다.
+
+## 2026-11-13 — Talk To Figma 연결 후 부분 보정·전체 검증 차단
+
+- 사용자 채널 t0852evy로 설치된 로컬 MCP SDK/stdio 서버를 연결했다. Talk 도구가 현재 세션에 직접 노출되지 않아 절대 bun/server 경로를 사용했고 localhost3055는 샌드박스 밖 실행으로 성공했다. 플러그인/전역 설정은 변경하지 않았다.
+- 실제 Page0:1의 보존5루트·신규28루트 대조 및 로컬가드검사 뒤 오류4화면의 복구8INSTANCE를 보정했다.390은173/173px,360은158/158px,높이48px을 실제 전후 조회로 확인했다. 최신PNG20개를 재캡처하고 담당자는 전부, 조정자는 오류2크기·로딩 대표를 직접 열었다.20PNG SHA와20매핑 확인 및 diff검사 통과.
+- 산출물: [실행·검수보고](../work/bugmap-login/06-figma/talk-repair-report.md), talk-repair-log.json·전후응답·captures/talk/·갱신 README/node-map/capture-manifest/change-log. 실행스크립트06/scripts/talk-repair.mjs.
+- 남은 일: Talk가 VECTOR·boundVariables·imageRef·layoutMode를 생략하고 실제 execute_code를 제공하지 않아 전체raw nodes.json 미완료. LoaderCircle secondary바인딩도 보존 가능한 도구가 필요하다. 최신check는1~5passed,6in_progress(nodes.json누락),7~8blocked다. 기존partial raw는 과거증거로 보존하고 수정4루트 rawExported=false로 구분했다. 전체lint·7단계·사람승인대행은 진행하지 않았다. 연결 보완 후 재개사항은 [flow](../work/bugmap-login/control/flow.md)에 기록했다.
+- 독립 비평: [원문](../work/bugmap-login/06-figma/critique-talk-repair.md), 오류4·기본2·로딩1 직접 이미지 확인,20PNG해시일치. 수리범위ready/전체6blocked. fileKey직접확인·비필터raw부족은미검증으로유지.
+- 최종 메타데이터 별도 새맥락 [비평](../work/bugmap-login/06-figma/critique-talk-metadata.md)은 지정문서범위ready.20매핑·20PNG해시·과거raw구분일치. 전체6blocked유지.

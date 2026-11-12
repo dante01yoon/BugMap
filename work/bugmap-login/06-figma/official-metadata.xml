@@ -1,0 +1,599 @@
+<canvas id="0:1" name="Page 1" x="0" y="0" width="0" height="0">
+  <frame id="1:2" name="01 · 로그인 / iOS" x="120" y="120" width="390" height="844">
+    <text id="1:4" name="Status / Time" x="24" y="16" width="30" height="17" />
+    <rounded-rectangle id="1:5" name="Status / Battery" x="342" y="20" width="24" height="11" />
+    <rounded-rectangle id="1:6" name="Status / Battery cap" x="367" y="23" width="2" height="5" />
+    <rounded-rectangle id="1:7" name="Status / Signal" x="316" y="27" width="3" height="4" />
+    <rounded-rectangle id="1:8" name="Status / Signal" x="321" y="25" width="3" height="6" />
+    <rounded-rectangle id="1:9" name="Status / Signal" x="326" y="23" width="3" height="8" />
+    <rounded-rectangle id="1:10" name="Status / Signal" x="331" y="21" width="3" height="10" />
+    <frame id="1:11" name="Brand / 곤충맵" x="16" y="64" width="358" height="32">
+      <frame id="1:12" name="Brand / Map pin" x="0" y="0" width="32" height="32" />
+      <text id="1:16" name="Brand / Wordmark" x="44" y="0" width="64" height="28" />
+      <text id="1:17" name="Brand / Descriptor" x="244" y="10" width="84" height="15" />
+    </frame>
+    <frame id="1:18" name="Hero / 관찰 지도" x="16" y="124" width="358" height="256">
+      <ellipse id="1:19" name="Map / Park north" x="-40" y="-70" width="240" height="220" />
+      <ellipse id="1:20" name="Map / Park south" x="230" y="150" width="210" height="180" />
+      <line id="1:21" name="Map / Trail A" x="-5" y="190" width="370.8735466003418" height="149.842631816864" />
+      <line id="1:22" name="Map / Trail B" x="80" y="-15" width="179.73088681697845" height="276.7612820863724" />
+      <line id="1:23" name="Map / Trail C" x="270" y="-20" width="36.56080216169357" height="297.76384234428406" />
+      <line id="1:24" name="Map / Path" x="18" y="128" width="275.74618101119995" height="48.6214941740036" />
+      <text id="1:25" name="Map / Park label" x="24" y="28" width="120" height="15" />
+      <ellipse id="1:26" name="Map / Observation dot" x="64" y="160" width="12" height="12" />
+      <ellipse id="1:27" name="Map / Observation dot" x="296" y="78" width="12" height="12" />
+      <frame id="1:28" name="Map / Beetle marker" x="137" y="61" width="88" height="104" />
+      <frame id="1:42" name="Map / Observation preview" x="100" y="178" width="222" height="56">
+        <ellipse id="1:43" name="Preview / Live dot" x="18" y="24" width="8" height="8" />
+        <text id="1:44" name="Preview / Name" x="38" y="10" width="135" height="15" />
+        <text id="1:45" name="Preview / Metadata" x="38" y="30" width="131" height="12" />
+      </frame>
+    </frame>
+    <frame id="1:46" name="Introduction" x="16" y="408" width="358" height="136">
+      <text id="1:47" name="Headline" x="0" y="0" width="211" height="80" />
+      <text id="1:48" name="Description" x="0" y="92" width="209" height="44" />
+    </frame>
+    <frame id="1:49" name="Authentication / Social providers" x="16" y="576" width="358" height="168">
+      <frame id="1:50" name="Button / Kakao" x="0" y="0" width="358" height="48">
+        <ellipse id="1:51" name="Kakao / Bubble" x="22" y="15" width="20" height="15" />
+        <regular-polygon id="1:52" name="Kakao / Tail" x="23" y="25" width="8" height="7" />
+        <text id="1:53" name="Label" x="64" y="14" width="230" height="20" />
+        <ellipse id="1:65" name="Background / Left cap" x="0" y="0" width="48" height="48" />
+        <rounded-rectangle id="1:66" name="Background / Center" x="24" y="0" width="310" height="48" />
+        <ellipse id="1:67" name="Background / Right cap" x="310" y="0" width="48" height="48" />
+      </frame>
+      <frame id="1:54" name="Button / Google" x="0" y="60" width="358" height="48">
+        <text id="1:55" name="Google / Mark" x="23" y="11" width="16" height="25" />
+        <text id="1:56" name="Label" x="64" y="14" width="230" height="20" />
+      </frame>
+      <frame id="1:57" name="Button / Apple" x="0" y="120" width="358" height="48">
+        <ellipse id="1:58" name="Apple / Left lobe" x="24" y="20" width="13" height="15" />
+        <ellipse id="1:59" name="Apple / Right lobe" x="30" y="20" width="13" height="15" />
+        <ellipse id="1:60" name="Apple / Leaf" x="32" y="14" width="8.847522258758545" height="7.865219831466675" />
+        <ellipse id="1:61" name="Apple / Bite" x="39" y="20" width="6" height="7" />
+        <text id="1:62" name="Label" x="64" y="14" width="230" height="20" />
+      </frame>
+    </frame>
+    <text id="1:63" name="Terms / Notice" x="16" y="764" width="358" height="20" />
+    <rounded-rectangle id="1:64" name="System / Home indicator" x="128" y="823" width="134" height="5" />
+  </frame>
+  <frame id="2:2" name="Html → Body → Main" x="556" y="138" width="390" height="884">
+    <frame id="2:3" name="Container" x="0" y="0" width="390" height="804.75">
+      <frame id="2:4" name="Header &amp; Brand Showcase" x="0" y="0" width="390" height="216">
+        <frame id="2:5" name="Overlay+Border" x="163" y="32" width="64" height="64">
+          <frame id="2:6" name="Container" x="20" y="19.833332061767578" width="24" height="24.33333396911621">
+            <vector id="2:7" name="Icon" x="0" y="0" width="24" height="24.33333396911621" />
+          </frame>
+        </frame>
+        <frame id="2:8" name="Margin" x="156.97000122070312" y="96" width="76.05999755859375" height="37">
+          <frame id="2:9" name="Container" x="0" y="16" width="76.05999755859375" height="21">
+            <frame id="2:10" name="Heading 1" x="0" y="0" width="76.05999755859375" height="21">
+              <text id="2:11" name="Text" x="0" y="0" width="76.05999755859375" height="21" />
+            </frame>
+          </frame>
+        </frame>
+        <frame id="2:12" name="Margin" x="47.67999267578125" y="133" width="294.6400146484375" height="25">
+          <frame id="2:13" name="Container" x="0" y="4" width="294.6400146484375" height="21">
+            <text id="2:14" name="Text" x="0" y="0" width="294.6400146484375" height="21" />
+          </frame>
+        </frame>
+        <frame id="2:15" name="Margin" x="55" y="158" width="280" height="46">
+          <frame id="2:16" name="Container" x="0" y="4" width="280" height="42">
+            <text id="2:17" name="Text" x="4.55999755859375" y="0" width="270.8800048828125" height="42" />
+          </frame>
+        </frame>
+      </frame>
+      <frame id="2:18" name="Interactive Feature Highlights Carousel / Cards:margin" x="0" y="216" width="390" height="231">
+        <frame id="2:19" name="Interactive Feature Highlights Carousel / Cards" x="0" y="8" width="390" height="223">
+          <frame id="2:20" name="Container" x="0" y="0" width="390" height="207">
+            <frame id="2:21" name="Background+Border" x="16" y="0" width="319.79998779296875" height="199">
+              <frame id="2:22" name="Container" x="17" y="17" width="285.79998779296875" height="44">
+                <frame id="2:23" name="Overlay" x="0" y="0" width="44" height="44">
+                  <frame id="2:24" name="Container" x="12" y="12" width="20" height="20">
+                    <vector id="2:25" name="Icon" x="0" y="0" width="20" height="20" />
+                  </frame>
+                </frame>
+                <frame id="2:26" name="Background" x="207.9499969482422" y="0" width="77.83999633789062" height="29">
+                  <text id="2:27" name="Text" x="10" y="4" width="57.84000015258789" height="21" />
+                </frame>
+              </frame>
+              <frame id="2:28" name="Margin" x="17" y="61" width="285.79998779296875" height="79">
+                <frame id="2:29" name="Container" x="0" y="12" width="285.79998779296875" height="67">
+                  <frame id="2:30" name="Container" x="0" y="0" width="285.79998779296875" height="21">
+                    <text id="2:31" name="Text" x="0" y="0" width="126.41999816894531" height="21" />
+                    <frame id="2:32" name="Container" x="130.4199981689453" y="3.75" width="13.5" height="13.5">
+                      <vector id="2:33" name="Icon" x="0" y="0" width="13.5" height="13.5" />
+                    </frame>
+                  </frame>
+                  <frame id="2:34" name="Container" x="0" y="25" width="285.79998779296875" height="42">
+                    <text id="2:35" name="우리 동네 장수풍뎅이, 사슴벌레 서식지를 한눈에 확인하고 안심 탐사 경로를 안내받으세요." x="0" y="0" width="285.79998779296875" height="42" />
+                  </frame>
+                </frame>
+              </frame>
+              <frame id="2:36" name="Margin" x="17" y="140" width="285.79998779296875" height="42">
+                <frame id="2:37" name="HorizontalBorder" x="0" y="12" width="285.79998779296875" height="30">
+                  <frame id="2:38" name="Container" x="0" y="9" width="88.2300033569336" height="21">
+                    <rounded-rectangle id="2:39" name="Background" x="0" y="6.5" width="8" height="8" />
+                    <text id="2:40" name="Text" x="14" y="0" width="74.2300033569336" height="21" />
+                  </frame>
+                  <frame id="2:41" name="Container" x="213.9499969482422" y="9" width="71.83999633789062" height="21">
+                    <text id="2:42" name="Text" x="0" y="0" width="71.83999633789062" height="21" />
+                  </frame>
+                </frame>
+              </frame>
+            </frame>
+            <frame id="2:43" name="Background+Border" x="347.79998779296875" y="0" width="319.79998779296875" height="199">
+              <frame id="2:44" name="Container" x="17" y="17" width="285.79998779296875" height="44">
+                <frame id="2:45" name="Overlay" x="0" y="0" width="44" height="44">
+                  <frame id="2:46" name="Container" x="12" y="13" width="20" height="18">
+                    <vector id="2:47" name="Icon" x="0" y="0" width="20" height="18" />
+                  </frame>
+                </frame>
+                <frame id="2:48" name="Background" x="205.55999755859375" y="0" width="80.2300033569336" height="29">
+                  <text id="2:49" name="Text" x="10" y="4" width="60.22999954223633" height="21" />
+                </frame>
+              </frame>
+              <frame id="2:50" name="Margin" x="17" y="61" width="285.79998779296875" height="79">
+                <frame id="2:51" name="Container" x="0" y="12" width="285.79998779296875" height="67">
+                  <frame id="2:52" name="Container" x="0" y="0" width="285.79998779296875" height="21">
+                    <text id="2:53" name="Text" x="0" y="0" width="113.83999633789062" height="21" />
+                    <frame id="2:54" name="Container" x="117.83999633789062" y="2.25" width="16.5" height="16.5">
+                      <vector id="2:55" name="Icon" x="0" y="0" width="16.5" height="16.5" />
+                    </frame>
+                  </frame>
+                  <frame id="2:56" name="Container" x="0" y="25" width="285.79998779296875" height="42">
+                    <text id="2:57" name="야외에서 촬영한 사진 한 장으로 학명, 형태적 특 징, 계절별 서식 습성을 즉시 분석합니다." x="0" y="0" width="285.79998779296875" height="42" />
+                  </frame>
+                </frame>
+              </frame>
+              <frame id="2:58" name="Margin" x="17" y="140" width="285.79998779296875" height="42">
+                <frame id="2:59" name="HorizontalBorder" x="0" y="12" width="285.79998779296875" height="30">
+                  <frame id="2:60" name="Container" x="0" y="9" width="103.99019622802734" height="21">
+                    <frame id="2:61" name="Container" x="0" y="4.666666507720947" width="11.090195655822754" height="11.666666984558105">
+                      <vector id="2:62" name="Icon" x="0" y="0" width="11.090195655822754" height="11.666666984558105" />
+                    </frame>
+                    <text id="2:63" name="Text" x="15.080195426940918" y="0" width="88.91000366210938" height="21" />
+                  </frame>
+                  <frame id="2:64" name="Container" x="213.94998168945312" y="9" width="71.83999633789062" height="21">
+                    <text id="2:65" name="Text" x="0" y="0" width="71.83999633789062" height="21" />
+                  </frame>
+                </frame>
+              </frame>
+            </frame>
+            <frame id="2:66" name="Background+Border" x="679.5900268554688" y="0" width="319.79998779296875" height="199">
+              <frame id="2:67" name="Container" x="17" y="17" width="285.79998779296875" height="44">
+                <frame id="2:68" name="Overlay" x="0" y="0" width="44" height="44">
+                  <frame id="2:69" name="Container" x="10.994999885559082" y="12" width="22.010000228881836" height="20">
+                    <vector id="2:70" name="Icon" x="0" y="0" width="22.010000228881836" height="20" />
+                  </frame>
+                </frame>
+                <frame id="2:71" name="Background" x="197.35000610351562" y="0" width="88.44999694824219" height="29">
+                  <text id="2:72" name="Text" x="10" y="4" width="68.44999694824219" height="21" />
+                </frame>
+              </frame>
+              <frame id="2:73" name="Margin" x="17" y="61" width="285.79998779296875" height="79">
+                <frame id="2:74" name="Container" x="0" y="12" width="285.79998779296875" height="67">
+                  <frame id="2:75" name="Container" x="0" y="0" width="285.79998779296875" height="21">
+                    <text id="2:76" name="Text" x="0" y="0" width="203.72000122070312" height="21" />
+                    <frame id="2:77" name="Container" x="207.72000122070312" y="2.625" width="16.5" height="15.75">
+                      <vector id="2:78" name="Icon" x="0" y="0" width="16.5" height="15.75" />
+                    </frame>
+                  </frame>
+                  <frame id="2:79" name="Container" x="0" y="25" width="285.79998779296875" height="42">
+                    <text id="2:80" name="건강한 유충·성충 무료 나눔과 검증된 브리더의 사 육 가이드를 실시간으로 나눠보세요." x="0" y="0" width="285.79998779296875" height="42" />
+                  </frame>
+                </frame>
+              </frame>
+              <frame id="2:81" name="Margin" x="17" y="140" width="285.79998779296875" height="42">
+                <frame id="2:82" name="HorizontalBorder" x="0" y="12" width="285.79998779296875" height="30">
+                  <frame id="2:83" name="Container" x="0" y="9" width="95.77999877929688" height="21">
+                    <frame id="2:84" name="Container" x="0" y="7" width="14" height="7">
+                      <vector id="2:85" name="Icon" x="0" y="0" width="14" height="7" />
+                    </frame>
+                    <text id="2:86" name="Text" x="18" y="0" width="77.77999877929688" height="21" />
+                  </frame>
+                  <frame id="2:87" name="Container" x="220.49000549316406" y="9" width="65.30999755859375" height="21">
+                    <text id="2:88" name="Text" x="0" y="0" width="65.30999755859375" height="21" />
+                  </frame>
+                </frame>
+              </frame>
+            </frame>
+          </frame>
+          <frame id="2:89" name="Carousel Indicator Dots" x="0" y="217" width="390" height="6">
+            <rounded-rectangle id="2:90" name="Button" x="171" y="0" width="24" height="6" />
+            <rounded-rectangle id="2:91" name="Button" x="201" y="0" width="6" height="6" />
+            <rounded-rectangle id="2:92" name="Button" x="213" y="0" width="6" height="6" />
+          </frame>
+        </frame>
+      </frame>
+      <frame id="2:93" name="Login Section: Tactile Social Action Hub:margin" x="0" y="447" width="390" height="357.75">
+        <frame id="2:94" name="Login Section: Tactile Social Action Hub" x="0" y="20" width="390" height="337.75">
+          <frame id="2:95" name="Button" x="16" y="0" width="358" height="48">
+            <frame id="2:96" name="SVG" x="71.8499984741211" y="14" width="20" height="20" />
+            <frame id="2:98" name="Container" x="101.8499984741211" y="13.5" width="184.3000030517578" height="21">
+              <text id="2:99" name="Text" x="0" y="0" width="184.3000030517578" height="21" />
+            </frame>
+          </frame>
+          <frame id="2:100" name="Button" x="16" y="58" width="358" height="48">
+            <frame id="2:101" name="SVG" x="104.52999877929688" y="16" width="16" height="16" />
+            <frame id="2:103" name="Container" x="130.52999877929688" y="13.5" width="122.94000244140625" height="21">
+              <text id="2:104" name="Text" x="0" y="0" width="122.94000244140625" height="21" />
+            </frame>
+          </frame>
+          <frame id="2:105" name="Button" x="16" y="116" width="358" height="48">
+            <frame id="2:106" name="SVG" x="105.54499816894531" y="16" width="16" height="16">
+              <frame id="2:107" name="SVG" x="0" y="0" width="16" height="14" />
+            </frame>
+            <frame id="2:109" name="Container" x="131.5449981689453" y="13.5" width="120.91000366210938" height="21">
+              <text id="2:110" name="Text" x="0" y="0" width="120.91000366210938" height="21" />
+            </frame>
+          </frame>
+          <frame id="2:111" name="Margin" x="16" y="174" width="358" height="29">
+            <frame id="2:112" name="Container" x="0" y="8" width="358" height="21">
+              <frame id="2:113" name="Button" x="23.69666290283203" y="0" width="133.11000061035156" height="21">
+                <frame id="2:114" name="Container" x="0" y="0" width="133.11000061035156" height="21">
+                  <text id="2:115" name="Text" x="0" y="0" width="133.11000061035156" height="21" />
+                </frame>
+              </frame>
+              <rounded-rectangle id="2:116" name="Background" x="172.80667114257812" y="8.5" width="4" height="4" />
+              <frame id="2:117" name="Button" x="192.80667114257812" y="0" width="141.49667358398438" height="21">
+                <frame id="2:118" name="Container" x="0" y="0" width="128.8300018310547" height="21">
+                  <text id="2:119" name="Text" x="0" y="0" width="128.8300018310547" height="21" />
+                </frame>
+                <frame id="2:120" name="Container" x="130.8300018310547" y="5.166666507720947" width="10.666666984558105" height="10.666666984558105">
+                  <vector id="2:121" name="Icon" x="0" y="0" width="10.666666984558105" height="10.666666984558105" />
+                </frame>
+              </frame>
+            </frame>
+          </frame>
+          <frame id="2:122" name="Margin" x="16" y="213" width="358" height="55">
+            <frame id="2:123" name="Background+Border" x="0" y="12" width="358" height="43">
+              <frame id="2:124" name="Container" x="18.192001342773438" y="11" width="95.37999725341797" height="21">
+                <frame id="2:125" name="Container" x="0" y="4.25" width="10" height="12.5">
+                  <vector id="2:126" name="Icon" x="0" y="0" width="10" height="12.5" />
+                </frame>
+                <frame id="2:127" name="Container" x="16" y="0" width="79.37999725341797" height="21">
+                  <text id="2:128" name="Text" x="0" y="0" width="79.37999725341797" height="21" />
+                </frame>
+              </frame>
+              <rounded-rectangle id="2:129" name="Vertical Divider" x="123.95600128173828" y="15.5" width="1" height="12" />
+              <frame id="2:130" name="Container" x="135.33999633789062" y="11" width="120.11000061035156" height="21">
+                <frame id="2:131" name="Container" x="0" y="4.25" width="10" height="12.5">
+                  <vector id="2:132" name="Icon" x="0" y="0" width="10" height="12.5" />
+                </frame>
+                <frame id="2:133" name="Container" x="16" y="0" width="104.11000061035156" height="21">
+                  <text id="2:134" name="Text" x="0" y="0" width="104.11000061035156" height="21" />
+                </frame>
+              </frame>
+              <rounded-rectangle id="2:135" name="Vertical Divider" x="265.833984375" y="15.5" width="1" height="12" />
+              <frame id="2:136" name="Container" x="277.2179870605469" y="11" width="62.59000015258789" height="21">
+                <frame id="2:137" name="Container" x="0" y="4.25" width="10" height="12.5">
+                  <vector id="2:138" name="Icon" x="0" y="0" width="10" height="12.5" />
+                </frame>
+                <frame id="2:139" name="Container" x="16" y="0" width="46.59000015258789" height="21">
+                  <text id="2:140" name="Text" x="0" y="0" width="46.59000015258789" height="21" />
+                </frame>
+              </frame>
+            </frame>
+          </frame>
+          <frame id="2:141" name="Margin" x="16" y="278" width="358" height="43.75">
+            <frame id="2:142" name="Container" x="0" y="6.940000057220459" width="358" height="36.810001373291016">
+              <text id="2:143" name="Text" x="41.16999816894531" y="0" width="275.6600036621094" height="36" />
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+    </frame>
+  </frame>
+  <frame id="4:150" name="02 · 메인 / 발견 지도" x="1030" y="138" width="390" height="844">
+    <rounded-rectangle id="4:151" name="지도 배경 / 지형·도로 모식도" x="0" y="0" width="390" height="844" />
+    <frame id="4:145" name="Panel / 검색과 탐색" x="8" y="612" width="374" height="224">
+      <frame id="4:154" name="Search / 곤충 또는 지역" x="16" y="32" width="342" height="48">
+        <ellipse id="4:206" name="Search / Glass" x="18" y="15" width="15" height="15" />
+        <line id="4:207" name="Icon / Stroke" x="31" y="28" width="5.656854629516602" height="5.656854629516602" />
+        <text id="4:208" name="Search / Placeholder" x="48" y="15" width="192" height="17" />
+      </frame>
+      <frame id="4:167" name="Navigation / 지도 활성" x="17" y="146" width="64" height="54" />
+      <rounded-rectangle id="4:205" name="Sheet / Handle" x="166" y="12" width="42" height="4" />
+      <text id="4:209" name="Summary / Heading" x="20" y="97" width="139" height="17" />
+      <text id="4:210" name="Summary / Count" x="178" y="97" width="17" height="17" />
+      <text id="4:211" name="Summary / List" x="272" y="99" width="48" height="15" />
+      <line id="4:212" name="Icon / Stroke" x="333" y="102" width="3.535534143447876" height="3.535534143447876" />
+      <line id="4:213" name="Icon / Stroke" x="336.5" y="105.5" width="3.535534143447876" height="3.535534143447876" />
+      <text id="4:214" name="Summary / Privacy" x="20" y="120" width="137" height="12" />
+      <rounded-rectangle id="4:215" name="System / Home indicator" x="120" y="214" width="134" height="4" />
+      <vector id="4:216" name="Navigation / 지도 아이콘" x="38" y="154" width="22" height="22" />
+      <vector id="4:217" name="Navigation / 기록 아이콘" x="107" y="155" width="22" height="20" />
+      <vector id="4:218" name="Navigation / 커뮤니티 아이콘" x="177" y="155" width="22" height="20" />
+      <vector id="4:219" name="Navigation / 채팅 아이콘" x="248" y="156" width="22" height="20" />
+      <ellipse id="4:220" name="Navigation / Profile head" x="321" y="154" width="10" height="10" />
+      <line id="4:221" name="Icon / Stroke" x="317" y="174" width="18" height="0" />
+      <line id="4:222" name="Icon / Stroke" x="317" y="168" width="0" height="6" />
+      <line id="4:223" name="Icon / Stroke" x="335" y="168" width="0" height="6" />
+      <text id="4:224" name="Navigation / 지도" x="21" y="182" width="56" height="14" />
+      <text id="4:225" name="Navigation / 내 기록" x="90" y="182" width="56" height="14" />
+      <text id="4:226" name="Navigation / 커뮤니티" x="160" y="182" width="56" height="14" />
+      <text id="4:227" name="Navigation / 채팅" x="230" y="182" width="56" height="14" />
+      <text id="4:228" name="Navigation / 마이" x="300" y="182" width="56" height="14" />
+    </frame>
+    <frame id="4:152" name="Header / 현재 탐색 지역" x="16" y="58" width="278" height="58">
+      <vector id="4:176" name="Brand / Bug" x="16" y="16" width="24" height="24" />
+      <text id="4:177" name="Location / Title" x="52" y="10" width="101" height="19" />
+      <text id="4:178" name="Location / Supporting" x="52" y="33" width="137" height="12" />
+      <line id="4:179" name="Icon / Stroke" x="249" y="26" width="4.5962666273117065" height="3.856725811958313" />
+      <line id="4:180" name="Icon / Stroke" x="254" y="30" width="4.5962666273117065" height="3.856725811958313" />
+    </frame>
+    <frame id="4:153" name="Control / 지도 레이어" x="326" y="63" width="48" height="48" />
+    <frame id="4:155" name="Control / 내 위치" x="16" y="544" width="48" height="48" />
+    <frame id="4:157" name="Action / 발견 기록하기" x="214" y="544" width="160" height="48">
+      <line id="4:202" name="Icon / Stroke" x="20" y="24" width="14" height="0" />
+      <line id="4:203" name="Icon / Stroke" x="27" y="17" width="0" height="14" />
+      <text id="4:204" name="Action / Label" x="44" y="15" width="81" height="17" />
+    </frame>
+    <frame id="4:159" name="Marker / 관찰 기록 7" x="42" y="185" width="98" height="36">
+      <ellipse id="4:187" name="Marker / Dot" x="13" y="14" width="8" height="8" />
+      <text id="4:188" name="Marker / Count" x="29" y="10" width="35" height="16" />
+    </frame>
+    <frame id="4:161" name="Marker / 채집 기록 3" x="264" y="257" width="98" height="36">
+      <ellipse id="4:189" name="Marker / Dot" x="13" y="14" width="8" height="8" />
+      <text id="4:190" name="Marker / Count" x="29" y="10" width="36" height="16" />
+    </frame>
+    <frame id="4:163" name="Marker / 관찰 기록 5" x="47" y="384" width="98" height="36">
+      <ellipse id="4:191" name="Marker / Dot" x="13" y="14" width="8" height="8" />
+      <text id="4:192" name="Marker / Count" x="29" y="10" width="36" height="16" />
+    </frame>
+    <frame id="4:165" name="Marker / 선택된 관찰 기록" x="147" y="337" width="210" height="62">
+      <vector id="4:193" name="Marker / Insect" x="14" y="19" width="22" height="22" />
+      <text id="4:194" name="Marker / Species" x="47" y="11" width="78" height="17" />
+      <text id="4:195" name="Marker / Discovery time" x="47" y="34" width="107" height="13" />
+    </frame>
+    <text id="4:169" name="System / Time" x="24" y="18" width="30" height="17" />
+    <rounded-rectangle id="4:170" name="System / Battery" x="342" y="22" width="24" height="10" />
+    <rounded-rectangle id="4:171" name="System / Battery cap" x="367" y="25" width="2" height="4" />
+    <rounded-rectangle id="4:172" name="System / Signal" x="316" y="29" width="3" height="3" />
+    <rounded-rectangle id="4:173" name="System / Signal" x="321" y="27" width="3" height="5" />
+    <rounded-rectangle id="4:174" name="System / Signal" x="326" y="25" width="3" height="7" />
+    <rounded-rectangle id="4:175" name="System / Signal" x="331" y="23" width="3" height="9" />
+    <text id="4:182" name="Map label / 서울숲" x="120" y="273" width="45" height="19" />
+    <text id="4:183" name="Map label / 성수동" x="280" y="165" width="36" height="16" />
+    <text id="4:184" name="Map label / 응봉동" x="32" y="132" width="31" height="13" />
+    <text id="4:185" name="Map label / 한강" x="161" y="469" width="31" height="16" />
+    <text id="4:186" name="Map label / 성수대교" x="240" y="456" width="34" height="11" />
+    <ellipse id="4:196" name="Location / Radius" x="194" y="298" width="38" height="38" />
+    <ellipse id="4:197" name="Location / Outline" x="203" y="307" width="20" height="20" />
+    <ellipse id="4:198" name="Location / Position" x="207" y="311" width="12" height="12" />
+  </frame>
+  <frame id="12:235" name="03 · 발견·채집 기록 / 전체 펼침" x="1970" y="138" width="390" height="1432">
+    <frame id="12:236" name="Header / 뒤로·기록하기" x="0" y="0" width="390" height="104">
+      <frame id="12:237" name="System / 상태바" x="16" y="0" width="358" height="44">
+        <text id="12:238" name="9:41" x="0" y="14" width="27" height="16" />
+        <text id="12:239" name="•••  ▰" x="317" y="14" width="41" height="16" />
+      </frame>
+      <frame id="12:240" name="Navigation / 작성" x="16" y="44" width="358" height="60">
+        <text id="12:241" name="‹" x="0" y="12" width="44" height="36" />
+        <text id="12:242" name="발견·채집 기록" x="124.5" y="19" width="109" height="22" />
+        <text id="12:243" name="닫기" x="314" y="22" width="44" height="16" />
+      </frame>
+    </frame>
+    <frame id="12:244" name="Form / 스크롤 콘텐츠" x="0" y="104" width="390" height="1216">
+      <frame id="12:245" name="01 / 사진 촬영·첨부" x="16" y="12" width="358" height="252">
+        <frame id="12:246" name="Label / 사진으로 남겨요" x="0" y="0" width="358" height="24">
+          <text id="12:247" name="사진으로 남겨요" x="0" y="2.5" width="107" height="19" />
+          <text id="12:248" name="1장 이상 필수" x="296" y="5.5" width="62" height="13" />
+        </frame>
+        <frame id="13:316" name="사진 / 빈 첨부 영역" x="0" y="36" width="358" height="216">
+          <frame id="13:250" name="Icon / Camera" x="157" y="39" width="44" height="32">
+            <frame id="13:251" name="Camera / body" x="7" y="5" width="30" height="22" />
+          </frame>
+          <text id="13:253" name="어떤 곤충을 만났나요?" x="104" y="79" width="150" height="19" />
+          <text id="13:254" name="곤충이 잘 보이는 사진을 남겨주세요" x="89" y="106" width="180" height="15" />
+          <frame id="13:255" name="Actions / 촬영·첨부" x="16" y="129" width="326" height="48">
+            <frame id="13:312" name="촬영하기" x="0" y="0" width="159" height="48">
+              <text id="13:257" name="촬영하기" x="53.5" y="15.5" width="52" height="17" />
+            </frame>
+            <frame id="13:343" name="사진 첨부" x="167" y="0" width="159" height="48">
+              <text id="13:259" name="사진 첨부" x="51.5" y="15.5" width="56" height="17" />
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+      <frame id="13:260" name="02 / 곤충·기록 유형" x="16" y="288" width="358" height="172">
+        <frame id="13:261" name="Label / 무엇을 발견했나요?" x="0" y="0" width="358" height="24">
+          <text id="13:262" name="무엇을 발견했나요?" x="0" y="2.5" width="131" height="19" />
+        </frame>
+        <frame id="13:347" name="Field / 곤충 이름" x="0" y="36" width="358" height="48">
+          <text id="13:264" name="곤충 이름을 입력하세요" x="17" y="15.5" width="137" height="17" />
+          <text id="13:265" name="이름 모름" x="293" y="16.5" width="48" height="15" />
+        </frame>
+        <frame id="13:266" name="Selection / 관찰·채집" x="0" y="96" width="358" height="48">
+          <frame id="13:351" name="◉  관찰했어요" x="0" y="0" width="175" height="48">
+            <text id="13:268" name="◉  관찰했어요" x="45" y="15.5" width="85" height="17" />
+          </frame>
+          <frame id="13:355" name="○  채집했어요" x="183" y="0" width="175" height="48">
+            <text id="13:270" name="○  채집했어요" x="45" y="15.5" width="85" height="17" />
+          </frame>
+        </frame>
+        <text id="13:271" name="이름을 몰라도 발견을 기록할 수 있어요" x="0" y="156" width="194" height="15" />
+      </frame>
+      <frame id="13:272" name="03 / 발견 위치 저장" x="16" y="484" width="358" height="276">
+        <frame id="13:273" name="Label / 어디서 발견했나요?" x="0" y="0" width="358" height="24">
+          <text id="13:274" name="어디서 발견했나요?" x="0" y="2.5" width="131" height="19" />
+          <text id="13:275" name="필수" x="337" y="5.5" width="21" height="13" />
+        </frame>
+        <frame id="13:359" name="Location / 저장할 위치" x="0" y="36" width="358" height="188">
+          <frame id="13:277" name="Map / 위치 미리보기" x="1" y="1" width="358" height="100">
+            <rounded-rectangle id="13:278" name="지도 배경 / 지형·도로 모식도" x="0" y="-170" width="358" height="774" />
+            <frame id="13:386" name="Map / 선택 위치" x="159" y="30" width="40" height="40">
+              <text id="13:280" name="＋" x="8.5" y="6" width="23" height="28" />
+            </frame>
+            <frame id="13:429" name="Control / 현재 위치로 지정" x="294" y="26" width="48" height="48" />
+          </frame>
+          <frame id="13:281" name="Location / 장소와 변경" x="1" y="101" width="358" height="76">
+            <frame id="13:282" name="Location / 주소" x="16" y="14" width="230" height="48">
+              <text id="13:283" name="서울숲" x="0" y="0" width="45" height="19" />
+              <text id="13:284" name="서울 성동구 뚝섬로 273" x="0" y="21" width="120" height="15" />
+            </frame>
+            <text id="13:285" name="변경 ›" x="309" y="30" width="33" height="16" />
+          </frame>
+        </frame>
+        <frame id="13:286" name="Location / 공개 범위" x="0" y="236" width="358" height="40">
+          <text id="13:287" name="위치 공개 범위" x="0" y="12" width="80" height="16" />
+          <text id="13:288" name="대략적인 위치  ⌄" x="269" y="12" width="89" height="16" />
+        </frame>
+      </frame>
+      <frame id="13:289" name="04 / 발견 날짜·시간" x="16" y="784" width="358" height="124">
+        <frame id="13:290" name="Label / 언제 발견했나요?" x="0" y="0" width="358" height="24">
+          <text id="13:291" name="언제 발견했나요?" x="0" y="2.5" width="116" height="19" />
+          <text id="13:292" name="필수" x="337" y="5.5" width="21" height="13" />
+        </frame>
+        <frame id="13:293" name="Fields / 날짜·시간" x="0" y="36" width="358" height="48">
+          <frame id="13:390" name="Date / 발견 날짜" x="0" y="0" width="211" height="48">
+            <text id="13:295" name="2026. 11. 09." x="17" y="15.5" width="84" height="17" />
+            <text id="13:296" name="⌄" x="185" y="14.5" width="9" height="19" />
+          </frame>
+          <frame id="13:394" name="Time / 발견 시간" x="219" y="0" width="139" height="48">
+            <text id="13:298" name="오전 09:41" x="17" y="15.5" width="68" height="17" />
+            <text id="13:299" name="⌄" x="113" y="14.5" width="9" height="19" />
+          </frame>
+        </frame>
+        <text id="13:300" name="게시 시각이 아닌, 실제 발견한 때를 선택해요" x="0" y="96" width="223" height="15" />
+      </frame>
+      <frame id="13:301" name="05 / 관찰 글" x="16" y="932" width="358" height="252">
+        <frame id="13:302" name="Label / 발견의 순간을 들려주세요" x="0" y="0" width="358" height="24">
+          <text id="13:303" name="발견의 순간을 들려주세요" x="0" y="2.5" width="170" height="19" />
+          <text id="13:304" name="선택" x="337" y="5.5" width="21" height="13" />
+        </frame>
+        <frame id="13:398" name="Textarea / 관찰 내용" x="0" y="36" width="358" height="184">
+          <text id="13:306" name="어떤 모습이었나요?
+주변 환경이나 곤충의 행동 등
+기억하고 싶은 이야기를 자유롭게 남겨주세요." x="17" y="17" width="265" height="72" />
+        </frame>
+        <text id="13:307" name="예: 참나무 줄기에서 천천히 움직이고 있었어요." x="0" y="232" width="214" height="13" />
+      </frame>
+    </frame>
+    <frame id="13:308" name="Footer / 기록 저장" x="0" y="1320" width="390" height="112">
+      <text id="13:309" name="사진과 필수 정보를 입력하면 저장할 수 있어요" x="80" y="18.5" width="230" height="15" />
+      <frame id="13:425" name="기록 저장하기" x="16" y="41.5" width="358" height="48">
+        <text id="13:311" name="기록 저장하기" x="138.5" y="15.5" width="81" height="17" />
+      </frame>
+    </frame>
+  </frame>
+  <frame id="13:433" name="03 · 발견·채집 기록 / 모바일" x="1510" y="138" width="390" height="844">
+    <frame id="13:434" name="Header / 뒤로·기록하기" x="0" y="0" width="390" height="104">
+      <frame id="13:435" name="System / 상태바" x="16" y="0" width="358" height="44">
+        <text id="13:436" name="9:41" x="0" y="14" width="27" height="16" />
+        <text id="13:437" name="•••  ▰" x="317" y="14" width="41" height="16" />
+      </frame>
+      <frame id="13:438" name="Navigation / 작성" x="16" y="44" width="358" height="60">
+        <text id="13:439" name="‹" x="0" y="12" width="44" height="36" />
+        <text id="13:440" name="발견·채집 기록" x="124.5" y="19" width="109" height="22" />
+        <text id="13:441" name="닫기" x="314" y="22" width="44" height="16" />
+      </frame>
+    </frame>
+    <frame id="13:514" name="Viewport / 스크롤 영역" x="0" y="104" width="390" height="628">
+      <frame id="13:442" name="Form / 스크롤 콘텐츠" x="0" y="0" width="390" height="1216">
+        <frame id="13:443" name="01 / 사진 촬영·첨부" x="16" y="12" width="358" height="252">
+          <frame id="13:444" name="Label / 사진으로 남겨요" x="0" y="0" width="358" height="24">
+            <text id="13:445" name="사진으로 남겨요" x="0" y="2.5" width="107" height="19" />
+            <text id="13:446" name="1장 이상 필수" x="296" y="5.5" width="62" height="13" />
+          </frame>
+          <frame id="13:447" name="사진 / 빈 첨부 영역" x="0" y="36" width="358" height="216">
+            <frame id="13:448" name="Icon / Camera" x="157" y="39" width="44" height="32">
+              <frame id="13:449" name="Camera / body" x="7" y="5" width="30" height="22" />
+            </frame>
+            <text id="13:451" name="어떤 곤충을 만났나요?" x="104" y="79" width="150" height="19" />
+            <text id="13:452" name="곤충이 잘 보이는 사진을 남겨주세요" x="89" y="106" width="180" height="15" />
+            <frame id="13:453" name="Actions / 촬영·첨부" x="16" y="129" width="326" height="48">
+              <frame id="13:454" name="촬영하기" x="0" y="0" width="159" height="48">
+                <text id="13:455" name="촬영하기" x="53.5" y="15.5" width="52" height="17" />
+              </frame>
+              <frame id="13:456" name="사진 첨부" x="167" y="0" width="159" height="48">
+                <text id="13:457" name="사진 첨부" x="51.5" y="15.5" width="56" height="17" />
+              </frame>
+            </frame>
+          </frame>
+        </frame>
+        <frame id="13:458" name="02 / 곤충·기록 유형" x="16" y="288" width="358" height="172">
+          <frame id="13:459" name="Label / 무엇을 발견했나요?" x="0" y="0" width="358" height="24">
+            <text id="13:460" name="무엇을 발견했나요?" x="0" y="2.5" width="131" height="19" />
+          </frame>
+          <frame id="13:461" name="Field / 곤충 이름" x="0" y="36" width="358" height="48">
+            <text id="13:462" name="곤충 이름을 입력하세요" x="17" y="15.5" width="137" height="17" />
+            <text id="13:463" name="이름 모름" x="293" y="16.5" width="48" height="15" />
+          </frame>
+          <frame id="13:464" name="Selection / 관찰·채집" x="0" y="96" width="358" height="48">
+            <frame id="13:465" name="◉  관찰했어요" x="0" y="0" width="175" height="48">
+              <text id="13:466" name="◉  관찰했어요" x="45" y="15.5" width="85" height="17" />
+            </frame>
+            <frame id="13:467" name="○  채집했어요" x="183" y="0" width="175" height="48">
+              <text id="13:468" name="○  채집했어요" x="45" y="15.5" width="85" height="17" />
+            </frame>
+          </frame>
+          <text id="13:469" name="이름을 몰라도 발견을 기록할 수 있어요" x="0" y="156" width="194" height="15" />
+        </frame>
+        <frame id="13:470" name="03 / 발견 위치 저장" x="16" y="484" width="358" height="276">
+          <frame id="13:471" name="Label / 어디서 발견했나요?" x="0" y="0" width="358" height="24">
+            <text id="13:472" name="어디서 발견했나요?" x="0" y="2.5" width="131" height="19" />
+            <text id="13:473" name="필수" x="337" y="5.5" width="21" height="13" />
+          </frame>
+          <frame id="13:474" name="Location / 저장할 위치" x="0" y="36" width="358" height="188">
+            <frame id="13:475" name="Map / 위치 미리보기" x="1" y="1" width="358" height="100">
+              <rounded-rectangle id="13:476" name="지도 배경 / 지형·도로 모식도" x="0" y="-170" width="358" height="774" />
+              <frame id="13:477" name="Map / 선택 위치" x="159" y="30" width="40" height="40">
+                <text id="13:478" name="＋" x="8.5" y="6" width="23" height="28" />
+              </frame>
+              <frame id="13:479" name="Control / 현재 위치로 지정" x="294" y="26" width="48" height="48" />
+            </frame>
+            <frame id="13:483" name="Location / 장소와 변경" x="1" y="101" width="358" height="76">
+              <frame id="13:484" name="Location / 주소" x="16" y="14" width="230" height="48">
+                <text id="13:485" name="서울숲" x="0" y="0" width="45" height="19" />
+                <text id="13:486" name="서울 성동구 뚝섬로 273" x="0" y="21" width="120" height="15" />
+              </frame>
+              <text id="13:487" name="변경 ›" x="309" y="30" width="33" height="16" />
+            </frame>
+          </frame>
+          <frame id="13:488" name="Location / 공개 범위" x="0" y="236" width="358" height="40">
+            <text id="13:489" name="위치 공개 범위" x="0" y="12" width="80" height="16" />
+            <text id="13:490" name="대략적인 위치  ⌄" x="269" y="12" width="89" height="16" />
+          </frame>
+        </frame>
+        <frame id="13:491" name="04 / 발견 날짜·시간" x="16" y="784" width="358" height="124">
+          <frame id="13:492" name="Label / 언제 발견했나요?" x="0" y="0" width="358" height="24">
+            <text id="13:493" name="언제 발견했나요?" x="0" y="2.5" width="116" height="19" />
+            <text id="13:494" name="필수" x="337" y="5.5" width="21" height="13" />
+          </frame>
+          <frame id="13:495" name="Fields / 날짜·시간" x="0" y="36" width="358" height="48">
+            <frame id="13:496" name="Date / 발견 날짜" x="0" y="0" width="211" height="48">
+              <text id="13:497" name="2026. 11. 09." x="17" y="15.5" width="84" height="17" />
+              <text id="13:498" name="⌄" x="185" y="14.5" width="9" height="19" />
+            </frame>
+            <frame id="13:499" name="Time / 발견 시간" x="219" y="0" width="139" height="48">
+              <text id="13:500" name="오전 09:41" x="17" y="15.5" width="68" height="17" />
+              <text id="13:501" name="⌄" x="113" y="14.5" width="9" height="19" />
+            </frame>
+          </frame>
+          <text id="13:502" name="게시 시각이 아닌, 실제 발견한 때를 선택해요" x="0" y="96" width="223" height="15" />
+        </frame>
+        <frame id="13:503" name="05 / 관찰 글" x="16" y="932" width="358" height="252">
+          <frame id="13:504" name="Label / 발견의 순간을 들려주세요" x="0" y="0" width="358" height="24">
+            <text id="13:505" name="발견의 순간을 들려주세요" x="0" y="2.5" width="170" height="19" />
+            <text id="13:506" name="선택" x="337" y="5.5" width="21" height="13" />
+          </frame>
+          <frame id="13:507" name="Textarea / 관찰 내용" x="0" y="36" width="358" height="184">
+            <text id="13:508" name="어떤 모습이었나요?
+주변 환경이나 곤충의 행동 등
+기억하고 싶은 이야기를 자유롭게 남겨주세요." x="17" y="17" width="265" height="72" />
+          </frame>
+          <text id="13:509" name="예: 참나무 줄기에서 천천히 움직이고 있었어요." x="0" y="232" width="214" height="13" />
+        </frame>
+      </frame>
+    </frame>
+    <frame id="13:510" name="Footer / 기록 저장" x="0" y="732" width="390" height="112">
+      <text id="13:511" name="사진과 필수 정보를 입력하면 저장할 수 있어요" x="80" y="18.5" width="230" height="15" />
+      <frame id="13:512" name="기록 저장하기" x="16" y="41.5" width="358" height="48">
+        <text id="13:513" name="기록 저장하기" x="138.5" y="15.5" width="81" height="17" />
+      </frame>
+    </frame>
+  </frame>
+</canvas>
+IMPORTANT: After you call this tool, you MUST call get_design_context if trying to implement the design, since this tool only returns metadata. If you do not call get_design_context, the agent will not be able to implement the design.

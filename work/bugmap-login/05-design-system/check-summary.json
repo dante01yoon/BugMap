@@ -1,0 +1,91 @@
+{
+  "at": "2026-11-12T20:24:07.864Z",
+  "currentStage": "design-system",
+  "complete": false,
+  "scope": "Artifact, capture, token, web lint and human-review checks; exported Figma node lint; product behavior and visual Figma verification remain manual.",
+  "stages": [
+    {
+      "stage": "prd",
+      "number": 1,
+      "status": "passed",
+      "issues": [],
+      "canApprove": true
+    },
+    {
+      "stage": "research",
+      "number": 2,
+      "status": "passed",
+      "issues": [],
+      "canApprove": true
+    },
+    {
+      "stage": "structure",
+      "number": 3,
+      "status": "passed",
+      "issues": [],
+      "canApprove": true
+    },
+    {
+      "stage": "wireframes",
+      "number": 4,
+      "status": "passed",
+      "issues": [],
+      "canApprove": true
+    },
+    {
+      "stage": "design-system",
+      "number": 5,
+      "status": "awaiting_approval",
+      "issues": [
+        "Approval required: approve design-system --by <name>"
+      ],
+      "canApprove": true
+    },
+    {
+      "stage": "figma",
+      "number": 6,
+      "status": "blocked",
+      "issues": [
+        "Missing file: 06-figma/nodes.json",
+        "Missing file: 06-figma/node-map.json",
+        "Missing file: 06-figma/change-log.md",
+        "Empty or missing directory: 06-figma/captures/",
+        "figma: Missing file: 06-figma/nodes.json",
+        "Previous stage has not passed"
+      ],
+      "canApprove": false
+    },
+    {
+      "stage": "validation",
+      "number": 7,
+      "status": "blocked",
+      "issues": [
+        "Missing file: 07-validation/coverage.csv",
+        "Missing file: 07-validation/report.md",
+        "Missing file: 07-validation/issues.csv",
+        "Missing file: 07-validation/figma-lint.json",
+        "Missing file: 07-validation/web-lint.json",
+        "Missing file: 07-validation/reviews.json",
+        "Empty or missing directory: 07-validation/captures/",
+        "validation: No HTML screens in 06-figma/web/",
+        "Previous stage has not passed"
+      ],
+      "canApprove": false
+    },
+    {
+      "stage": "handoff",
+      "number": 8,
+      "status": "blocked",
+      "issues": [
+        "Missing file: 08-handoff/HANDOFF.md",
+        "Missing file: 08-handoff/implementation-notes.md",
+        "Empty or missing directory: 08-handoff/assets/",
+        "Missing file: 08-handoff/manifest.json",
+        "Missing file: 08-handoff/open-items.md",
+        "handoff: Missing file: 08-handoff/implementation-notes.md",
+        "Previous stage has not passed"
+      ],
+      "canApprove": false
+    }
+  ]
+}

@@ -1,0 +1,839 @@
+{
+  "at": "2026-11-12T20:24:07.912Z",
+  "accessedDate": "2026-11-13 KST",
+  "userOriginalCount": 78,
+  "changedUserFiles": [],
+  "sourceGuide": "asset-sources.md",
+  "files": [
+    {
+      "path": "assets/Kakao Login/.DS_Store",
+      "bytes": 6148,
+      "sha256": "5c09ecab44efcb8bb211cdddd790979e108afd982d64cabe2284bc25014a1606",
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @1x/kakao_login_en_large.png",
+      "bytes": 1016,
+      "sha256": "e9f49861ed9a82311e0ee729bb5625cf76650629d47970fdfabf040ff7ea93e9",
+      "dimensions": {
+        "width": 336,
+        "height": 46
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @1x/kakao_login_en_medium.png",
+      "bytes": 975,
+      "sha256": "de2061253753618b467ea3d934e198a6dee575f22f71be923e58b9226102fef0",
+      "dimensions": {
+        "width": 224,
+        "height": 46
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @1x/kakao_login_en_small.png",
+      "bytes": 589,
+      "sha256": "17acc32d993b76bf91b82a7b0dd1011c04485137a4327aeb0a7fff0e81611d6f",
+      "dimensions": {
+        "width": 112,
+        "height": 46
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @1x/kakao_login_en_xlarge.png",
+      "bytes": 1030,
+      "sha256": "57a75f219190cb0ca0c217cbee951fed158caa13a55a14c25fce059ef2511116",
+      "dimensions": {
+        "width": 448,
+        "height": 46
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @1x/kakao_login_kr_large.png",
+      "bytes": 812,
+      "sha256": "eb9b4e17d54921a1cee79de71439cdc2ff4eb15630b456a10ba6d31990ad32ce",
+      "dimensions": {
+        "width": 336,
+        "height": 46
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @1x/kakao_login_kr_medium.png",
+      "bytes": 782,
+      "sha256": "f1d700e94c96b62b7c6353f8ba1432f510f08873b5ddaa409cf27b0a7b1233b3",
+      "dimensions": {
+        "width": 224,
+        "height": 46
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @1x/kakao_login_kr_small.png",
+      "bytes": 580,
+      "sha256": "e5d5cc5dae29063eec4b8c04bfbb156eebc019ec51913f12c522ab56722d900d",
+      "dimensions": {
+        "width": 112,
+        "height": 46
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @1x/kakao_login_kr_xlarge.png",
+      "bytes": 835,
+      "sha256": "5de527068e2a00cb7314e454f1fabaa976ba56700e5035e695b50f01d4f6661a",
+      "dimensions": {
+        "width": 448,
+        "height": 46
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @1x/kakao_login_light.png",
+      "bytes": 595,
+      "sha256": "ec001727f111d274f57abdab877fb9c5efa31a94350cc029bc352afbe6fc83f1",
+      "dimensions": {
+        "width": 48,
+        "height": 48
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @2x/kakao_login_en_large.png",
+      "bytes": 1965,
+      "sha256": "4da1370f812255f5e5d484a5f4559759b785cdec57dca6272445a9e3aa151a69",
+      "dimensions": {
+        "width": 672,
+        "height": 92
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @2x/kakao_login_en_medium.png",
+      "bytes": 1895,
+      "sha256": "f28d83edc42c86e601c37c1522675edebac4badc496c56669f37bd4f474d8462",
+      "dimensions": {
+        "width": 448,
+        "height": 92
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @2x/kakao_login_en_small.png",
+      "bytes": 1022,
+      "sha256": "4920d5f678b49361bf616e6292f95eda84ec03cfc6212f40440a822e4267d88e",
+      "dimensions": {
+        "width": 224,
+        "height": 92
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @2x/kakao_login_en_xlarge.png",
+      "bytes": 2010,
+      "sha256": "9ae7fdf794dde95399f9c90ca0a804555823a474aa0687b87a1ce2312619429d",
+      "dimensions": {
+        "width": 896,
+        "height": 92
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @2x/kakao_login_kr_large.png",
+      "bytes": 1494,
+      "sha256": "7a1e9badcfabd5cfc7fbf2f384f065f877e07c9fb724474228f801e7214f8ee3",
+      "dimensions": {
+        "width": 672,
+        "height": 92
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @2x/kakao_login_kr_medium.png",
+      "bytes": 1433,
+      "sha256": "42cc0ad6054f399ab985b2b29c1d1730dc0e653912e5ddd3bc7ed7fdd2d8ea25",
+      "dimensions": {
+        "width": 448,
+        "height": 92
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @2x/kakao_login_kr_small.png",
+      "bytes": 889,
+      "sha256": "73eb801675b6d3062417c8b8f8969540ea3d0fe12163a7a8d5bea690d83c27c1",
+      "dimensions": {
+        "width": 224,
+        "height": 92
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @2x/kakao_login_kr_xlarge.png",
+      "bytes": 1547,
+      "sha256": "ed361544b384131f777d6085638182abc8483a6b95fe2fead12acb3b9425b04e",
+      "dimensions": {
+        "width": 896,
+        "height": 92
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @2x/kakao_login_light.png",
+      "bytes": 1004,
+      "sha256": "4c8a1a564a5bb81ca03a63a290f326d40e28bd33280ca7ce7b2f5da4ee679e34",
+      "dimensions": {
+        "width": 96,
+        "height": 96
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @3x/kakao_login_en_large.png",
+      "bytes": 2922,
+      "sha256": "f8f4361bc8e2b3a3faac2982ca7868c3577db7bb66e83a0f27356ef61cacb702",
+      "dimensions": {
+        "width": 1008,
+        "height": 138
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @3x/kakao_login_en_medium.png",
+      "bytes": 2809,
+      "sha256": "4599c67ea77f44f643e6dc4cbade16eff455032cbf2294929d54de6f286f4b40",
+      "dimensions": {
+        "width": 672,
+        "height": 138
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @3x/kakao_login_en_small.png",
+      "bytes": 1502,
+      "sha256": "c0368197423db907ced2c331fad8c93549e707db00692dc59c9463749bf304bf",
+      "dimensions": {
+        "width": 336,
+        "height": 138
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @3x/kakao_login_en_xlarge.png",
+      "bytes": 3035,
+      "sha256": "a36594ecc9f2519322901d891ef47047acf5a8d400c802e7d098e09b116aeb73",
+      "dimensions": {
+        "width": 1344,
+        "height": 138
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @3x/kakao_login_kr_large.png",
+      "bytes": 2134,
+      "sha256": "2e615fbe1a77ccdfe3a02a4e46d52d62cddb9e7467c7b059180c3cb8e9b32968",
+      "dimensions": {
+        "width": 1008,
+        "height": 138
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @3x/kakao_login_kr_medium.png",
+      "bytes": 2039,
+      "sha256": "127e120dfcece13c45e652d8797b80968f273b3647289871e9008cde7923803e",
+      "dimensions": {
+        "width": 672,
+        "height": 138
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @3x/kakao_login_kr_small.png",
+      "bytes": 1313,
+      "sha256": "1f89f263d1221982bf15dd104b062706b7010af0bf7cafd35f69949d2b34d321",
+      "dimensions": {
+        "width": 336,
+        "height": 138
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @3x/kakao_login_kr_xlarge.png",
+      "bytes": 2227,
+      "sha256": "a35349497513794b09dce89a34c2ef892cf8d841365a0b5ea162243f7c16aba7",
+      "dimensions": {
+        "width": 1344,
+        "height": 138
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @3x/kakao_login_light.png",
+      "bytes": 1373,
+      "sha256": "7afc367436b4422b21220225034dc0b0985b2253688ddbf41a304337e7257bfb",
+      "dimensions": {
+        "width": 144,
+        "height": 144
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @4x/kakao_login_en_large.png",
+      "bytes": 3876,
+      "sha256": "0f87e3f9cb540545a3949d156f23f10d6916fafdac801a417a9b03150226ba3f",
+      "dimensions": {
+        "width": 1344,
+        "height": 184
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @4x/kakao_login_en_medium.png",
+      "bytes": 3684,
+      "sha256": "8e5571e0ca45f2e8209173f51894969a90c1a8927d8c2de9e9ff56f901233423",
+      "dimensions": {
+        "width": 896,
+        "height": 184
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @4x/kakao_login_en_small.png",
+      "bytes": 1912,
+      "sha256": "65a512b2a352b14effc0a1408d442c9e131e1c58c455486fc0a41fb260a3b776",
+      "dimensions": {
+        "width": 448,
+        "height": 184
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @4x/kakao_login_en_xlarge.png",
+      "bytes": 3992,
+      "sha256": "55fdb4f3f1ce3fee32c13d5a737ad18d9c99731dd47681df76439c809e968763",
+      "dimensions": {
+        "width": 1792,
+        "height": 184
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @4x/kakao_login_kr_large.png",
+      "bytes": 2796,
+      "sha256": "17bea356225c4564b9ebfb329c8ae8b2f15bbd3d46ed7dffa957a03344ed04b6",
+      "dimensions": {
+        "width": 1344,
+        "height": 184
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @4x/kakao_login_kr_medium.png",
+      "bytes": 2621,
+      "sha256": "33bbda3c56c1fb4131279bc13e6578d3e53409e3f11618a0e5a9cbda01b1ef10",
+      "dimensions": {
+        "width": 896,
+        "height": 184
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @4x/kakao_login_kr_small.png",
+      "bytes": 1647,
+      "sha256": "d1b2d37c8bfa6129f3ca73449a6dbe4cb3e24ab06548f4e3b29eb4b341762088",
+      "dimensions": {
+        "width": 448,
+        "height": 184
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @4x/kakao_login_kr_xlarge.png",
+      "bytes": 2897,
+      "sha256": "bc8644bca811eae3268d982a6cba3a77aaa8e76b0b34faa338c04aed8ce9ff12",
+      "dimensions": {
+        "width": 1792,
+        "height": 184
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/PNG @4x/kakao_login_light.png",
+      "bytes": 1761,
+      "sha256": "52530053de4bd84aabb2ea0716c793a71076d43d5229488e873bc56db028d180",
+      "dimensions": {
+        "width": 192,
+        "height": 192
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/SVG/kakao_login_en_large.svg",
+      "bytes": 5272,
+      "sha256": "2f28da559ee3f0f29d52db5b7c036ef9c051eecd75a5a7a4649db6b8b5871b55",
+      "vector": true,
+      "embeddedRaster": false,
+      "fills": [
+        "#FEE500",
+        "#191919"
+      ],
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/SVG/kakao_login_en_medium.svg",
+      "bytes": 5257,
+      "sha256": "0a4bd6d089c4b4cd2bba1b57993c9822d0784c804d1e9a4110cf78790a5f611b",
+      "vector": true,
+      "embeddedRaster": false,
+      "fills": [
+        "#FEE500",
+        "#191919"
+      ],
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/SVG/kakao_login_en_small.svg",
+      "bytes": 2279,
+      "sha256": "32a1d886e3dcab0370151a7f153cb2aa607990824b9f54ccb623f2a26a7d8c23",
+      "vector": true,
+      "embeddedRaster": false,
+      "fills": [
+        "#FEE500",
+        "#191919"
+      ],
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/SVG/kakao_login_en_xlarge.svg",
+      "bytes": 5272,
+      "sha256": "17fef3b3cb08a320d1ff64d8f639d07911645c2ce2e092aa7ef4120c38e0ca34",
+      "vector": true,
+      "embeddedRaster": false,
+      "fills": [
+        "#FEE500",
+        "#191919"
+      ],
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/SVG/kakao_login_kr_large.svg",
+      "bytes": 2688,
+      "sha256": "63583a7ab7361dde701e6459ef9862a7b12c26f7a9d4191601aed73b2b392782",
+      "vector": true,
+      "embeddedRaster": false,
+      "fills": [
+        "#FEE500",
+        "#191919"
+      ],
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/SVG/kakao_login_kr_medium.svg",
+      "bytes": 2681,
+      "sha256": "ab90ab44616f14a671844cd991b3fbb33277f42c5bb2cc5a9422344a854c9398",
+      "vector": true,
+      "embeddedRaster": false,
+      "fills": [
+        "#FEE500",
+        "#191919"
+      ],
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/SVG/kakao_login_kr_small.svg",
+      "bytes": 1239,
+      "sha256": "aa6b674d147cc534ed6750c6b770332e5fb77964bd874b5de4c3bdfc07cbbb0e",
+      "vector": true,
+      "embeddedRaster": false,
+      "fills": [
+        "#fee500",
+        "#191919"
+      ],
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/SVG/kakao_login_kr_xlarge.svg",
+      "bytes": 2688,
+      "sha256": "ce85816137e74132d90c1916686c539e9add46f44a6da21ca9161e2725579253",
+      "vector": true,
+      "embeddedRaster": false,
+      "fills": [
+        "#FEE500",
+        "#191919"
+      ],
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/Kakao Login/SVG/kakao_login_light.svg",
+      "bytes": 551,
+      "sha256": "27ee345cc3b7e9a8cb569f163202e55e6dcc9779b0a18038a8b446561a085685",
+      "vector": true,
+      "embeddedRaster": false,
+      "fills": [
+        "#FEE500",
+        "#191919"
+      ],
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Dark_KR_green_center_H48.png",
+      "bytes": 6153,
+      "sha256": "23ac04fdfa9c1608e103dc0710c57eda63a34d4c6f9c2846d86846fdfc9433ba",
+      "dimensions": {
+        "width": 1472,
+        "height": 192
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Dark_KR_green_center_H56.png",
+      "bytes": 6730,
+      "sha256": "314abdc10e282d8acd23624d129e28926aa67055a91acd6626f340e9ee6a35a0",
+      "dimensions": {
+        "width": 1472,
+        "height": 224
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Dark_KR_green_icon_H48.png",
+      "bytes": 3629,
+      "sha256": "377a2830ba897eca666a0f29ccc9009340c2803be4adb4bc8d0ce655bde28b12",
+      "dimensions": {
+        "width": 192,
+        "height": 192
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Dark_KR_green_icon_H56.png",
+      "bytes": 4164,
+      "sha256": "24c798d869bfd72312ff936bc8329ab73a1beba173873feb6faef5d7f06c76f9",
+      "dimensions": {
+        "width": 224,
+        "height": 224
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Dark_KR_green_narrow_H48.png",
+      "bytes": 5403,
+      "sha256": "97ac11a1cd03b7897a1e06bd9b18fcf47efe1cc8b9a1f30aaebf0b04b2b71f88",
+      "dimensions": {
+        "width": 840,
+        "height": 192
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Dark_KR_green_narrow_H56.png",
+      "bytes": 6028,
+      "sha256": "40fdfd35cdfe561ddb9bb6947bfea6c5c18b5c4c5c9eac095d9632997f6287c8",
+      "dimensions": {
+        "width": 920,
+        "height": 224
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Dark_KR_green_wide_H48.png",
+      "bytes": 6229,
+      "sha256": "d1d875d6d872d2a32ddfec28f3a6e535d0448ea767a10d7e8cea88ab6e5db003",
+      "dimensions": {
+        "width": 1472,
+        "height": 192
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Dark_KR_green_wide_H56.png",
+      "bytes": 6832,
+      "sha256": "3b0d2e2bc76e2f271bcae15b6f486111cdf41e96bfbd755a60ead611e60dbf70",
+      "dimensions": {
+        "width": 1472,
+        "height": 224
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Dark_KR_white_center_H48.png",
+      "bytes": 6567,
+      "sha256": "355c4c7d60d005a85dd12caceb4e0f6cdf4f552385cad981c2cf340fbdc312d1",
+      "dimensions": {
+        "width": 1472,
+        "height": 192
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Dark_KR_white_center_H56.png",
+      "bytes": 7082,
+      "sha256": "cd5f192a66512ba31375b5e704fdd3badacfbb01e22e84915b3e78c5bda21eed",
+      "dimensions": {
+        "width": 1472,
+        "height": 224
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Dark_KR_white_icon_H48.png",
+      "bytes": 5213,
+      "sha256": "f3f7c95674012e8eec7c1190721c3148345364401ffc8ee0547a0bf03e99c83e",
+      "dimensions": {
+        "width": 192,
+        "height": 192
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Dark_KR_white_icon_H56.png",
+      "bytes": 6066,
+      "sha256": "679719c96d38a867297e8c7d7e0c93bcf4b369831170dfb36a79c6863031460e",
+      "dimensions": {
+        "width": 224,
+        "height": 224
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Dark_KR_white_narrow_H48.png",
+      "bytes": 5900,
+      "sha256": "424ab50517ebeaf92841518cd0535fb031c2aec6359cdd8c4ccc89f0cb411358",
+      "dimensions": {
+        "width": 840,
+        "height": 192
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Dark_KR_white_narrow_H56.png",
+      "bytes": 6463,
+      "sha256": "d1d26feebf47fd4058dd0892e01ca1b888aa7f1da0cc86e25dbc3274f394e331",
+      "dimensions": {
+        "width": 960,
+        "height": 224
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Dark_KR_white_wide_H48.png",
+      "bytes": 6664,
+      "sha256": "d1c4e928724a2815957283a09268cd7b6c2e5edc464156bc625f4965d8e97805",
+      "dimensions": {
+        "width": 1472,
+        "height": 192
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Dark_KR_white_wide_H56.png",
+      "bytes": 7179,
+      "sha256": "b53b5e00e670161e9d64e0346608f8e3584631c7e479dd721072b82384f0e035",
+      "dimensions": {
+        "width": 1472,
+        "height": 224
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Light_KR_green_center_H48.png",
+      "bytes": 6334,
+      "sha256": "4d086f9c7f12e8b99589669042415db9de4fd31a28f5eac8721ebf893caaf06d",
+      "dimensions": {
+        "width": 1472,
+        "height": 192
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Light_KR_green_center_H56.png",
+      "bytes": 6937,
+      "sha256": "32f226668570a070bcb3f15ed4f4ec234ff2089baf724bee55888742605f3a9f",
+      "dimensions": {
+        "width": 1472,
+        "height": 224
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Light_KR_green_icon_H48.png",
+      "bytes": 3687,
+      "sha256": "00028bfdb32d84e817aecf0ebe5d14251234930efc4f23f6a7969b647db9f5dd",
+      "dimensions": {
+        "width": 192,
+        "height": 192
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Light_KR_green_icon_H56.png",
+      "bytes": 4252,
+      "sha256": "83eeef830bee319b83737bde1c74509e9ac7b1a6659e23e318cfcd7d6640f0f7",
+      "dimensions": {
+        "width": 224,
+        "height": 224
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Light_KR_green_narrow_H48.png",
+      "bytes": 5633,
+      "sha256": "055e962de7a54b8f41ee9ebbe5932295b28d5a76a224b025deea80071af298e9",
+      "dimensions": {
+        "width": 840,
+        "height": 192
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Light_KR_green_narrow_H56.png",
+      "bytes": 6259,
+      "sha256": "5f023a6198d4558a0ab2d2e01e6975eecb52022852c3f9453e021c89166383fd",
+      "dimensions": {
+        "width": 920,
+        "height": 224
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Light_KR_green_wide_H48.png",
+      "bytes": 6428,
+      "sha256": "70295afb1a6700c7799cd2e056f1be6bd88b134851f024c1c32e8bc32e0604a5",
+      "dimensions": {
+        "width": 1472,
+        "height": 192
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Light_KR_green_wide_H56.png",
+      "bytes": 7079,
+      "sha256": "02e7f5e404d4bf105b634a5bec6d32876bd0deae2cff7aa1ddbf0cfac854cbde",
+      "dimensions": {
+        "width": 1472,
+        "height": 224
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Light_KR_white_center_H48.png",
+      "bytes": 6688,
+      "sha256": "d7330414dfc270da16458daf35395bbbea59246dae769f46420302a2a82f202c",
+      "dimensions": {
+        "width": 1472,
+        "height": 192
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Light_KR_white_center_H56.png",
+      "bytes": 7241,
+      "sha256": "e0bd654e2de27eefd4197c1046cfa982ce4a31f221f3a48ea10c0d2b82a42f02",
+      "dimensions": {
+        "width": 1472,
+        "height": 224
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Light_KR_white_icon_H48.png",
+      "bytes": 5135,
+      "sha256": "54486dc8d6fdfd253173e35708462247bc6ca23b47ce5111f4537c5c90839a72",
+      "dimensions": {
+        "width": 192,
+        "height": 192
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Light_KR_white_icon_H56.png",
+      "bytes": 5876,
+      "sha256": "01430fa1063d0f70323828525fe983e67c2f6978158049e041939efb83422b50",
+      "dimensions": {
+        "width": 224,
+        "height": 224
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Light_KR_white_narrow_H48.png",
+      "bytes": 5976,
+      "sha256": "15c32a98dbcbd592eb2b1eeaeb36587f8af0a0253f2e8494cc381b692c4fb2fa",
+      "dimensions": {
+        "width": 840,
+        "height": 192
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Light_KR_white_narrow_H56.png",
+      "bytes": 6611,
+      "sha256": "c97f1191fcfbb4e9a9d4ff67a0d19e2e9c7c66035f508c1269960fffd3bb9a09",
+      "dimensions": {
+        "width": 960,
+        "height": 224
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Light_KR_white_wide_H48.png",
+      "bytes": 6794,
+      "sha256": "ec2569fabbcd2f99dffcc34685eac79fcca215c0f67175ed5d03179e9d900f75",
+      "dimensions": {
+        "width": 1472,
+        "height": 192
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/NAVER_login_KR/NAVER_login_Light_KR_white_wide_H56.png",
+      "bytes": 7328,
+      "sha256": "1f58c60bf54809292df5bc1073c2ff18ecf109f596e03439110d80b3c15f2916",
+      "dimensions": {
+        "width": 1472,
+        "height": 224
+      },
+      "origin": "user-provided; exact user download URL/time unverified"
+    },
+    {
+      "path": "assets/apple-signin-ko-black-328x48@2x.png",
+      "bytes": 6108,
+      "sha256": "220a82feda90bcc2ad55cf7c6335ca7454c9406e9e832c7daeb4a53c10b15ccf",
+      "dimensions": {
+        "width": 656,
+        "height": 96
+      },
+      "origin": "direct official Apple CDN download through official preview UI"
+    },
+    {
+      "path": "assets/apple-signin-ko-black-358x48@2x.png",
+      "bytes": 6363,
+      "sha256": "fa13268354c9d261f4bb5cfb7d7e73c7030b8c1f849a114fa7b6b0c382079e89",
+      "dimensions": {
+        "width": 716,
+        "height": 96
+      },
+      "origin": "direct official Apple CDN download through official preview UI"
+    },
+    {
+      "path": "assets/apple-signin-ko-white-outline-328x48@2x.png",
+      "bytes": 6403,
+      "sha256": "4a090e934f7fe63808d584397b76546a6e3ae2d7ec7ee839ea84e15d5ad241b0",
+      "dimensions": {
+        "width": 656,
+        "height": 96
+      },
+      "origin": "direct official Apple CDN download through official preview UI"
+    },
+    {
+      "path": "assets/lucide-license.txt",
+      "bytes": 3208,
+      "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+      "origin": "installed Lucide package license"
+    }
+  ]
+}

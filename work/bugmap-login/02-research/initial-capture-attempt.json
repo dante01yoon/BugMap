@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "generator": "design-harness",
+  "command": "refs:capture",
+  "at": "2026-11-12T19:36:42.342Z",
+  "inputs": {
+    "02-research/refs.json": "0e9e15beac02627005e93fcff40572c253a16fc138790bf9cbb8c679da7b51e8"
+  },
+  "outputs": {
+    "02-research/captures/kakao-official.png": "32d51b7af3ae5d05a1fc4e48542db5e036f2c3cacfd8eeef75868424d1924e60",
+    "02-research/captures/naver-official.png": "7058420b292812f1a443f7fa5bb8b5ec6b011c7c663cca1d785d65086e43bf0f",
+    "02-research/captures/apple-official.png": "175dff86224533909b992ebaf53a890699f45d5a85562a4a02b01d1d3135ae10"
+  },
+  "references": [
+    {
+      "id": "kakao-official",
+      "url": "https://developers.kakao.com/docs/ko/kakaologin/design-guide#%EC%B9%B4%EC%B9%B4%EC%98%A4-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EB%B2%84%ED%8A%BC",
+      "viewport": {
+        "width": 1280,
+        "height": 1800
+      },
+      "finalUrl": "https://developers.kakao.com/docs/ko/kakaologin/design-guide#%EC%B9%B4%EC%B9%B4%EC%98%A4-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EB%B2%84%ED%8A%BC",
+      "title": "카카오 로그인 > 디자인 가이드 - 카카오디벨로퍼스 | 문서",
+      "capture": "02-research/captures/kakao-official.png"
+    },
+    {
+      "id": "naver-official",
+      "url": "https://developers.naver.com/docs/login/bi/bi.md",
+      "viewport": {
+        "width": 1280,
+        "height": 1800
+      },
+      "finalUrl": "https://developers.naver.com/docs/login/bi/bi.md",
+      "title": "네이버 로그인 버튼 사용 가이드 - LOGIN",
+      "capture": "02-research/captures/naver-official.png"
+    },
+    {
+      "id": "apple-official",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple/",
+      "viewport": {
+        "width": 1280,
+        "height": 1800
+      },
+      "finalUrl": "https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple/",
+      "title": "Sign in with Apple | Apple Developer Documentation",
+      "capture": "02-research/captures/apple-official.png"
+    }
+  ]
+}

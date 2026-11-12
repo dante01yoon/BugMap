@@ -1,0 +1,18 @@
+{
+  "fileKey": "LynbxdW8Qf7TavCrPLd2nY",
+  "pageId": "0:1",
+  "fileName": "BugMap",
+  "pageName": "Page 1",
+  "bridge": "official Figma MCP",
+  "preserveNodeIds": [
+    "1:2",
+    "2:2",
+    "4:150",
+    "12:235",
+    "13:433"
+  ],
+  "editPolicy": "승인 후 별도 로그인 프레임 추가. 기존 노드 변경 금지.",
+  "identityNote": "사용자 제공 공식 URL의 정식 파일 키. 공식 metadata에서 Page 1과 기존 보존 노드 ID·위치가 일치함을 확인했다. 원본 응답은 06-figma/official-metadata.xml. 임시 브리지 키에 묶인 승인 이력은 보존하며 현재 대상 입력으로 사람의 재확인을 받는다.",
+  "fileUrl": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=0-1",
+  "legacyBridgeFileKey": "local-mw921bod-gf4vt4"
+}

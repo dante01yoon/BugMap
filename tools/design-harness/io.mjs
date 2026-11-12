@@ -1,6 +1,9 @@
 import { lstatSync, readdirSync, readFileSync, mkdirSync, writeFileSync, renameSync, linkSync, unlinkSync } from 'node:fs';
-import { resolve, join, relative, sep, dirname, isAbsolute } from 'node:path';
+import { resolve, join, relative, sep, dirname, isAbsolute, basename } from 'node:path';
 import { createHash, randomUUID } from 'node:crypto';
+
+export const isPlatformMetadata = path => basename(path) === '.DS_Store';
+export const artifactHashes = values => Object.fromEntries(Object.entries(values).filter(([path]) => !isPlatformMetadata(path)));
 
 export function safeStat(path) {
   const absolute = resolve(path);
@@ -37,7 +40,7 @@ export function filesUnder(base, path) {
   function visit(name) {
     const stat = safeStat(within(base, name));
     if (!stat) return;
-    if (stat.isFile()) files.push(name);
+    if (stat.isFile()) { if (!isPlatformMetadata(name)) files.push(name); }
     else if (stat.isDirectory()) for (const child of readdirSync(within(base, name)).sort()) visit(`${name}/${child}`);
     else throw new Error(`Unsupported file: ${name}`);
   }
@@ -81,7 +84,7 @@ export function evidence(command, inputs, outputs) {
 export function verifyEvidence(base, path, command, inputs, expectedOutputs) {
   const report = json(base, path);
   if (report.version !== 1 || report.generator !== 'design-harness' || report.command !== command
-    || !Number.isFinite(Date.parse(report.at)) || !same(report.inputs, inputs) || !object(report.outputs)) {
+    || !Number.isFinite(Date.parse(report.at)) || !same(artifactHashes(report.inputs ?? {}), artifactHashes(inputs)) || !object(report.outputs)) {
     throw new Error(`Stale or invalid ${command} evidence: ${path}`);
   }
   const keys = Object.keys(report.outputs).sort();

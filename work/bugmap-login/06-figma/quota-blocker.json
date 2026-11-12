@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-13",
+  "status": "blocked",
+  "tool": "mcp__codex_apps__figma_use_figma",
+  "fileKey": "LynbxdW8Qf7TavCrPLd2nY",
+  "sessionId": "8860e952-09fa-4669-b2d5-73a759d755ca",
+  "response": "You've reached the Figma MCP tool call limit on the Starter plan. Upgrade your plan for more tool calls: https://www.figma.com/files/team/1204245655945863536/all-projects?upgrade=mcp_rate_limit_paywall Use the whoami tool for more plan details. Learn more: https://developers.figma.com/docs/figma-mcp-server/rate-limits-access/",
+  "expectedScreens": 20,
+  "createdScreens": 20,
+  "exportedRoots": 8,
+  "downloadedCaptures": 22,
+  "remoteAuthentication": "not implemented",
+  "billingChanges": false,
+  "additionalOfficialRetries": false,
+  "downloadedOfficialCaptures": 2,
+  "downloadedBridgeCaptures": 20
+}

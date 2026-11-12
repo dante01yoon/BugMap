@@ -5,7 +5,7 @@ import { figmaTarget } from '../figma.mjs';
 import { json, safeStat } from '../io.mjs';
 
 // Unknown Figma operations are treated as writes. use_figma can execute arbitrary JS.
-const reads = new Set(['get_metadata', 'get_design_context', 'get_screenshot', 'get_variable_defs', 'search_design_system', 'get_code_connect_map', 'get_code_connect_suggestions', 'get_figma_data', 'get_file', 'get_nodes', 'export_nodes', 'get_status', 'get_session', 'create_session']);
+const reads = new Set(['list_files', 'get_document', 'get_node', 'get_selection', 'get_styles', 'get_motion_styles', 'get_node_motion', 'save_screenshots', 'get_metadata', 'get_design_context', 'get_screenshot', 'get_variable_defs', 'search_design_system', 'get_code_connect_map', 'get_code_connect_suggestions', 'get_figma_data', 'get_file', 'get_nodes', 'export_nodes', 'get_status', 'get_session', 'create_session']);
 export function isFigmaWrite(name) {
   if (typeof name !== 'string' || !/figma/i.test(name)) return false;
   const operation = name.split('__').at(-1).replace(/^figma_/, '');
@@ -21,7 +21,7 @@ export function locateProject(cwd) {
     }
     const work = join(root, 'work');
     if (safeStat(work)?.isDirectory()) {
-      const candidates = readdirSync(work).filter(id => safeStat(join(work, id, 'control/project.json'))?.isFile());
+      const candidates = readdirSync(work).filter(id => safeStat(join(work, id))?.isDirectory() && safeStat(join(work, id, 'control/project.json'))?.isFile());
       if (candidates.length > 1) throw new Error('Multiple harness projects; select project in .design-harness.json');
       if (candidates.length === 1) return { root, project: candidates[0], base: projectPath(root, candidates[0]) };
     }

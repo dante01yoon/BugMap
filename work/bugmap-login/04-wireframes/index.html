@@ -1,0 +1,53 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>곤충맵 로그인 저충실도 비교</title><style>body{font:16px sans-serif;margin:24px;color:#222;background:#eee}main{max-width:1100px;margin:auto}section{margin:32px 0;background:white;padding:20px}.pair{display:flex;gap:24px;flex-wrap:wrap}figure{margin:0}img{max-width:100%;height:auto;border:1px solid #aaa}p{max-width:900px;line-height:1.6}nav a{margin-right:16px}</style><main><h1>곤충맵 로그인 · 저충실도 비교</h1><p>20개 정적 PNG: 390×844 / 360×800 × 10상태. 공식 자산 자리는 실제 로고가 아닙니다. 상태 잠금·미지원 조건은 화면 밖 검토 주석입니다. 정책 슬롯은 미연결이며 사용 가능한 링크나 동의문이 아닙니다. 스크롤·인증·초점 동작은 검증하지 않았습니다.</p><p><a href="review.md">자체 검수</a> · <a href="../03-structure/behavior.md">행동/요구사항 명세</a> · <a href="wireframes.json">편집 JSON</a></p><nav>
+<a href="#default">default</a>
+<a href="#loading_kakao">loading_kakao</a>
+<a href="#loading_naver">loading_naver</a>
+<a href="#loading_apple">loading_apple</a>
+<a href="#cancelled">cancelled</a>
+<a href="#network_error">network_error</a>
+<a href="#unsupported">unsupported</a>
+<a href="#service_outage">service_outage</a>
+<a href="#success">success</a>
+<a href="#policy_pending">policy_pending</a>
+</nav>
+<section id="default"><h2>default</h2><p>기본 선택. 정책 영역은 미연결 검토 위치입니다.</p><div class="pair">
+<figure><figcaption>390×844 · <a href="login/default.svg">SVG</a> · <a href="captures/login/default.png">PNG</a></figcaption><img width="390" src="captures/login/default.png" alt="390×844 default"></figure>
+<figure><figcaption>360×800 · <a href="login-compact/default.svg">SVG</a> · <a href="captures/login-compact/default.png">PNG</a></figcaption><img width="360" src="captures/login-compact/default.png" alt="360×800 default"></figure>
+</div></section>
+<section id="loading_kakao"><h2>loading_kakao</h2><p>선택 카카오 유지. 세 선택 비활성 box이며 중복 요청 금지 계약은 behavior.md에 있습니다.</p><div class="pair">
+<figure><figcaption>390×844 · <a href="login/loading_kakao.svg">SVG</a> · <a href="captures/login/loading_kakao.png">PNG</a></figcaption><img width="390" src="captures/login/loading_kakao.png" alt="390×844 loading_kakao"></figure>
+<figure><figcaption>360×800 · <a href="login-compact/loading_kakao.svg">SVG</a> · <a href="captures/login-compact/loading_kakao.png">PNG</a></figcaption><img width="360" src="captures/login-compact/loading_kakao.png" alt="360×800 loading_kakao"></figure>
+</div></section>
+<section id="loading_naver"><h2>loading_naver</h2><p>선택 네이버 유지. 세 선택 비활성 box.</p><div class="pair">
+<figure><figcaption>390×844 · <a href="login/loading_naver.svg">SVG</a> · <a href="captures/login/loading_naver.png">PNG</a></figcaption><img width="390" src="captures/login/loading_naver.png" alt="390×844 loading_naver"></figure>
+<figure><figcaption>360×800 · <a href="login-compact/loading_naver.svg">SVG</a> · <a href="captures/login-compact/loading_naver.png">PNG</a></figcaption><img width="360" src="captures/login-compact/loading_naver.png" alt="360×800 loading_naver"></figure>
+</div></section>
+<section id="loading_apple"><h2>loading_apple</h2><p>선택 Apple 유지. 세 선택 비활성 box.</p><div class="pair">
+<figure><figcaption>390×844 · <a href="login/loading_apple.svg">SVG</a> · <a href="captures/login/loading_apple.png">PNG</a></figcaption><img width="390" src="captures/login/loading_apple.png" alt="390×844 loading_apple"></figure>
+<figure><figcaption>360×800 · <a href="login-compact/loading_apple.svg">SVG</a> · <a href="captures/login-compact/loading_apple.png">PNG</a></figcaption><img width="360" src="captures/login-compact/loading_apple.png" alt="360×800 loading_apple"></figure>
+</div></section>
+<section id="cancelled"><h2>cancelled</h2><p>중립 취소 안내. 세 선택 다시 활성.</p><div class="pair">
+<figure><figcaption>390×844 · <a href="login/cancelled.svg">SVG</a> · <a href="captures/login/cancelled.png">PNG</a></figcaption><img width="390" src="captures/login/cancelled.png" alt="390×844 cancelled"></figure>
+<figure><figcaption>360×800 · <a href="login-compact/cancelled.svg">SVG</a> · <a href="captures/login-compact/cancelled.png">PNG</a></figcaption><img width="360" src="captures/login-compact/cancelled.png" alt="360×800 cancelled"></figure>
+</div></section>
+<section id="network_error"><h2>network_error</h2><p>카카오 실패 예시. 다른 제공자에도 같은 템플릿. 재시도/다른 방법 48px.</p><div class="pair">
+<figure><figcaption>390×844 · <a href="login/network_error.svg">SVG</a> · <a href="captures/login/network_error.png">PNG</a></figcaption><img width="390" src="captures/login/network_error.png" alt="390×844 network_error"></figure>
+<figure><figcaption>360×800 · <a href="login-compact/network_error.svg">SVG</a> · <a href="captures/login-compact/network_error.png">PNG</a></figcaption><img width="360" src="captures/login-compact/network_error.png" alt="360×800 network_error"></figure>
+</div></section>
+<section id="unsupported"><h2>unsupported</h2><p>Apple 예시는 검증된 특정 인증 브라우저 미지원 입력을 가정한 시안입니다. 실제 판정 아님. OS만으로 판단 금지. Apple box 비활성, 나머지 선택 활성.</p><div class="pair">
+<figure><figcaption>390×844 · <a href="login/unsupported.svg">SVG</a> · <a href="captures/login/unsupported.png">PNG</a></figcaption><img width="390" src="captures/login/unsupported.png" alt="390×844 unsupported"></figure>
+<figure><figcaption>360×800 · <a href="login-compact/unsupported.svg">SVG</a> · <a href="captures/login-compact/unsupported.png">PNG</a></figcaption><img width="360" src="captures/login-compact/unsupported.png" alt="360×800 unsupported"></figure>
+</div></section>
+<section id="service_outage"><h2>service_outage</h2><p>확인된 일시 장애. 환경 미지원과 구분.</p><div class="pair">
+<figure><figcaption>390×844 · <a href="login/service_outage.svg">SVG</a> · <a href="captures/login/service_outage.png">PNG</a></figcaption><img width="390" src="captures/login/service_outage.png" alt="390×844 service_outage"></figure>
+<figure><figcaption>360×800 · <a href="login-compact/service_outage.svg">SVG</a> · <a href="captures/login-compact/service_outage.png">PNG</a></figcaption><img width="360" src="captures/login-compact/service_outage.png" alt="360×800 service_outage"></figure>
+</div></section>
+<section id="success"><h2>success</h2><p>검토용 연결 명세판. 실제 인증 완료 화면이나 인증검증 결과가 아닙니다.</p><div class="pair">
+<figure><figcaption>390×844 · <a href="login/success.svg">SVG</a> · <a href="captures/login/success.png">PNG</a></figcaption><img width="390" src="captures/login/success.png" alt="390×844 success"></figure>
+<figure><figcaption>360×800 · <a href="login-compact/success.svg">SVG</a> · <a href="captures/login-compact/success.png">PNG</a></figcaption><img width="360" src="captures/login-compact/success.png" alt="360×800 success"></figure>
+</div></section>
+<section id="policy_pending"><h2>policy_pending</h2><p>검토용 미정 상세판. 정책 URL/동의 방식 미정이며 제품 링크에서 진입하지 않습니다.</p><div class="pair">
+<figure><figcaption>390×844 · <a href="login/policy_pending.svg">SVG</a> · <a href="captures/login/policy_pending.png">PNG</a></figcaption><img width="390" src="captures/login/policy_pending.png" alt="390×844 policy_pending"></figure>
+<figure><figcaption>360×800 · <a href="login-compact/policy_pending.svg">SVG</a> · <a href="captures/login-compact/policy_pending.png">PNG</a></figcaption><img width="360" src="captures/login-compact/policy_pending.png" alt="360×800 policy_pending"></figure>
+</div></section>
+</main></html>

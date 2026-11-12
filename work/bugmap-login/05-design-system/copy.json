@@ -1,0 +1,39 @@
+{
+  "strings": {
+    "brand": "곤충맵",
+    "title": "작은 발견을 사진으로, 지도에.",
+    "description": "곤충을 사진과 위치로 기록하고 함께 나눠요.",
+    "choose": "로그인 방법을 선택해 주세요",
+    "kakao": "카카오 로그인",
+    "naver": "네이버 로그인",
+    "apple": "Apple로 로그인",
+    "default": "세 제공자 중 하나를 선택해요.",
+    "loading_kakao": "카카오 로그인 요청 중…",
+    "loading_naver": "네이버 로그인 요청 중…",
+    "loading_apple": "Apple 로그인 요청 중…",
+    "cancelled": "로그인을 취소했어요. 다시 선택할 수 있어요.",
+    "network_error": "카카오 로그인에 연결하지 못했어요.",
+    "network_help": "연결을 확인한 후 다시 시도해 주세요.",
+    "unsupported": "Apple 로그인을 사용할 수 없어요.",
+    "unsupported_reason": "이 인증 브라우저는 지원하지 않아요.",
+    "unsupported_help": "카카오 또는 네이버로 로그인해 주세요.",
+    "service_outage": "Apple 로그인이 잠시 중단되었어요.",
+    "outage_help": "잠시 후 다시 시도하거나 다른 방법을 선택해 주세요.",
+    "retry": "다시 시도",
+    "other": "다른 방법",
+    "terms": "이용약관 · 미연결 (검토용 위치)",
+    "privacy": "개인정보 처리방침 · 미연결 (검토용)",
+    "policy_note": "정책 URL과 동의 방식은 내부 검토 중이에요.",
+    "policy_pending": "검토용 · 정책 URL과 동의 방식은 내부 검토 중이에요.",
+    "success": "검토용 연결 명세: 인증·세션 확인 후 기존 지도로 이동"
+  },
+  "forbidden": [
+    "정확도 98%",
+    "15,000+",
+    "3초 만에",
+    "AI 종 자동 식별",
+    "개인위치 암호화",
+    "안심 탐사 경로",
+    "실시간 채집 지도"
+  ]
+}

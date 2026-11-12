@@ -207,7 +207,7 @@ The shape language features an extra-rounded, soft silhouette. Cards, sheets, an
 ## Components
 
 ### Iconography
-All UI icons must be selected from the [Lucide icon catalog](https://lucide.dev/icons) and used as `lucide-react-native` components. Figma icon nodes, exported vectors, or rasterized copies are not UI icon sources. Select the closest semantic Lucide icon; provider buttons may use generic Lucide symbols instead of provider marks.
+All UI icons must be selected from the [Lucide icon catalog](https://lucide.dev/icons) and used as `lucide-react-native` components. Figma icon nodes, exported vectors, or rasterized copies are not UI icon sources. Select the closest semantic Lucide icon for general UI actions. Social sign-in provider marks are brand assets: use the provider’s official login artwork or official button component and follow its usage guide; do not substitute generic Lucide symbols or extract marks from Figma.
 
 All system icons adhere strictly to the Lucide icon guidelines:
 - **Geometry:** 24x24 pixel grid with uniform 2px stroke width (`stroke-width: 2`).
@@ -234,3 +234,7 @@ All system icons adhere strictly to the Lucide icon guidelines:
 ### Lists, Checkboxes & Radio Buttons
 - **List Dividers:** Crisp hairline rule `1px solid #F3F4F6` with zero drop shadows.
 - **Checkboxes & Radios:** 20px controls with 2px stroke border (`#D1D5DB`). Selected state renders solid `#15803D` fill with white line checkmark. Radio buttons utilize a 32px full circle with a centered solid `#15803D` dot.
+
+### Social sign-in brand exception · 2026-11-13
+
+The approved [bugmap-login PRD](../work/bugmap-login/01-prd/PRD.md) separates general UI icons from provider brands. Kakao, Naver and Apple sign-in marks use official provider resources; logo geometry, colors and button proportions follow their own guides. This exception does not choose the backend authentication providers or change the existing implementation automatically. Sources and observed limits: [research](../work/bugmap-login/02-research/sources.md).

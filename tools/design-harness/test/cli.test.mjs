@@ -167,3 +167,21 @@ test('corrupt approval history makes check fail and never resets to unapproved',
   assert.equal(f.run('check', '--json').status, 2);
   assert.equal(readFileSync(join(f.project, 'control/approvals.json'), 'utf8'), 'null');
 });
+
+test('Finder metadata never invalidates approvals or becomes a design input', t => {
+  const f = fixture(t); f.fill(); f.approve(1); f.approve(4); f.approve(5);
+  const log = JSON.parse(readFileSync(join(f.project, 'control/approvals.json')));
+  // Older versions recorded Finder metadata. Reading that history must remain
+  // compatible without rewriting human-authored approval entries.
+  for (const entry of log.approvals) entry.files['01-prd/.DS_Store'] = 'a'.repeat(64);
+  const originalLog = JSON.stringify(log); f.put('control/approvals.json', originalLog);
+  f.put('01-prd/.DS_Store', 'Finder layout');
+  f.put('05-design-system/assets/.DS_Store', 'New Finder view');
+  const report = f.check();
+  assert.equal(report.stages[0].status, 'passed');
+  assert.equal(report.stages[3].status, 'passed');
+  assert.equal(report.stages[4].status, 'passed');
+  assert.equal(readFileSync(join(f.project, 'control/approvals.json'), 'utf8'), originalLog);
+  f.put('05-design-system/real-design-notes.md', 'Real new design input');
+  assert.equal(f.check().stages[4].status, 'needs_revision');
+});

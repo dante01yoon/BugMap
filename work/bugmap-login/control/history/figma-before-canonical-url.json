@@ -1,0 +1,16 @@
+{
+  "fileKey": "local-mw921bod-gf4vt4",
+  "pageId": "0:1",
+  "fileName": "BugMap",
+  "pageName": "Page 1",
+  "bridge": "figma-agent-mcp",
+  "preserveNodeIds": [
+    "1:2",
+    "2:2",
+    "4:150",
+    "12:235",
+    "13:433"
+  ],
+  "editPolicy": "승인 후 별도 로그인 프레임 추가. 기존 노드 변경 금지.",
+  "identityNote": "로컬 브리지 키. 재연결 시 동일 파일인지 다시 확인하고 키 변경은 승인 무효화 대상으로 처리."
+}

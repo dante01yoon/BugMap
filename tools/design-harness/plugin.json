@@ -1,11 +1,19 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "design-harness",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Evidence-based eight-stage design workflow with human approval gates and Figma guards.",
-  "author": { "name": "BugMap contributors" },
-  "extensions": { "com.openai": {
-    "hooks": "./hooks/hooks.json",
-    "interface": { "displayName": "Design Harness", "shortDescription": "Design stages, approval checks and Figma guards", "category": "Productivity" }
-  } }
+  "author": {
+    "name": "BugMap contributors"
+  },
+  "extensions": {
+    "com.openai": {
+      "hooks": "./hooks/hooks.json",
+      "interface": {
+        "displayName": "Design Harness",
+        "shortDescription": "Design stages, approval checks and Figma guards",
+        "category": "Productivity"
+      }
+    }
+  }
 }

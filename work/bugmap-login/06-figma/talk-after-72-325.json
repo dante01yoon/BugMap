@@ -1,0 +1,900 @@
+{
+  "id": "72:325",
+  "name": "04 · 로그인 / 390 / network_error",
+  "type": "FRAME",
+  "fills": [
+    {
+      "blendMode": "NORMAL",
+      "type": "SOLID",
+      "color": "#ffffff"
+    }
+  ],
+  "absoluteBoundingBox": {
+    "x": 4750,
+    "y": 100,
+    "width": 390,
+    "height": 844
+  },
+  "children": [
+    {
+      "id": "72:326",
+      "name": "BugMap Login / brand",
+      "type": "INSTANCE",
+      "absoluteBoundingBox": {
+        "x": 4766,
+        "y": 144,
+        "width": 358,
+        "height": 28
+      },
+      "children": [
+        {
+          "id": "I72:326;70:31",
+          "name": "BugMap Login / Lucide Bug",
+          "type": "INSTANCE",
+          "absoluteBoundingBox": {
+            "x": 4766,
+            "y": 146,
+            "width": 24,
+            "height": 24
+          },
+          "children": [
+            {
+              "id": "I72:326;70:31;70:15",
+              "name": "Bug",
+              "type": "GROUP",
+              "absoluteBoundingBox": {
+                "x": 4768,
+                "y": 148.5,
+                "width": 20,
+                "height": 19
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "I72:326;70:44",
+          "name": "Label",
+          "type": "TEXT",
+          "fills": [
+            {
+              "blendMode": "NORMAL",
+              "type": "SOLID",
+              "color": "#111827"
+            }
+          ],
+          "absoluteBoundingBox": {
+            "x": 4800,
+            "y": 144,
+            "width": 56,
+            "height": 28
+          },
+          "characters": "곤충맵",
+          "style": {
+            "fontFamily": "Noto Sans KR",
+            "fontStyle": "Bold",
+            "fontWeight": 700,
+            "fontSize": 20,
+            "textAlignHorizontal": "LEFT",
+            "letterSpacing": 0,
+            "lineHeightPx": 28
+          }
+        }
+      ]
+    },
+    {
+      "id": "72:341",
+      "name": "Spacing",
+      "type": "FRAME",
+      "absoluteBoundingBox": {
+        "x": 4766,
+        "y": 172,
+        "width": 358,
+        "height": 20
+      },
+      "children": []
+    },
+    {
+      "id": "72:342",
+      "name": "Introduction",
+      "type": "FRAME",
+      "absoluteBoundingBox": {
+        "x": 4766,
+        "y": 192,
+        "width": 358,
+        "height": 122
+      },
+      "children": [
+        {
+          "id": "72:343",
+          "name": "Title",
+          "type": "TEXT",
+          "fills": [
+            {
+              "blendMode": "NORMAL",
+              "type": "SOLID",
+              "color": "#111827"
+            }
+          ],
+          "absoluteBoundingBox": {
+            "x": 4766,
+            "y": 192,
+            "width": 358,
+            "height": 68
+          },
+          "characters": "작은 발견을\n사진으로, 지도에.",
+          "style": {
+            "fontFamily": "Noto Sans KR",
+            "fontStyle": "Bold",
+            "fontWeight": 700,
+            "fontSize": 26,
+            "textAlignHorizontal": "LEFT",
+            "letterSpacing": -0.6000000238418579,
+            "lineHeightPx": 34
+          }
+        },
+        {
+          "id": "72:344",
+          "name": "Spacing",
+          "type": "FRAME",
+          "absoluteBoundingBox": {
+            "x": 4766,
+            "y": 260,
+            "width": 358,
+            "height": 10
+          },
+          "children": []
+        },
+        {
+          "id": "72:345",
+          "name": "Description",
+          "type": "TEXT",
+          "fills": [
+            {
+              "blendMode": "NORMAL",
+              "type": "SOLID",
+              "color": "#4b5563"
+            }
+          ],
+          "absoluteBoundingBox": {
+            "x": 4766,
+            "y": 270,
+            "width": 290,
+            "height": 44
+          },
+          "characters": "곤충을 사진과 위치로 기록하고\n함께 나눠요.",
+          "style": {
+            "fontFamily": "Noto Sans KR",
+            "fontStyle": "Light",
+            "fontWeight": 300,
+            "fontSize": 14,
+            "textAlignHorizontal": "LEFT",
+            "letterSpacing": 0,
+            "lineHeightPx": 22
+          }
+        }
+      ]
+    },
+    {
+      "id": "72:346",
+      "name": "Spacing",
+      "type": "FRAME",
+      "absoluteBoundingBox": {
+        "x": 4766,
+        "y": 314,
+        "width": 358,
+        "height": 20
+      },
+      "children": []
+    },
+    {
+      "id": "72:347",
+      "name": "BugMap Login / valueCard",
+      "type": "INSTANCE",
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": "#f9fafb"
+        }
+      ],
+      "strokes": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": "#e5e7eb"
+        }
+      ],
+      "cornerRadius": 32,
+      "absoluteBoundingBox": {
+        "x": 4766,
+        "y": 334,
+        "width": 358,
+        "height": 80
+      },
+      "children": [
+        {
+          "id": "I72:347;70:46",
+          "name": "Frame",
+          "type": "FRAME",
+          "absoluteBoundingBox": {
+            "x": 4841.5,
+            "y": 362,
+            "width": 83,
+            "height": 24
+          },
+          "children": [
+            {
+              "id": "I72:347;70:47",
+              "name": "BugMap Login / Lucide Camera",
+              "type": "INSTANCE",
+              "absoluteBoundingBox": {
+                "x": 4841.5,
+                "y": 362,
+                "width": 24,
+                "height": 24
+              },
+              "children": [
+                {
+                  "id": "I72:347;70:47;70:20",
+                  "name": "Camera",
+                  "type": "GROUP",
+                  "absoluteBoundingBox": {
+                    "x": 4843.5,
+                    "y": 366,
+                    "width": 20,
+                    "height": 16
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "I72:347;70:51",
+              "name": "Label",
+              "type": "TEXT",
+              "fills": [
+                {
+                  "blendMode": "NORMAL",
+                  "type": "SOLID",
+                  "color": "#4b5563"
+                }
+              ],
+              "absoluteBoundingBox": {
+                "x": 4873.5,
+                "y": 363,
+                "width": 51,
+                "height": 22
+              },
+              "characters": "사진 기록",
+              "style": {
+                "fontFamily": "Noto Sans KR",
+                "fontStyle": "Medium",
+                "fontWeight": 500,
+                "fontSize": 13,
+                "textAlignHorizontal": "LEFT",
+                "letterSpacing": 0,
+                "lineHeightPx": 22
+              }
+            }
+          ]
+        },
+        {
+          "id": "I72:347;70:52",
+          "name": "Divider",
+          "type": "RECTANGLE",
+          "fills": [
+            {
+              "blendMode": "NORMAL",
+              "type": "SOLID",
+              "color": "#d1d5db"
+            }
+          ],
+          "absoluteBoundingBox": {
+            "x": 4944.5,
+            "y": 362,
+            "width": 1,
+            "height": 24
+          }
+        },
+        {
+          "id": "I72:347;70:53",
+          "name": "Frame",
+          "type": "FRAME",
+          "absoluteBoundingBox": {
+            "x": 4965.5,
+            "y": 362,
+            "width": 83,
+            "height": 24
+          },
+          "children": [
+            {
+              "id": "I72:347;70:54",
+              "name": "BugMap Login / Lucide MapPin",
+              "type": "INSTANCE",
+              "absoluteBoundingBox": {
+                "x": 4965.5,
+                "y": 362,
+                "width": 24,
+                "height": 24
+              },
+              "children": [
+                {
+                  "id": "I72:347;70:54;70:25",
+                  "name": "MapPin",
+                  "type": "GROUP",
+                  "absoluteBoundingBox": {
+                    "x": 4969.5,
+                    "y": 364,
+                    "width": 16,
+                    "height": 19.9997501373291
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "I72:347;70:58",
+              "name": "Label",
+              "type": "TEXT",
+              "fills": [
+                {
+                  "blendMode": "NORMAL",
+                  "type": "SOLID",
+                  "color": "#4b5563"
+                }
+              ],
+              "absoluteBoundingBox": {
+                "x": 4997.5,
+                "y": 363,
+                "width": 51,
+                "height": 22
+              },
+              "characters": "위치 기록",
+              "style": {
+                "fontFamily": "Noto Sans KR",
+                "fontStyle": "Medium",
+                "fontWeight": 500,
+                "fontSize": 13,
+                "textAlignHorizontal": "LEFT",
+                "letterSpacing": 0,
+                "lineHeightPx": 22
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "72:361",
+      "name": "Spacing",
+      "type": "FRAME",
+      "absoluteBoundingBox": {
+        "x": 4766,
+        "y": 414,
+        "width": 358,
+        "height": 20
+      },
+      "children": []
+    },
+    {
+      "id": "72:362",
+      "name": "Choose",
+      "type": "TEXT",
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": "#111827"
+        }
+      ],
+      "absoluteBoundingBox": {
+        "x": 4766,
+        "y": 434,
+        "width": 358,
+        "height": 22
+      },
+      "characters": "로그인 방법을 선택해 주세요",
+      "style": {
+        "fontFamily": "Noto Sans KR",
+        "fontStyle": "Medium",
+        "fontWeight": 500,
+        "fontSize": 14,
+        "textAlignHorizontal": "LEFT",
+        "letterSpacing": 0,
+        "lineHeightPx": 22
+      }
+    },
+    {
+      "id": "72:363",
+      "name": "Spacing",
+      "type": "FRAME",
+      "absoluteBoundingBox": {
+        "x": 4766,
+        "y": 456,
+        "width": 358,
+        "height": 12
+      },
+      "children": []
+    },
+    {
+      "id": "72:364",
+      "name": "Provider choices",
+      "type": "FRAME",
+      "absoluteBoundingBox": {
+        "x": 4766,
+        "y": 468,
+        "width": 358,
+        "height": 168
+      },
+      "children": [
+        {
+          "id": "72:365",
+          "name": "providerButton / kakao",
+          "type": "INSTANCE",
+          "fills": [
+            {
+              "blendMode": "NORMAL",
+              "type": "SOLID",
+              "color": "#fee500"
+            }
+          ],
+          "cornerRadius": 8.34782600402832,
+          "absoluteBoundingBox": {
+            "x": 4766,
+            "y": 468,
+            "width": 358,
+            "height": 48
+          },
+          "children": [
+            {
+              "id": "I72:365;70:79",
+              "name": "Official Kakao SVG",
+              "type": "GROUP",
+              "absoluteBoundingBox": {
+                "x": 4828.13037109375,
+                "y": 468,
+                "width": 233.7391357421875,
+                "height": 48
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "72:370",
+          "name": "providerButton / naver",
+          "type": "INSTANCE",
+          "fills": [
+            {
+              "blendMode": "NORMAL",
+              "type": "SOLID",
+              "color": "#ffffff"
+            }
+          ],
+          "strokes": [
+            {
+              "blendMode": "NORMAL",
+              "type": "SOLID",
+              "color": "#d9d9d9"
+            }
+          ],
+          "cornerRadius": 8,
+          "absoluteBoundingBox": {
+            "x": 4766,
+            "y": 528,
+            "width": 358,
+            "height": 48
+          },
+          "children": [
+            {
+              "id": "I72:370;70:81",
+              "name": "Official naver PNG",
+              "type": "RECTANGLE",
+              "fills": [
+                {
+                  "blendMode": "NORMAL",
+                  "type": "IMAGE",
+                  "scaleMode": "FIT"
+                }
+              ],
+              "absoluteBoundingBox": {
+                "x": 4761,
+                "y": 528,
+                "width": 368,
+                "height": 48
+              }
+            }
+          ]
+        },
+        {
+          "id": "72:372",
+          "name": "providerButton / apple",
+          "type": "INSTANCE",
+          "fills": [
+            {
+              "blendMode": "NORMAL",
+              "type": "SOLID",
+              "color": "#000000"
+            }
+          ],
+          "cornerRadius": 8,
+          "absoluteBoundingBox": {
+            "x": 4766,
+            "y": 588,
+            "width": 358,
+            "height": 48
+          },
+          "children": [
+            {
+              "id": "I72:372;70:83",
+              "name": "Official apple PNG",
+              "type": "RECTANGLE",
+              "fills": [
+                {
+                  "blendMode": "NORMAL",
+                  "type": "IMAGE",
+                  "scaleMode": "FIT"
+                }
+              ],
+              "absoluteBoundingBox": {
+                "x": 4766,
+                "y": 588,
+                "width": 358,
+                "height": 48
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "72:374",
+      "name": "Spacing",
+      "type": "FRAME",
+      "absoluteBoundingBox": {
+        "x": 4766,
+        "y": 636,
+        "width": 358,
+        "height": 16
+      },
+      "children": []
+    },
+    {
+      "id": "72:375",
+      "name": "status / network_error",
+      "type": "FRAME",
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": "#f9fafb"
+        }
+      ],
+      "strokes": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": "#e5e7eb"
+        }
+      ],
+      "cornerRadius": 20,
+      "absoluteBoundingBox": {
+        "x": 4766,
+        "y": 652,
+        "width": 358,
+        "height": 74
+      },
+      "children": [
+        {
+          "id": "72:376",
+          "name": "Status title",
+          "type": "TEXT",
+          "fills": [
+            {
+              "blendMode": "NORMAL",
+              "type": "SOLID",
+              "color": "#111827"
+            }
+          ],
+          "absoluteBoundingBox": {
+            "x": 4781,
+            "y": 665,
+            "width": 330,
+            "height": 22
+          },
+          "characters": "카카오 로그인에 연결하지 못했어요.",
+          "style": {
+            "fontFamily": "Noto Sans KR",
+            "fontStyle": "Medium",
+            "fontWeight": 500,
+            "fontSize": 14,
+            "textAlignHorizontal": "LEFT",
+            "letterSpacing": 0,
+            "lineHeightPx": 22
+          }
+        },
+        {
+          "id": "72:377",
+          "name": "Status explanation",
+          "type": "TEXT",
+          "fills": [
+            {
+              "blendMode": "NORMAL",
+              "type": "SOLID",
+              "color": "#4b5563"
+            }
+          ],
+          "absoluteBoundingBox": {
+            "x": 4781,
+            "y": 691,
+            "width": 330,
+            "height": 22
+          },
+          "characters": "연결을 확인한 후 다시 시도해 주세요.",
+          "style": {
+            "fontFamily": "Noto Sans KR",
+            "fontStyle": "Light",
+            "fontWeight": 300,
+            "fontSize": 14,
+            "textAlignHorizontal": "LEFT",
+            "letterSpacing": 0,
+            "lineHeightPx": 22
+          }
+        }
+      ]
+    },
+    {
+      "id": "72:378",
+      "name": "Spacing",
+      "type": "FRAME",
+      "absoluteBoundingBox": {
+        "x": 4766,
+        "y": 726,
+        "width": 358,
+        "height": 12
+      },
+      "children": []
+    },
+    {
+      "id": "72:379",
+      "name": "Recovery actions",
+      "type": "FRAME",
+      "absoluteBoundingBox": {
+        "x": 4766,
+        "y": 738,
+        "width": 358,
+        "height": 48
+      },
+      "children": [
+        {
+          "id": "72:380",
+          "name": "recovery / primary",
+          "type": "INSTANCE",
+          "fills": [
+            {
+              "blendMode": "NORMAL",
+              "type": "SOLID",
+              "color": "#15803d"
+            }
+          ],
+          "cornerRadius": 32,
+          "absoluteBoundingBox": {
+            "x": 4766,
+            "y": 738,
+            "width": 173,
+            "height": 48
+          },
+          "children": [
+            {
+              "id": "I72:380;70:96",
+              "name": "Label",
+              "type": "TEXT",
+              "fills": [
+                {
+                  "blendMode": "NORMAL",
+                  "type": "SOLID",
+                  "color": "#ffffff"
+                }
+              ],
+              "absoluteBoundingBox": {
+                "x": 4825,
+                "y": 751,
+                "width": 55,
+                "height": 22
+              },
+              "characters": "다시 시도",
+              "style": {
+                "fontFamily": "Noto Sans KR",
+                "fontStyle": "Medium",
+                "fontWeight": 500,
+                "fontSize": 14,
+                "textAlignHorizontal": "LEFT",
+                "letterSpacing": 0,
+                "lineHeightPx": 22
+              }
+            }
+          ]
+        },
+        {
+          "id": "72:382",
+          "name": "recovery / secondary",
+          "type": "INSTANCE",
+          "fills": [
+            {
+              "blendMode": "NORMAL",
+              "type": "SOLID",
+              "color": "#f3f4f6"
+            }
+          ],
+          "strokes": [
+            {
+              "blendMode": "NORMAL",
+              "type": "SOLID",
+              "color": "#e5e7eb"
+            }
+          ],
+          "cornerRadius": 32,
+          "absoluteBoundingBox": {
+            "x": 4951,
+            "y": 738,
+            "width": 173,
+            "height": 48
+          },
+          "children": [
+            {
+              "id": "I72:382;70:98",
+              "name": "Label",
+              "type": "TEXT",
+              "fills": [
+                {
+                  "blendMode": "NORMAL",
+                  "type": "SOLID",
+                  "color": "#111827"
+                }
+              ],
+              "absoluteBoundingBox": {
+                "x": 5010,
+                "y": 751,
+                "width": 55,
+                "height": 22
+              },
+              "characters": "다른 방법",
+              "style": {
+                "fontFamily": "Noto Sans KR",
+                "fontStyle": "Medium",
+                "fontWeight": 500,
+                "fontSize": 14,
+                "textAlignHorizontal": "LEFT",
+                "letterSpacing": 0,
+                "lineHeightPx": 22
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "72:384",
+      "name": "Policy footer",
+      "type": "FRAME",
+      "absoluteBoundingBox": {
+        "x": 4766,
+        "y": 786,
+        "width": 358,
+        "height": 124
+      },
+      "children": [
+        {
+          "id": "72:385",
+          "name": "Policy review slots",
+          "type": "FRAME",
+          "absoluteBoundingBox": {
+            "x": 4766,
+            "y": 822,
+            "width": 358,
+            "height": 88
+          },
+          "children": [
+            {
+              "id": "72:386",
+              "name": "policySlot / terms",
+              "type": "FRAME",
+              "strokes": [
+                {
+                  "blendMode": "NORMAL",
+                  "type": "SOLID",
+                  "color": "#e5e7eb"
+                }
+              ],
+              "absoluteBoundingBox": {
+                "x": 4766,
+                "y": 822,
+                "width": 358,
+                "height": 44
+              },
+              "children": [
+                {
+                  "id": "72:387",
+                  "name": "Policy placeholder",
+                  "type": "TEXT",
+                  "fills": [
+                    {
+                      "blendMode": "NORMAL",
+                      "type": "SOLID",
+                      "color": "#6b7280"
+                    }
+                  ],
+                  "absoluteBoundingBox": {
+                    "x": 4766,
+                    "y": 835.5,
+                    "width": 358,
+                    "height": 18
+                  },
+                  "characters": "이용약관 · 미연결 (검토용 위치)",
+                  "style": {
+                    "fontFamily": "Noto Sans KR",
+                    "fontStyle": "Medium",
+                    "fontWeight": 500,
+                    "fontSize": 12,
+                    "textAlignHorizontal": "LEFT",
+                    "letterSpacing": 0,
+                    "lineHeightPx": 18
+                  }
+                }
+              ]
+            },
+            {
+              "id": "72:388",
+              "name": "policySlot / privacy",
+              "type": "FRAME",
+              "strokes": [
+                {
+                  "blendMode": "NORMAL",
+                  "type": "SOLID",
+                  "color": "#e5e7eb"
+                }
+              ],
+              "absoluteBoundingBox": {
+                "x": 4766,
+                "y": 866,
+                "width": 358,
+                "height": 44
+              },
+              "children": [
+                {
+                  "id": "72:389",
+                  "name": "Policy placeholder",
+                  "type": "TEXT",
+                  "fills": [
+                    {
+                      "blendMode": "NORMAL",
+                      "type": "SOLID",
+                      "color": "#6b7280"
+                    }
+                  ],
+                  "absoluteBoundingBox": {
+                    "x": 4766,
+                    "y": 879,
+                    "width": 358,
+                    "height": 18
+                  },
+                  "characters": "개인정보 처리방침 · 미연결 (검토용)",
+                  "style": {
+                    "fontFamily": "Noto Sans KR",
+                    "fontStyle": "Medium",
+                    "fontWeight": 500,
+                    "fontSize": 12,
+                    "textAlignHorizontal": "LEFT",
+                    "letterSpacing": 0,
+                    "lineHeightPx": 18
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

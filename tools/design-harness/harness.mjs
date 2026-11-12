@@ -1,5 +1,5 @@
 import { inspectStage } from './stage-checks.mjs';
-import { safeStat } from './io.mjs';
+import { safeStat, isPlatformMetadata, artifactHashes } from './io.mjs';
 import { readdirSync, readFileSync, openSync, closeSync, writeFileSync, renameSync, unlinkSync, realpathSync } from 'node:fs';
 import { resolve, join, relative, sep } from 'node:path';
 import { createHash, randomUUID } from 'node:crypto';
@@ -31,7 +31,7 @@ function walk(base, path, hashes, issues) {
   try {
     const stat = safeStat(path);
     if (!stat) return;
-    if (stat.isFile()) { inspectFile(base, path, hashes, issues); return; }
+    if (stat.isFile()) { if (!isPlatformMetadata(path)) inspectFile(base, path, hashes, issues); return; }
     if (!stat.isDirectory()) { issues.push(`Unsupported file: ${relative(base, path)}`); return; }
     for (const name of readdirSync(path).sort()) walk(base, join(path, name), hashes, issues);
   } catch (error) { issues.push(error.message); }
@@ -88,7 +88,7 @@ export function check(base) {
     Object.assign(files, hashes);
     const structurallyReady = issues.length === 0;
     const latest = [...log.approvals].reverse().find(entry => entry.stage === stage.id);
-    const valid = latest && same(latest.files, files) && same(latest.upstreamApprovals, upstreamApprovals);
+    const valid = latest && same(artifactHashes(latest.files), artifactHashes(files)) && same(latest.upstreamApprovals, upstreamApprovals);
     let status;
     if (!priorPassed && index > 0) status = 'blocked';
     else if (latest && !valid) status = 'needs_revision';

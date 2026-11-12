@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
-import { fillPipeline } from './fixtures.mjs';
+import { fillPipeline, png, digest } from './fixtures.mjs';
 const cli = fileURLToPath(new URL('../bin/design-harness', import.meta.url));
 const hook = fileURLToPath(new URL('../hooks/run.mjs', import.meta.url));
 function fixture(t) {
@@ -83,6 +83,15 @@ test('hooks resolve subdirectories, reject ambiguity and malformed input, and ac
   assert.equal(malformed.status, 0); assert.equal(JSON.parse(malformed.stdout).hookSpecificOutput.permissionDecision, 'deny');
 });
 
+test('project discovery ignores regular work files without bypassing target checks', t => {
+  const f = fixture(t); f.approve();
+  writeFileSync(join(f.root, 'work/.DS_Store'), 'Finder metadata');
+  writeFileSync(join(f.root, 'work/README.md'), 'Workspace notes');
+  assert.deepEqual(f.invoke('PreToolUse'), {});
+  assert.equal(f.invoke('PreToolUse', { tool_input: { fileKey: 'OtherFile' } }).hookSpecificOutput.permissionDecision, 'deny');
+  assert.match(f.invoke('Stop').systemMessage, /design-harness check/);
+});
+
 test('lint flags layout, components, touch targets and refuses symlink exports', async t => {
   const f = fixture(t), data = JSON.parse(readFileSync(join(f.base, '06-figma/nodes.json')));
   Object.assign(data.nodes[0], { name: 'Button', width: 20, height: 20, layoutMode: 'NONE', componentName: 'missing' });
@@ -105,4 +114,88 @@ test('Figma contracts reject numeric file keys and non-string export timestamps'
   f.put('control/figma.json', { fileKey: 'DemoFile', pageId: '0:1' });
   f.put('06-figma/nodes.json', { ...original, exportedAt: 1 });
   assert.equal(f.run('lint:figma', '--force').status, 2);
+});
+
+test('bridge read-only operations remain readable before design approval', t => {
+  const f = fixture(t);
+  for (const operation of ['list_files', 'get_document', 'get_node', 'get_selection', 'get_styles', 'get_motion_styles', 'get_node_motion', 'save_screenshots']) {
+    for (const event of ['PreToolUse', 'PostToolUse']) assert.deepEqual(f.invoke(event, { tool_name: `mcp__figma_agent_mcp__${operation}`, tool_input: {} }), {}, operation);
+  }
+});
+
+test('IMAGE fills require manifest-backed exact PNG provenance and preserved proportions', t => {
+  const f = fixture(t), bytes = png(96, 48), asset = 'assets/brand.png', imageHash = 'a'.repeat(40);
+  mkdirSync(join(f.base, '05-design-system/assets'), { recursive: true });
+  writeFileSync(join(f.base, '05-design-system', asset), bytes);
+  f.put('05-design-system/assets-manifest.json', { files: [{ path: asset, bytes: bytes.length, sha256: digest(bytes), dimensions: { width: 96, height: 48 } }] });
+  const data = JSON.parse(readFileSync(join(f.base, '06-figma/nodes.json')));
+  data.nodes[0].children = [{ id: '2:1', type: 'RECTANGLE', name: 'Official artwork', width: 96, height: 48, fills: [{ type: 'IMAGE', imageHash, scaleMode: 'FILL' }] }];
+  f.put('06-figma/nodes.json', data);
+  const map = { nodes: [{ screen: 'map', state: 'default', nodeId: '1:1' }], images: [{ nodeId: '2:1', fillIndex: 0, asset, imageHash }] };
+  f.put('06-figma/node-map.json', map);
+  let result = f.run('lint:figma', '--force', '--json'); assert.equal(result.status, 0, result.stderr + result.stdout);
+  assert.ok(Object.hasOwn(JSON.parse(result.stdout).inputs, '05-design-system/assets/brand.png'));
+  for (const patch of [{ imageHash: 'b'.repeat(40) }, { scaleMode: 'CROP' }, { opacity: .5 }, { rotation: 20 }, { filters: { contrast: .2 } }, { imageTransform: [[1, 0, 0], [0, 1, 0]] }]) {
+    data.nodes[0].children[0].fills = [{ type: 'IMAGE', imageHash, scaleMode: 'FILL', ...patch }];
+    f.put('06-figma/nodes.json', data); result = f.run('lint:figma', '--force', '--json'); assert.notEqual(result.status, 0, JSON.stringify(patch));
+  }
+  data.nodes[0].children[0].fills = [{ type: 'IMAGE', imageHash, scaleMode: 'FILL' }];
+  for (const target of [data.nodes[0], data.nodes[0].children[0]]) {
+    target.rotation = 30; f.put('06-figma/nodes.json', data);
+    assert.notEqual(f.run('lint:figma', '--force').status, 0, 'node/ancestor rotation');
+    delete target.rotation;
+  }
+  data.nodes[0].children[0].width = 80;
+  f.put('06-figma/nodes.json', data); assert.notEqual(f.run('lint:figma', '--force').status, 0);
+  data.nodes[0].children[0].width = 96; f.put('06-figma/nodes.json', data);
+  for (const badAsset of ['../outside.png', 'assets/unregistered.png']) {
+    f.put('06-figma/node-map.json', { ...map, images: [{ ...map.images[0], asset: badAsset }] });
+    assert.notEqual(f.run('lint:figma', '--force').status, 0);
+  }
+  for (const images of [[], [{ ...map.images[0], nodeId: '9:9' }], [map.images[0], map.images[0]]]) {
+    f.put('06-figma/node-map.json', { ...map, images });
+    assert.notEqual(f.run('lint:figma', '--force').status, 0);
+  }
+  f.put('06-figma/node-map.json', map);
+  data.nodes[0].opacity = .5; f.put('06-figma/nodes.json', data);
+  assert.notEqual(f.run('lint:figma', '--force').status, 0);
+  delete data.nodes[0].opacity; f.put('06-figma/nodes.json', data);
+  writeFileSync(join(f.base, '05-design-system', asset), png(95, 48));
+  assert.notEqual(f.run('lint:figma', '--force').status, 0);
+});
+
+test('native instance descendant IDs retain image provenance and duplicate checks', t => {
+  const f = fixture(t), bytes = png(96, 48), asset = 'assets/brand.png', imageHash = 'a'.repeat(40);
+  mkdirSync(join(f.base, '05-design-system/assets'), { recursive: true });
+  writeFileSync(join(f.base, '05-design-system', asset), bytes);
+  f.put('05-design-system/assets-manifest.json', { files: [{ path: asset, bytes: bytes.length, sha256: digest(bytes), dimensions: { width: 96, height: 48 } }] });
+  const data = JSON.parse(readFileSync(join(f.base, '06-figma/nodes.json')));
+  const artwork = { id: 'I71:5;70:31', type: 'RECTANGLE', name: 'Official artwork', width: 96, height: 48, fills: [{ type: 'IMAGE', imageHash, scaleMode: 'FILL' }] };
+  data.nodes[0].children = [artwork];
+  const map = { nodes: [{ screen: 'map', state: 'default', nodeId: '1:1' }], images: [{ nodeId: artwork.id, fillIndex: 0, asset, imageHash }] };
+  f.put('06-figma/nodes.json', data); f.put('06-figma/node-map.json', map);
+  let result = f.run('lint:figma', '--force', '--json');
+  assert.equal(result.status, 0, result.stderr + result.stdout);
+  data.nodes[0].children.push({ ...artwork }); f.put('06-figma/nodes.json', data);
+  assert.equal(f.run('lint:figma', '--force').status, 2, 'duplicate IDs still rejected');
+  data.nodes[0].children = [artwork]; artwork.fills[0].imageHash = 'b'.repeat(40); f.put('06-figma/nodes.json', data);
+  assert.notEqual(f.run('lint:figma', '--force').status, 0, 'image provenance still enforced');
+  for (const id of ['I71:5', '71:5;70:31', 'I71:5;', 'I71:5;invalid', 123]) {
+    artwork.id = id; f.put('06-figma/nodes.json', data);
+    assert.equal(f.run('lint:figma', '--force').status, 2, 'malformed IDs still rejected');
+  }
+});
+
+ test('image geometry checks reject relative distortion and invalid opacity lineage', t => {
+  const f = fixture(t), bytes = png(1, 1000), imageHash = 'a'.repeat(40);
+  mkdirSync(join(f.base, '05-design-system/assets'), { recursive: true });
+  writeFileSync(join(f.base, '05-design-system/assets/portrait.png'), bytes);
+  f.put('05-design-system/assets-manifest.json', { files: [{ path: 'assets/portrait.png', bytes: bytes.length, sha256: digest(bytes), dimensions: { width: 1, height: 1000 } }] });
+  const data = JSON.parse(readFileSync(join(f.base, '06-figma/nodes.json')));
+  data.nodes[0].children = [{ id: '2:1', type: 'RECTANGLE', name: 'Portrait', width: 2, height: 1000, fills: [{ type: 'IMAGE', imageHash, scaleMode: 'FIT' }] }];
+  f.put('06-figma/node-map.json', { nodes: [{ screen: 'map', state: 'default', nodeId: '1:1' }], images: [{ nodeId: '2:1', fillIndex: 0, asset: 'assets/portrait.png', imageHash }] });
+  f.put('06-figma/nodes.json', data); assert.notEqual(f.run('lint:figma', '--force').status, 0, '100% distortion');
+  data.nodes[0].children[0].width = 1; f.put('06-figma/nodes.json', data); assert.equal(f.run('lint:figma', '--force').status, 0, 'valid FIT');
+  data.nodes[0].opacity = .5; data.nodes[0].children[0].opacity = 2; f.put('06-figma/nodes.json', data);
+  assert.notEqual(f.run('lint:figma', '--force').status, 0, 'compensating invalid opacity');
 });

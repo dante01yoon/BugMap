@@ -398,3 +398,7 @@ PostgreSQL + PostGIS를 기본 DB로 권장한다. `sightings.public_location`�
 사용자 요청으로 CLI 0.3.0에 lint:figma와 Codex 플러그인 훅을 채택했다. Node 20·외부 런타임 의존성 없음은 유지한다. 대상 설정 control/figma.json을 공통 승인 해시에 포함하고 PreToolUse는 기존 check의 유효한 시스템 승인과 정확한 대상 파일을 요구한다. PostToolUse는 새 노드 내보내기를 안내하고 Stop은 동일 check를 읽기 전용으로 실행한다. 사람 대기에서 자동 재개하지 않는다.
 
 내보낸 노드와 매핑·토큰·와이어프레임의 SHA-256을 보고서에 기록하고 check에서 전체 결과를 재계산한다. 조작된 로컬 JSON/원격 최신성·실제 바인딩·시각 품질은 이 구조만으로 인증할 수 없다. 훅도 지원되는 이름의 Figma 도구 경로에 한정되며 OS 보안 경계가 아니다. 배포/설치·계약은 [Figma 안내](../tools/design-harness/FIGMA.md), 단계 기준은 [하네스](design-harness.md)를 따른다.
+
+### 0.3.1 등록 PNG와 브리지 조회 분류
+
+Figma IMAGE fill은 시스템 assets-manifest.json의 실제 PNG와 node-map.images의 노드/채우기/원격 imageHash 매핑이 일치할 때만 허용한다. 파일 안전 I/O·SHA-256·PNG 치수·원본 비율·불투명/무회전/무필터/무크롭을 검사하며 manifest/PNG도 보고서 입력에 포함한다. 기존 단계별 승인 체인은 유지하고 로컬 JSON의 원격 진위 인증 한계도 유지한다. 연결 확인과 상세 raw 노드 내보내기는 실제 도구 응답으로 별도 검증한다. 현재 연결의 상세 제약은 [실행 preflight](../work/bugmap-login/06-figma/preflight.json)를 따른다.

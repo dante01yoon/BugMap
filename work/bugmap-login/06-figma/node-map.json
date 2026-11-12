@@ -1,0 +1,347 @@
+{
+  "status": "blocked: recovery widths repaired; full raw export incomplete; loading icon secondary binding pending",
+  "nodes": [
+    {
+      "screen": "login",
+      "state": "default",
+      "nodeId": "72:26",
+      "width": 390,
+      "height": 844,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-26",
+      "capture": "captures/talk/72-26.png",
+      "html": "web/login--default.html",
+      "rawExported": true,
+      "previousCapture": "captures/bridge/72:26.png"
+    },
+    {
+      "screen": "login",
+      "state": "loading_kakao",
+      "nodeId": "72:84",
+      "width": 390,
+      "height": 844,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-84",
+      "capture": "captures/talk/72-84.png",
+      "html": "web/login--loading_kakao.html",
+      "rawExported": true,
+      "previousCapture": "captures/bridge/72:84.png"
+    },
+    {
+      "screen": "login",
+      "state": "loading_naver",
+      "nodeId": "72:145",
+      "width": 390,
+      "height": 844,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-145",
+      "capture": "captures/talk/72-145.png",
+      "html": "web/login--loading_naver.html",
+      "rawExported": true,
+      "previousCapture": "captures/bridge/72:145.png"
+    },
+    {
+      "screen": "login",
+      "state": "loading_apple",
+      "nodeId": "72:206",
+      "width": 390,
+      "height": 844,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-206",
+      "capture": "captures/talk/72-206.png",
+      "html": "web/login--loading_apple.html",
+      "rawExported": true,
+      "previousCapture": "captures/bridge/72:206.png"
+    },
+    {
+      "screen": "login",
+      "state": "cancelled",
+      "nodeId": "72:267",
+      "width": 390,
+      "height": 844,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-267",
+      "capture": "captures/talk/72-267.png",
+      "html": "web/login--cancelled.html",
+      "rawExported": true,
+      "previousCapture": "captures/bridge/72:267.png"
+    },
+    {
+      "screen": "login",
+      "state": "network_error",
+      "nodeId": "72:325",
+      "width": 390,
+      "height": 844,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-325",
+      "capture": "captures/talk/72-325.png",
+      "html": "web/login--network_error.html",
+      "rawExported": false,
+      "previousCapture": "captures/bridge/72:325.png",
+      "rawSnapshotStatus": "historical pre-repair; not current"
+    },
+    {
+      "screen": "login",
+      "state": "unsupported",
+      "nodeId": "72:390",
+      "width": 390,
+      "height": 844,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-390",
+      "capture": "captures/talk/72-390.png",
+      "html": "web/login--unsupported.html",
+      "rawExported": true,
+      "previousCapture": "captures/bridge/72:390.png"
+    },
+    {
+      "screen": "login",
+      "state": "service_outage",
+      "nodeId": "72:450",
+      "width": 390,
+      "height": 844,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-450",
+      "capture": "captures/talk/72-450.png",
+      "html": "web/login--service_outage.html",
+      "rawExported": false,
+      "previousCapture": "captures/bridge/72:450.png",
+      "rawSnapshotStatus": "historical pre-repair; not current"
+    },
+    {
+      "screen": "login",
+      "state": "success",
+      "nodeId": "72:515",
+      "width": 390,
+      "height": 844,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-515",
+      "capture": "captures/talk/72-515.png",
+      "html": "web/login--success.html",
+      "rawExported": false,
+      "previousCapture": "captures/bridge/72:515.png"
+    },
+    {
+      "screen": "login",
+      "state": "policy_pending",
+      "nodeId": "72:573",
+      "width": 390,
+      "height": 844,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-573",
+      "capture": "captures/talk/72-573.png",
+      "html": "web/login--policy_pending.html",
+      "rawExported": false,
+      "previousCapture": "captures/bridge/72:573.png"
+    },
+    {
+      "screen": "login-compact",
+      "state": "default",
+      "nodeId": "72:631",
+      "width": 360,
+      "height": 800,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-631",
+      "capture": "captures/talk/72-631.png",
+      "html": "web/login-compact--default.html",
+      "rawExported": false,
+      "previousCapture": "captures/bridge/72:631.png"
+    },
+    {
+      "screen": "login-compact",
+      "state": "loading_kakao",
+      "nodeId": "72:689",
+      "width": 360,
+      "height": 800,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-689",
+      "capture": "captures/talk/72-689.png",
+      "html": "web/login-compact--loading_kakao.html",
+      "rawExported": false,
+      "previousCapture": "captures/bridge/72:689.png"
+    },
+    {
+      "screen": "login-compact",
+      "state": "loading_naver",
+      "nodeId": "72:750",
+      "width": 360,
+      "height": 800,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-750",
+      "capture": "captures/talk/72-750.png",
+      "html": "web/login-compact--loading_naver.html",
+      "rawExported": false,
+      "previousCapture": "captures/bridge/72:750.png"
+    },
+    {
+      "screen": "login-compact",
+      "state": "loading_apple",
+      "nodeId": "72:811",
+      "width": 360,
+      "height": 800,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-811",
+      "capture": "captures/talk/72-811.png",
+      "html": "web/login-compact--loading_apple.html",
+      "rawExported": false,
+      "previousCapture": "captures/bridge/72:811.png"
+    },
+    {
+      "screen": "login-compact",
+      "state": "cancelled",
+      "nodeId": "72:872",
+      "width": 360,
+      "height": 800,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-872",
+      "capture": "captures/talk/72-872.png",
+      "html": "web/login-compact--cancelled.html",
+      "rawExported": false,
+      "previousCapture": "captures/bridge/72:872.png"
+    },
+    {
+      "screen": "login-compact",
+      "state": "network_error",
+      "nodeId": "72:930",
+      "width": 360,
+      "height": 800,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-930",
+      "capture": "captures/talk/72-930.png",
+      "html": "web/login-compact--network_error.html",
+      "rawExported": false,
+      "previousCapture": "captures/bridge/72:930.png",
+      "rawSnapshotStatus": "not exported"
+    },
+    {
+      "screen": "login-compact",
+      "state": "unsupported",
+      "nodeId": "72:995",
+      "width": 360,
+      "height": 800,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-995",
+      "capture": "captures/talk/72-995.png",
+      "html": "web/login-compact--unsupported.html",
+      "rawExported": false,
+      "previousCapture": "captures/bridge/72:995.png"
+    },
+    {
+      "screen": "login-compact",
+      "state": "service_outage",
+      "nodeId": "72:1055",
+      "width": 360,
+      "height": 800,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-1055",
+      "capture": "captures/talk/72-1055.png",
+      "html": "web/login-compact--service_outage.html",
+      "rawExported": false,
+      "previousCapture": "captures/bridge/72:1055.png",
+      "rawSnapshotStatus": "not exported"
+    },
+    {
+      "screen": "login-compact",
+      "state": "success",
+      "nodeId": "72:1120",
+      "width": 360,
+      "height": 800,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-1120",
+      "capture": "captures/talk/72-1120.png",
+      "html": "web/login-compact--success.html",
+      "rawExported": false,
+      "previousCapture": "captures/bridge/72:1120.png"
+    },
+    {
+      "screen": "login-compact",
+      "state": "policy_pending",
+      "nodeId": "72:1178",
+      "width": 360,
+      "height": 800,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-1178",
+      "capture": "captures/talk/72-1178.png",
+      "html": "web/login-compact--policy_pending.html",
+      "rawExported": false,
+      "previousCapture": "captures/bridge/72:1178.png"
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "I72:71;70:81",
+      "fillIndex": 0,
+      "asset": "assets/NAVER_login_KR/NAVER_login_Light_KR_white_center_H48.png",
+      "imageHash": "0228cb73d8f09c52f14f94f4a855e7d13d448d2a"
+    },
+    {
+      "nodeId": "I72:73;70:83",
+      "fillIndex": 0,
+      "asset": "assets/apple-signin-ko-black-358x48@2x.png",
+      "imageHash": "7ddbd9ff52a137ffbdf4b63c57f9d958d783b616"
+    },
+    {
+      "nodeId": "I72:129;70:81",
+      "fillIndex": 0,
+      "asset": "assets/NAVER_login_KR/NAVER_login_Light_KR_white_center_H48.png",
+      "imageHash": "0228cb73d8f09c52f14f94f4a855e7d13d448d2a"
+    },
+    {
+      "nodeId": "I72:131;70:83",
+      "fillIndex": 0,
+      "asset": "assets/apple-signin-ko-black-358x48@2x.png",
+      "imageHash": "7ddbd9ff52a137ffbdf4b63c57f9d958d783b616"
+    },
+    {
+      "nodeId": "I72:190;70:81",
+      "fillIndex": 0,
+      "asset": "assets/NAVER_login_KR/NAVER_login_Light_KR_white_center_H48.png",
+      "imageHash": "0228cb73d8f09c52f14f94f4a855e7d13d448d2a"
+    },
+    {
+      "nodeId": "I72:192;70:83",
+      "fillIndex": 0,
+      "asset": "assets/apple-signin-ko-black-358x48@2x.png",
+      "imageHash": "7ddbd9ff52a137ffbdf4b63c57f9d958d783b616"
+    },
+    {
+      "nodeId": "I72:251;70:81",
+      "fillIndex": 0,
+      "asset": "assets/NAVER_login_KR/NAVER_login_Light_KR_white_center_H48.png",
+      "imageHash": "0228cb73d8f09c52f14f94f4a855e7d13d448d2a"
+    },
+    {
+      "nodeId": "I72:253;70:83",
+      "fillIndex": 0,
+      "asset": "assets/apple-signin-ko-black-358x48@2x.png",
+      "imageHash": "7ddbd9ff52a137ffbdf4b63c57f9d958d783b616"
+    },
+    {
+      "nodeId": "I72:312;70:81",
+      "fillIndex": 0,
+      "asset": "assets/NAVER_login_KR/NAVER_login_Light_KR_white_center_H48.png",
+      "imageHash": "0228cb73d8f09c52f14f94f4a855e7d13d448d2a"
+    },
+    {
+      "nodeId": "I72:314;70:83",
+      "fillIndex": 0,
+      "asset": "assets/apple-signin-ko-black-358x48@2x.png",
+      "imageHash": "7ddbd9ff52a137ffbdf4b63c57f9d958d783b616"
+    },
+    {
+      "nodeId": "I72:370;70:81",
+      "fillIndex": 0,
+      "asset": "assets/NAVER_login_KR/NAVER_login_Light_KR_white_center_H48.png",
+      "imageHash": "0228cb73d8f09c52f14f94f4a855e7d13d448d2a"
+    },
+    {
+      "nodeId": "I72:372;70:83",
+      "fillIndex": 0,
+      "asset": "assets/apple-signin-ko-black-358x48@2x.png",
+      "imageHash": "7ddbd9ff52a137ffbdf4b63c57f9d958d783b616"
+    },
+    {
+      "nodeId": "I72:435;70:81",
+      "fillIndex": 0,
+      "asset": "assets/NAVER_login_KR/NAVER_login_Light_KR_white_center_H48.png",
+      "imageHash": "0228cb73d8f09c52f14f94f4a855e7d13d448d2a"
+    },
+    {
+      "nodeId": "I72:437;70:83",
+      "fillIndex": 0,
+      "asset": "assets/apple-signin-ko-black-358x48@2x.png",
+      "imageHash": "7ddbd9ff52a137ffbdf4b63c57f9d958d783b616"
+    },
+    {
+      "nodeId": "I72:495;70:81",
+      "fillIndex": 0,
+      "asset": "assets/NAVER_login_KR/NAVER_login_Light_KR_white_center_H48.png",
+      "imageHash": "0228cb73d8f09c52f14f94f4a855e7d13d448d2a"
+    },
+    {
+      "nodeId": "I72:497;70:83",
+      "fillIndex": 0,
+      "asset": "assets/apple-signin-ko-black-358x48@2x.png",
+      "imageHash": "7ddbd9ff52a137ffbdf4b63c57f9d958d783b616"
+    }
+  ]
+}

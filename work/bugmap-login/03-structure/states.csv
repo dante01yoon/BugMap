@@ -1,0 +1,21 @@
+screen_id,state_id,entry_condition,state_content,recovery_exit,requirements,not_applicable
+login,default,최초 진입 또는 다시 선택,제공자 선택,제품 전이: loading_{provider}; 내부 검토 참조: policy_pending (제품 진입 없음),LOGIN-01;LOGIN-02;LOGIN-05;LOGIN-06;LOGIN-05;LOGIN-08,빈 결과: 로그인은 조회목록 아님; 앱 위치/사진 권한: 로그인에서 요청하지 않음; 저장 복귀: 이번 범위에 편집/저장 없음
+login,loading_kakao,카카오 선택; 단일 요청 잠금,카카오 로그인 요청 중,cancelled / network_error / unsupported / service_outage / success,LOGIN-02;LOGIN-03;LOGIN-05;LOGIN-08,빈 결과: 로그인은 조회목록 아님; 앱 위치/사진 권한: 로그인에서 요청하지 않음; 저장 복귀: 이번 범위에 편집/저장 없음
+login,loading_naver,네이버 선택; 단일 요청 잠금,네이버 로그인 요청 중,cancelled / network_error / unsupported / service_outage / success,LOGIN-02;LOGIN-03;LOGIN-05;LOGIN-08,빈 결과: 로그인은 조회목록 아님; 앱 위치/사진 권한: 로그인에서 요청하지 않음; 저장 복귀: 이번 범위에 편집/저장 없음
+login,loading_apple,Apple 선택; 단일 요청 잠금,Apple 로그인 요청 중,cancelled / network_error / unsupported / service_outage / success,LOGIN-02;LOGIN-03;LOGIN-05;LOGIN-08,빈 결과: 로그인은 조회목록 아님; 앱 위치/사진 권한: 로그인에서 요청하지 않음; 저장 복귀: 이번 범위에 편집/저장 없음
+login,cancelled,제공자 취소 콜백 또는 취소 확인,로그인을 취소했어요,default 또는 loading_{provider},LOGIN-04;LOGIN-05;LOGIN-08,빈 결과: 로그인은 조회목록 아님; 앱 위치/사진 권한: 로그인에서 요청하지 않음; 저장 복귀: 이번 범위에 편집/저장 없음
+login,network_error,선택 제공자 요청의 연결 실패,연결을 확인해 주세요,다시 시도 → 동일 제공자 loading; 다른 방법 → default,LOGIN-04;LOGIN-05;LOGIN-08,빈 결과: 로그인은 조회목록 아님; 앱 위치/사진 권한: 로그인에서 요청하지 않음; 저장 복귀: 이번 범위에 편집/저장 없음
+login,unsupported,검증된 지원정보의 미지원 판정; OS 단독 추론 금지,이 환경에서는 지원하지 않아요,확인된 미지원 제공자만 비활성; 나머지 선택 → loading,LOGIN-09;LOGIN-05;LOGIN-08,빈 결과: 로그인은 조회목록 아님; 앱 위치/사진 권한: 로그인에서 요청하지 않음; 저장 복귀: 이번 범위에 편집/저장 없음
+login,service_outage,제공자의 확인된 일시 장애,로그인이 잠시 중단됐어요,다시 시도 → 지원 재확인 후 loading; 다른 방법 → default,LOGIN-09;LOGIN-05;LOGIN-08,빈 결과: 로그인은 조회목록 아님; 앱 위치/사진 권한: 로그인에서 요청하지 않음; 저장 복귀: 이번 범위에 편집/저장 없음
+login,success,제공자 검증 및 앱 세션 완료 콜백 (실제 연결 제외),로그인 완료 후 지도로 이동,메인 지도 외부 목적지; 로그인 스택 제거,LOGIN-09;LOGIN-05;LOGIN-08,빈 결과: 로그인은 조회목록 아님; 앱 위치/사진 권한: 로그인에서 요청하지 않음; 저장 복귀: 이번 범위에 편집/저장 없음
+login,policy_pending,검토용 정책 미정 상세; 제품 링크에서 진입하지 않음,정책 연결 전 검토 사항,검토에서 default 비교; 실제 URL 확정 전 링크 노출 금지,LOGIN-06;LOGIN-05;LOGIN-08,빈 결과: 로그인은 조회목록 아님; 앱 위치/사진 권한: 로그인에서 요청하지 않음; 저장 복귀: 이번 범위에 편집/저장 없음
+login-compact,default,최초 진입 또는 다시 선택,제공자 선택,제품 전이: loading_{provider}; 내부 검토 참조: policy_pending (제품 진입 없음),LOGIN-01;LOGIN-02;LOGIN-05;LOGIN-06;LOGIN-05;LOGIN-08,빈 결과: 로그인은 조회목록 아님; 앱 위치/사진 권한: 로그인에서 요청하지 않음; 저장 복귀: 이번 범위에 편집/저장 없음
+login-compact,loading_kakao,카카오 선택; 단일 요청 잠금,카카오 로그인 요청 중,cancelled / network_error / unsupported / service_outage / success,LOGIN-02;LOGIN-03;LOGIN-05;LOGIN-08,빈 결과: 로그인은 조회목록 아님; 앱 위치/사진 권한: 로그인에서 요청하지 않음; 저장 복귀: 이번 범위에 편집/저장 없음
+login-compact,loading_naver,네이버 선택; 단일 요청 잠금,네이버 로그인 요청 중,cancelled / network_error / unsupported / service_outage / success,LOGIN-02;LOGIN-03;LOGIN-05;LOGIN-08,빈 결과: 로그인은 조회목록 아님; 앱 위치/사진 권한: 로그인에서 요청하지 않음; 저장 복귀: 이번 범위에 편집/저장 없음
+login-compact,loading_apple,Apple 선택; 단일 요청 잠금,Apple 로그인 요청 중,cancelled / network_error / unsupported / service_outage / success,LOGIN-02;LOGIN-03;LOGIN-05;LOGIN-08,빈 결과: 로그인은 조회목록 아님; 앱 위치/사진 권한: 로그인에서 요청하지 않음; 저장 복귀: 이번 범위에 편집/저장 없음
+login-compact,cancelled,제공자 취소 콜백 또는 취소 확인,로그인을 취소했어요,default 또는 loading_{provider},LOGIN-04;LOGIN-05;LOGIN-08,빈 결과: 로그인은 조회목록 아님; 앱 위치/사진 권한: 로그인에서 요청하지 않음; 저장 복귀: 이번 범위에 편집/저장 없음
+login-compact,network_error,선택 제공자 요청의 연결 실패,연결을 확인해 주세요,다시 시도 → 동일 제공자 loading; 다른 방법 → default,LOGIN-04;LOGIN-05;LOGIN-08,빈 결과: 로그인은 조회목록 아님; 앱 위치/사진 권한: 로그인에서 요청하지 않음; 저장 복귀: 이번 범위에 편집/저장 없음
+login-compact,unsupported,검증된 지원정보의 미지원 판정; OS 단독 추론 금지,이 환경에서는 지원하지 않아요,확인된 미지원 제공자만 비활성; 나머지 선택 → loading,LOGIN-09;LOGIN-05;LOGIN-08,빈 결과: 로그인은 조회목록 아님; 앱 위치/사진 권한: 로그인에서 요청하지 않음; 저장 복귀: 이번 범위에 편집/저장 없음
+login-compact,service_outage,제공자의 확인된 일시 장애,로그인이 잠시 중단됐어요,다시 시도 → 지원 재확인 후 loading; 다른 방법 → default,LOGIN-09;LOGIN-05;LOGIN-08,빈 결과: 로그인은 조회목록 아님; 앱 위치/사진 권한: 로그인에서 요청하지 않음; 저장 복귀: 이번 범위에 편집/저장 없음
+login-compact,success,제공자 검증 및 앱 세션 완료 콜백 (실제 연결 제외),로그인 완료 후 지도로 이동,메인 지도 외부 목적지; 로그인 스택 제거,LOGIN-09;LOGIN-05;LOGIN-08,빈 결과: 로그인은 조회목록 아님; 앱 위치/사진 권한: 로그인에서 요청하지 않음; 저장 복귀: 이번 범위에 편집/저장 없음
+login-compact,policy_pending,검토용 정책 미정 상세; 제품 링크에서 진입하지 않음,정책 연결 전 검토 사항,검토에서 default 비교; 실제 URL 확정 전 링크 노출 금지,LOGIN-06;LOGIN-05;LOGIN-08,빈 결과: 로그인은 조회목록 아님; 앱 위치/사진 권한: 로그인에서 요청하지 않음; 저장 복귀: 이번 범위에 편집/저장 없음

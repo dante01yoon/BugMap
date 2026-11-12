@@ -1,0 +1,134 @@
+{
+  "version": 1,
+  "stage": "figma",
+  "status": "blocked",
+  "mode": "read-only preflight",
+  "at": "2026-11-13",
+  "scope": {
+    "local": "work/bugmap-login/06-figma/",
+    "fileKey": "local-mw921bod-gf4vt4",
+    "pageId": "0:1",
+    "preserveNodeIds": [
+      "1:2",
+      "2:2",
+      "4:150",
+      "12:235",
+      "13:433"
+    ],
+    "remoteWritesAuthorized": false
+  },
+  "check": {
+    "command": "node tools/design-harness/bin/design-harness check --root /Users/mac/Documents/BugMap --project bugmap-login --json",
+    "exitCode": 1,
+    "currentStage": "figma",
+    "stages1Through5": "passed",
+    "issues1Through5": [],
+    "designSystemApprovalId": "ec06054a-95e0-4016-ae8c-7d8018c70b19",
+    "figmaStatus": "in_progress"
+  },
+  "reads": [
+    {
+      "tool": "list_files",
+      "args": {},
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "[\n  {\n    \"fileKey\": \"unknown\",\n    \"fileName\": \"Untitled\"\n  }\n]"
+          }
+        ]
+      }
+    },
+    {
+      "tool": "get_document",
+      "args": {
+        "fileKey": "local-mw921bod-gf4vt4",
+        "depth": 1
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "No active connection for fileKey: local-mw921bod-gf4vt4"
+          }
+        ],
+        "isError": true
+      }
+    },
+    {
+      "tool": "get_metadata",
+      "args": {
+        "fileKey": "local-mw921bod-gf4vt4",
+        "nodeIds": [
+          "0:1",
+          "1:2",
+          "2:2",
+          "4:150",
+          "12:235",
+          "13:433"
+        ]
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "No active connection for fileKey: local-mw921bod-gf4vt4"
+          }
+        ],
+        "isError": true
+      }
+    },
+    {
+      "tool": "get_node",
+      "args": {
+        "fileKey": "local-mw921bod-gf4vt4",
+        "nodeIds": [
+          "0:1",
+          "1:2",
+          "2:2",
+          "4:150",
+          "12:235",
+          "13:433"
+        ],
+        "depth": 1
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "No active connection for fileKey: local-mw921bod-gf4vt4"
+          }
+        ],
+        "isError": true
+      }
+    }
+  ],
+  "capabilities": {
+    "source": "Live mcp__figma_agent_mcp tool definitions; no mutations tested.",
+    "editableText": "create_text / set_text_content / set_text_properties are exposed; actual creation, Korean font loading and readback unverified.",
+    "autoLayout": "create_frame + set_auto_layout (HORIZONTAL/VERTICAL/NONE, padding, spacing, align, wrap) exposed; actual behavior unverified.",
+    "images": "Observed default get_node image4:151 only returns fills:image; raw fills/imageHash not exported.",
+    "svgIcons": "No createNodeFromSvg, SVG import, vector creation, path creation or use_figma tool in this bridge. create_shape only permits RECTANGLE/ELLIPSE/LINE/POLYGON/STAR. No supported exact editable Lucide SVG insertion path established; primitive redraw is forbidden.",
+    "componentsTokens": "No explicit component/instance/variant/variable/style creation or binding tool in this bridge. generic properties does not establish support. Other Figma service tools exist but were not used because delegation restricts this preflight to this bridge.",
+    "screenshots": "get_screenshot / save_screenshots exposed; no screenshot attempted because approved file is disconnected.",
+    "rawReadback": "Observed TEXT1:4 lacks fontSize/fontName; FRAME2:3 lacks layoutMode/padding/gap; VECTOR2:7 lacks vectorPaths/strokes. Summary reads cannot satisfy native raw export contract."
+  },
+  "unverified": [
+    "Current page identity",
+    "Preserved node existence and geometry",
+    "Native text editing / auto-layout execution",
+    "get_node fills/imageHash serialization",
+    "Exact Lucide SVG insertion",
+    "Editable component and variable foundations",
+    "Actual captures"
+  ],
+  "actionsNotTaken": [
+    "No remote write, selection change, viewport change, or page switch",
+    "No control/approval/review edit",
+    "No original asset modification",
+    "No fake node-map, nodes.json, or Figma completion claim"
+  ],
+  "next": "Await root. Resolve explicit approved-key routing, raw property export and exact SVG/components/variable support before any writes.",
+  "reconnectionEvidence": "preflight-reconnected.json",
+  "reconnectionStatus": "Default target identity verified; explicit key routing and raw property export remain blocked"
+}

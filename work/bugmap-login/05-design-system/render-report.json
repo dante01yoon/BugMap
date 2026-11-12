@@ -1,0 +1,1174 @@
+{
+  "generatedAt": "2026-11-12T20:22:49.698Z",
+  "tool": "local Chromium CDP / render.mjs",
+  "scope": "05-only static design review; not lint:web stage7",
+  "runs": [
+    {
+      "state": "default",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "captures/390x844-default.png",
+      "bottomCapture": null,
+      "height": 844,
+      "width": 390,
+      "policy": [
+        {
+          "top": 722,
+          "bottom": 766,
+          "text": "이용약관 · 미연결 (검토용 위치)"
+        },
+        {
+          "top": 766,
+          "bottom": 810,
+          "text": "개인정보 처리방침 · 미연결 (검토용)"
+        }
+      ],
+      "controls": [
+        {
+          "label": "카카오 로그인",
+          "disabled": false,
+          "width": 358,
+          "height": 48
+        },
+        {
+          "label": "네이버 로그인",
+          "disabled": false,
+          "width": 358,
+          "height": 48
+        },
+        {
+          "label": "Apple로 로그인",
+          "disabled": false,
+          "width": 358,
+          "height": 48
+        }
+      ],
+      "fonts": "Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", Arial, sans-serif",
+      "actualFonts": {
+        "h1": {
+          "fonts": [
+            {
+              "familyName": "Apple SD Gothic Neo",
+              "postScriptName": "AppleSDGothicNeo-Bold",
+              "isCustomFont": false,
+              "glyphCount": 12
+            },
+            {
+              "familyName": ".SF NS",
+              "postScriptName": ".SFNS-Bold",
+              "isCustomFont": false,
+              "glyphCount": 4
+            }
+          ]
+        },
+        ".description": {
+          "fonts": [
+            {
+              "familyName": "Apple SD Gothic Neo",
+              "postScriptName": "AppleSDGothicNeo-Light",
+              "isCustomFont": false,
+              "glyphCount": 18
+            },
+            {
+              "familyName": ".SF NS",
+              "postScriptName": ".SFNS-Regular",
+              "isCustomFont": false,
+              "glyphCount": 5
+            }
+          ]
+        },
+        ".policy": {
+          "fonts": [
+            {
+              "familyName": "Apple SD Gothic Neo",
+              "postScriptName": "AppleSDGothicNeo-Medium",
+              "isCustomFont": false,
+              "glyphCount": 12
+            },
+            {
+              "familyName": ".SF NS",
+              "postScriptName": ".SFNS-Regular",
+              "isCustomFont": false,
+              "glyphCount": 7
+            }
+          ]
+        }
+      },
+      "issues": []
+    },
+    {
+      "state": "loading_kakao",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "captures/390x844-loading_kakao.png",
+      "bottomCapture": null,
+      "height": 844,
+      "width": 390,
+      "policy": [
+        {
+          "top": 722,
+          "bottom": 766,
+          "text": "이용약관 · 미연결 (검토용 위치)"
+        },
+        {
+          "top": 766,
+          "bottom": 810,
+          "text": "개인정보 처리방침 · 미연결 (검토용)"
+        }
+      ],
+      "controls": [
+        {
+          "label": "카카오 로그인",
+          "disabled": true,
+          "width": 358,
+          "height": 48
+        },
+        {
+          "label": "네이버 로그인",
+          "disabled": true,
+          "width": 358,
+          "height": 48
+        },
+        {
+          "label": "Apple로 로그인",
+          "disabled": true,
+          "width": 358,
+          "height": 48
+        }
+      ],
+      "fonts": "Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", Arial, sans-serif",
+      "actualFonts": null,
+      "issues": []
+    },
+    {
+      "state": "loading_naver",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "captures/390x844-loading_naver.png",
+      "bottomCapture": null,
+      "height": 844,
+      "width": 390,
+      "policy": [
+        {
+          "top": 722,
+          "bottom": 766,
+          "text": "이용약관 · 미연결 (검토용 위치)"
+        },
+        {
+          "top": 766,
+          "bottom": 810,
+          "text": "개인정보 처리방침 · 미연결 (검토용)"
+        }
+      ],
+      "controls": [
+        {
+          "label": "카카오 로그인",
+          "disabled": true,
+          "width": 358,
+          "height": 48
+        },
+        {
+          "label": "네이버 로그인",
+          "disabled": true,
+          "width": 358,
+          "height": 48
+        },
+        {
+          "label": "Apple로 로그인",
+          "disabled": true,
+          "width": 358,
+          "height": 48
+        }
+      ],
+      "fonts": "Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", Arial, sans-serif",
+      "actualFonts": null,
+      "issues": []
+    },
+    {
+      "state": "loading_apple",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "captures/390x844-loading_apple.png",
+      "bottomCapture": null,
+      "height": 844,
+      "width": 390,
+      "policy": [
+        {
+          "top": 722,
+          "bottom": 766,
+          "text": "이용약관 · 미연결 (검토용 위치)"
+        },
+        {
+          "top": 766,
+          "bottom": 810,
+          "text": "개인정보 처리방침 · 미연결 (검토용)"
+        }
+      ],
+      "controls": [
+        {
+          "label": "카카오 로그인",
+          "disabled": true,
+          "width": 358,
+          "height": 48
+        },
+        {
+          "label": "네이버 로그인",
+          "disabled": true,
+          "width": 358,
+          "height": 48
+        },
+        {
+          "label": "Apple로 로그인",
+          "disabled": true,
+          "width": 358,
+          "height": 48
+        }
+      ],
+      "fonts": "Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", Arial, sans-serif",
+      "actualFonts": null,
+      "issues": []
+    },
+    {
+      "state": "cancelled",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "captures/390x844-cancelled.png",
+      "bottomCapture": null,
+      "height": 844,
+      "width": 390,
+      "policy": [
+        {
+          "top": 722,
+          "bottom": 766,
+          "text": "이용약관 · 미연결 (검토용 위치)"
+        },
+        {
+          "top": 766,
+          "bottom": 810,
+          "text": "개인정보 처리방침 · 미연결 (검토용)"
+        }
+      ],
+      "controls": [
+        {
+          "label": "카카오 로그인",
+          "disabled": false,
+          "width": 358,
+          "height": 48
+        },
+        {
+          "label": "네이버 로그인",
+          "disabled": false,
+          "width": 358,
+          "height": 48
+        },
+        {
+          "label": "Apple로 로그인",
+          "disabled": false,
+          "width": 358,
+          "height": 48
+        }
+      ],
+      "fonts": "Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", Arial, sans-serif",
+      "actualFonts": null,
+      "issues": []
+    },
+    {
+      "state": "network_error",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "captures/390x844-network_error.png",
+      "bottomCapture": null,
+      "height": 844,
+      "width": 390,
+      "policy": [
+        {
+          "top": 722,
+          "bottom": 766,
+          "text": "이용약관 · 미연결 (검토용 위치)"
+        },
+        {
+          "top": 766,
+          "bottom": 810,
+          "text": "개인정보 처리방침 · 미연결 (검토용)"
+        }
+      ],
+      "controls": [
+        {
+          "label": "카카오 로그인",
+          "disabled": false,
+          "width": 358,
+          "height": 48
+        },
+        {
+          "label": "네이버 로그인",
+          "disabled": false,
+          "width": 358,
+          "height": 48
+        },
+        {
+          "label": "Apple로 로그인",
+          "disabled": false,
+          "width": 358,
+          "height": 48
+        },
+        {
+          "label": "다시 시도",
+          "disabled": false,
+          "width": 173,
+          "height": 48
+        },
+        {
+          "label": "다른 방법",
+          "disabled": false,
+          "width": 173,
+          "height": 48
+        }
+      ],
+      "fonts": "Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", Arial, sans-serif",
+      "actualFonts": null,
+      "issues": []
+    },
+    {
+      "state": "unsupported",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "captures/390x844-unsupported.png",
+      "bottomCapture": null,
+      "height": 844,
+      "width": 390,
+      "policy": [
+        {
+          "top": 722,
+          "bottom": 766,
+          "text": "이용약관 · 미연결 (검토용 위치)"
+        },
+        {
+          "top": 766,
+          "bottom": 810,
+          "text": "개인정보 처리방침 · 미연결 (검토용)"
+        }
+      ],
+      "controls": [
+        {
+          "label": "카카오 로그인",
+          "disabled": false,
+          "width": 358,
+          "height": 48
+        },
+        {
+          "label": "네이버 로그인",
+          "disabled": false,
+          "width": 358,
+          "height": 48
+        },
+        {
+          "label": "Apple로 로그인",
+          "disabled": true,
+          "width": 358,
+          "height": 48
+        }
+      ],
+      "fonts": "Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", Arial, sans-serif",
+      "actualFonts": null,
+      "issues": []
+    },
+    {
+      "state": "service_outage",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "captures/390x844-service_outage.png",
+      "bottomCapture": null,
+      "height": 844,
+      "width": 390,
+      "policy": [
+        {
+          "top": 722,
+          "bottom": 766,
+          "text": "이용약관 · 미연결 (검토용 위치)"
+        },
+        {
+          "top": 766,
+          "bottom": 810,
+          "text": "개인정보 처리방침 · 미연결 (검토용)"
+        }
+      ],
+      "controls": [
+        {
+          "label": "카카오 로그인",
+          "disabled": false,
+          "width": 358,
+          "height": 48
+        },
+        {
+          "label": "네이버 로그인",
+          "disabled": false,
+          "width": 358,
+          "height": 48
+        },
+        {
+          "label": "Apple로 로그인",
+          "disabled": false,
+          "width": 358,
+          "height": 48
+        },
+        {
+          "label": "다시 시도",
+          "disabled": false,
+          "width": 173,
+          "height": 48
+        },
+        {
+          "label": "다른 방법",
+          "disabled": false,
+          "width": 173,
+          "height": 48
+        }
+      ],
+      "fonts": "Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", Arial, sans-serif",
+      "actualFonts": null,
+      "issues": []
+    },
+    {
+      "state": "policy_pending",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "captures/390x844-policy_pending.png",
+      "bottomCapture": null,
+      "height": 844,
+      "width": 390,
+      "policy": [
+        {
+          "top": 722,
+          "bottom": 766,
+          "text": "이용약관 · 미연결 (검토용 위치)"
+        },
+        {
+          "top": 766,
+          "bottom": 810,
+          "text": "개인정보 처리방침 · 미연결 (검토용)"
+        }
+      ],
+      "controls": [
+        {
+          "label": "카카오 로그인",
+          "disabled": false,
+          "width": 358,
+          "height": 48
+        },
+        {
+          "label": "네이버 로그인",
+          "disabled": false,
+          "width": 358,
+          "height": 48
+        },
+        {
+          "label": "Apple로 로그인",
+          "disabled": false,
+          "width": 358,
+          "height": 48
+        }
+      ],
+      "fonts": "Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", Arial, sans-serif",
+      "actualFonts": null,
+      "issues": []
+    },
+    {
+      "state": "success",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "captures/390x844-success.png",
+      "bottomCapture": null,
+      "height": 844,
+      "width": 390,
+      "policy": [
+        {
+          "top": 722,
+          "bottom": 766,
+          "text": "이용약관 · 미연결 (검토용 위치)"
+        },
+        {
+          "top": 766,
+          "bottom": 810,
+          "text": "개인정보 처리방침 · 미연결 (검토용)"
+        }
+      ],
+      "controls": [
+        {
+          "label": "카카오 로그인",
+          "disabled": true,
+          "width": 358,
+          "height": 48
+        },
+        {
+          "label": "네이버 로그인",
+          "disabled": true,
+          "width": 358,
+          "height": 48
+        },
+        {
+          "label": "Apple로 로그인",
+          "disabled": true,
+          "width": 358,
+          "height": 48
+        }
+      ],
+      "fonts": "Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", Arial, sans-serif",
+      "actualFonts": null,
+      "issues": []
+    },
+    {
+      "state": "default",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "capture": "captures/360x800-default.png",
+      "bottomCapture": null,
+      "height": 800,
+      "width": 360,
+      "policy": [
+        {
+          "top": 678,
+          "bottom": 722,
+          "text": "이용약관 · 미연결 (검토용 위치)"
+        },
+        {
+          "top": 722,
+          "bottom": 766,
+          "text": "개인정보 처리방침 · 미연결 (검토용)"
+        }
+      ],
+      "controls": [
+        {
+          "label": "카카오 로그인",
+          "disabled": false,
+          "width": 328,
+          "height": 48
+        },
+        {
+          "label": "네이버 로그인",
+          "disabled": false,
+          "width": 328,
+          "height": 48
+        },
+        {
+          "label": "Apple로 로그인",
+          "disabled": false,
+          "width": 328,
+          "height": 48
+        }
+      ],
+      "fonts": "Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", Arial, sans-serif",
+      "actualFonts": {
+        "h1": {
+          "fonts": [
+            {
+              "familyName": "Apple SD Gothic Neo",
+              "postScriptName": "AppleSDGothicNeo-Bold",
+              "isCustomFont": false,
+              "glyphCount": 12
+            },
+            {
+              "familyName": ".SF NS",
+              "postScriptName": ".SFNS-Bold",
+              "isCustomFont": false,
+              "glyphCount": 4
+            }
+          ]
+        },
+        ".description": {
+          "fonts": [
+            {
+              "familyName": "Apple SD Gothic Neo",
+              "postScriptName": "AppleSDGothicNeo-Light",
+              "isCustomFont": false,
+              "glyphCount": 18
+            },
+            {
+              "familyName": ".SF NS",
+              "postScriptName": ".SFNS-Regular",
+              "isCustomFont": false,
+              "glyphCount": 5
+            }
+          ]
+        },
+        ".policy": {
+          "fonts": [
+            {
+              "familyName": "Apple SD Gothic Neo",
+              "postScriptName": "AppleSDGothicNeo-Medium",
+              "isCustomFont": false,
+              "glyphCount": 12
+            },
+            {
+              "familyName": ".SF NS",
+              "postScriptName": ".SFNS-Regular",
+              "isCustomFont": false,
+              "glyphCount": 7
+            }
+          ]
+        }
+      },
+      "issues": []
+    },
+    {
+      "state": "loading_kakao",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "capture": "captures/360x800-loading_kakao.png",
+      "bottomCapture": null,
+      "height": 800,
+      "width": 360,
+      "policy": [
+        {
+          "top": 678,
+          "bottom": 722,
+          "text": "이용약관 · 미연결 (검토용 위치)"
+        },
+        {
+          "top": 722,
+          "bottom": 766,
+          "text": "개인정보 처리방침 · 미연결 (검토용)"
+        }
+      ],
+      "controls": [
+        {
+          "label": "카카오 로그인",
+          "disabled": true,
+          "width": 328,
+          "height": 48
+        },
+        {
+          "label": "네이버 로그인",
+          "disabled": true,
+          "width": 328,
+          "height": 48
+        },
+        {
+          "label": "Apple로 로그인",
+          "disabled": true,
+          "width": 328,
+          "height": 48
+        }
+      ],
+      "fonts": "Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", Arial, sans-serif",
+      "actualFonts": null,
+      "issues": []
+    },
+    {
+      "state": "loading_naver",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "capture": "captures/360x800-loading_naver.png",
+      "bottomCapture": null,
+      "height": 800,
+      "width": 360,
+      "policy": [
+        {
+          "top": 678,
+          "bottom": 722,
+          "text": "이용약관 · 미연결 (검토용 위치)"
+        },
+        {
+          "top": 722,
+          "bottom": 766,
+          "text": "개인정보 처리방침 · 미연결 (검토용)"
+        }
+      ],
+      "controls": [
+        {
+          "label": "카카오 로그인",
+          "disabled": true,
+          "width": 328,
+          "height": 48
+        },
+        {
+          "label": "네이버 로그인",
+          "disabled": true,
+          "width": 328,
+          "height": 48
+        },
+        {
+          "label": "Apple로 로그인",
+          "disabled": true,
+          "width": 328,
+          "height": 48
+        }
+      ],
+      "fonts": "Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", Arial, sans-serif",
+      "actualFonts": null,
+      "issues": []
+    },
+    {
+      "state": "loading_apple",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "capture": "captures/360x800-loading_apple.png",
+      "bottomCapture": null,
+      "height": 800,
+      "width": 360,
+      "policy": [
+        {
+          "top": 678,
+          "bottom": 722,
+          "text": "이용약관 · 미연결 (검토용 위치)"
+        },
+        {
+          "top": 722,
+          "bottom": 766,
+          "text": "개인정보 처리방침 · 미연결 (검토용)"
+        }
+      ],
+      "controls": [
+        {
+          "label": "카카오 로그인",
+          "disabled": true,
+          "width": 328,
+          "height": 48
+        },
+        {
+          "label": "네이버 로그인",
+          "disabled": true,
+          "width": 328,
+          "height": 48
+        },
+        {
+          "label": "Apple로 로그인",
+          "disabled": true,
+          "width": 328,
+          "height": 48
+        }
+      ],
+      "fonts": "Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", Arial, sans-serif",
+      "actualFonts": null,
+      "issues": []
+    },
+    {
+      "state": "cancelled",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "capture": "captures/360x800-cancelled.png",
+      "bottomCapture": null,
+      "height": 800,
+      "width": 360,
+      "policy": [
+        {
+          "top": 678,
+          "bottom": 722,
+          "text": "이용약관 · 미연결 (검토용 위치)"
+        },
+        {
+          "top": 722,
+          "bottom": 766,
+          "text": "개인정보 처리방침 · 미연결 (검토용)"
+        }
+      ],
+      "controls": [
+        {
+          "label": "카카오 로그인",
+          "disabled": false,
+          "width": 328,
+          "height": 48
+        },
+        {
+          "label": "네이버 로그인",
+          "disabled": false,
+          "width": 328,
+          "height": 48
+        },
+        {
+          "label": "Apple로 로그인",
+          "disabled": false,
+          "width": 328,
+          "height": 48
+        }
+      ],
+      "fonts": "Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", Arial, sans-serif",
+      "actualFonts": null,
+      "issues": []
+    },
+    {
+      "state": "network_error",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "capture": "captures/360x800-network_error.png",
+      "bottomCapture": null,
+      "height": 800,
+      "width": 360,
+      "policy": [
+        {
+          "top": 678,
+          "bottom": 722,
+          "text": "이용약관 · 미연결 (검토용 위치)"
+        },
+        {
+          "top": 722,
+          "bottom": 766,
+          "text": "개인정보 처리방침 · 미연결 (검토용)"
+        }
+      ],
+      "controls": [
+        {
+          "label": "카카오 로그인",
+          "disabled": false,
+          "width": 328,
+          "height": 48
+        },
+        {
+          "label": "네이버 로그인",
+          "disabled": false,
+          "width": 328,
+          "height": 48
+        },
+        {
+          "label": "Apple로 로그인",
+          "disabled": false,
+          "width": 328,
+          "height": 48
+        },
+        {
+          "label": "다시 시도",
+          "disabled": false,
+          "width": 158,
+          "height": 48
+        },
+        {
+          "label": "다른 방법",
+          "disabled": false,
+          "width": 158,
+          "height": 48
+        }
+      ],
+      "fonts": "Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", Arial, sans-serif",
+      "actualFonts": null,
+      "issues": []
+    },
+    {
+      "state": "unsupported",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "capture": "captures/360x800-unsupported.png",
+      "bottomCapture": null,
+      "height": 800,
+      "width": 360,
+      "policy": [
+        {
+          "top": 678,
+          "bottom": 722,
+          "text": "이용약관 · 미연결 (검토용 위치)"
+        },
+        {
+          "top": 722,
+          "bottom": 766,
+          "text": "개인정보 처리방침 · 미연결 (검토용)"
+        }
+      ],
+      "controls": [
+        {
+          "label": "카카오 로그인",
+          "disabled": false,
+          "width": 328,
+          "height": 48
+        },
+        {
+          "label": "네이버 로그인",
+          "disabled": false,
+          "width": 328,
+          "height": 48
+        },
+        {
+          "label": "Apple로 로그인",
+          "disabled": true,
+          "width": 328,
+          "height": 48
+        }
+      ],
+      "fonts": "Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", Arial, sans-serif",
+      "actualFonts": null,
+      "issues": []
+    },
+    {
+      "state": "service_outage",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "capture": "captures/360x800-service_outage.png",
+      "bottomCapture": null,
+      "height": 800,
+      "width": 360,
+      "policy": [
+        {
+          "top": 678,
+          "bottom": 722,
+          "text": "이용약관 · 미연결 (검토용 위치)"
+        },
+        {
+          "top": 722,
+          "bottom": 766,
+          "text": "개인정보 처리방침 · 미연결 (검토용)"
+        }
+      ],
+      "controls": [
+        {
+          "label": "카카오 로그인",
+          "disabled": false,
+          "width": 328,
+          "height": 48
+        },
+        {
+          "label": "네이버 로그인",
+          "disabled": false,
+          "width": 328,
+          "height": 48
+        },
+        {
+          "label": "Apple로 로그인",
+          "disabled": false,
+          "width": 328,
+          "height": 48
+        },
+        {
+          "label": "다시 시도",
+          "disabled": false,
+          "width": 158,
+          "height": 48
+        },
+        {
+          "label": "다른 방법",
+          "disabled": false,
+          "width": 158,
+          "height": 48
+        }
+      ],
+      "fonts": "Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", Arial, sans-serif",
+      "actualFonts": null,
+      "issues": []
+    },
+    {
+      "state": "policy_pending",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "capture": "captures/360x800-policy_pending.png",
+      "bottomCapture": null,
+      "height": 800,
+      "width": 360,
+      "policy": [
+        {
+          "top": 678,
+          "bottom": 722,
+          "text": "이용약관 · 미연결 (검토용 위치)"
+        },
+        {
+          "top": 722,
+          "bottom": 766,
+          "text": "개인정보 처리방침 · 미연결 (검토용)"
+        }
+      ],
+      "controls": [
+        {
+          "label": "카카오 로그인",
+          "disabled": false,
+          "width": 328,
+          "height": 48
+        },
+        {
+          "label": "네이버 로그인",
+          "disabled": false,
+          "width": 328,
+          "height": 48
+        },
+        {
+          "label": "Apple로 로그인",
+          "disabled": false,
+          "width": 328,
+          "height": 48
+        }
+      ],
+      "fonts": "Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", Arial, sans-serif",
+      "actualFonts": null,
+      "issues": []
+    },
+    {
+      "state": "success",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "capture": "captures/360x800-success.png",
+      "bottomCapture": null,
+      "height": 800,
+      "width": 360,
+      "policy": [
+        {
+          "top": 678,
+          "bottom": 722,
+          "text": "이용약관 · 미연결 (검토용 위치)"
+        },
+        {
+          "top": 722,
+          "bottom": 766,
+          "text": "개인정보 처리방침 · 미연결 (검토용)"
+        }
+      ],
+      "controls": [
+        {
+          "label": "카카오 로그인",
+          "disabled": true,
+          "width": 328,
+          "height": 48
+        },
+        {
+          "label": "네이버 로그인",
+          "disabled": true,
+          "width": 328,
+          "height": 48
+        },
+        {
+          "label": "Apple로 로그인",
+          "disabled": true,
+          "width": 328,
+          "height": 48
+        }
+      ],
+      "fonts": "Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", Arial, sans-serif",
+      "actualFonts": null,
+      "issues": []
+    }
+  ],
+  "interactions": [
+    {
+      "state": "default",
+      "selector": "[data-provider=kakao]",
+      "expected": "loading_kakao",
+      "actual": {
+        "state": "loading_kakao",
+        "disabled": [
+          true,
+          true,
+          true
+        ],
+        "message": "카카오 로그인 요청 중…"
+      },
+      "passed": true
+    },
+    {
+      "state": "network_error",
+      "selector": "#retry",
+      "expected": "loading_kakao",
+      "actual": {
+        "state": "loading_kakao",
+        "disabled": [
+          true,
+          true,
+          true
+        ],
+        "message": "카카오 로그인 요청 중…"
+      },
+      "passed": true
+    },
+    {
+      "state": "service_outage",
+      "selector": "#other",
+      "expected": "default",
+      "actual": {
+        "state": "default",
+        "disabled": [
+          false,
+          false,
+          false
+        ],
+        "message": "세 제공자 중 하나를 선택해요."
+      },
+      "passed": true
+    }
+  ],
+  "assetPixels": {
+    "assets/NAVER_login_KR/NAVER_login_Light_KR_white_center_H48.png": [
+      [
+        "255,255,255,255",
+        257385
+      ],
+      [
+        "217,217,217,255",
+        12848
+      ],
+      [
+        "0,0,0,255",
+        5971
+      ],
+      [
+        "3,169,77,255",
+        3198
+      ],
+      [
+        "0,0,0,0",
+        796
+      ],
+      [
+        "32,32,32,255",
+        324
+      ]
+    ],
+    "assets/NAVER_login_KR/NAVER_login_Light_KR_green_narrow_H48.png": [
+      [
+        "3,169,77,255",
+        149073
+      ],
+      [
+        "255,255,255,255",
+        9169
+      ],
+      [
+        "0,0,0,0",
+        796
+      ],
+      [
+        "129,212,166,255",
+        259
+      ],
+      [
+        "66,191,122,255",
+        250
+      ],
+      [
+        "223,244,233,255",
+        242
+      ]
+    ]
+  }
+}

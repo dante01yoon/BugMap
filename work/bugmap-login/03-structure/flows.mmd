@@ -1,0 +1,24 @@
+flowchart TD
+    Entry[앱 로그인 진입] --> Default[default: 세 제공자 선택]
+    Default --> Support{선택 제공자 지원정보 확인}
+    Support -->|확인된 미지원| Unsupported[unsupported: 구체 환경 이유]
+    Support -->|확인된 일시 장애| Outage[service_outage: 잠시 중단]
+    Support -->|지원 또는 SDK 확인 진행| Loading[loading_provider: 선택 유지 및 요청 잠금]
+    Loading -->|단일 콜백 취소| Cancelled[cancelled: 선택 가능 복귀]
+    Loading -->|연결 실패| Network[network_error: 선택 제공자 유지]
+    Loading -->|확인된 미지원| Unsupported
+    Loading -->|확인된 일시 장애| Outage
+    Loading -->|검증된 세션 완료| Success[success: 이동 연결 명세]
+    Success --> Map[기존 메인 지도: 디자인 범위 밖]
+    Cancelled -->|다시 선택| Default
+    Network -->|다시 시도: 같은 제공자| Support
+    Network -->|다른 방법| Default
+    Outage -->|다시 시도: 지원정보 갱신| Support
+    Outage -->|다른 방법| Default
+    Unsupported -->|다른 지원 제공자 선택| Support
+    Loading -->|외부 인증 뒤로 또는 앱 복귀| Callback{최종 콜백 확인}
+    Callback -->|취소 확인| Cancelled
+    Callback -->|진행 중: 새 요청 금지| Loading
+    Default -->|OS 뒤로| Exit[앱 플랫폼 기본 종료 또는 백그라운드]
+    Default -. 검토에서만 비교 .-> Policy[policy_pending: URL 및 동의 방식 미정]
+    Policy -. 실제 링크 아님 .-> Default

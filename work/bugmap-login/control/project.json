@@ -1,0 +1,26 @@
+{
+  "id": "bugmap-login",
+  "purpose": "현재 Figma 페이지의 로그인 첫 화면 재디자인 및 하네스 실제 실행 검증",
+  "platform": "mobile",
+  "language": "ko",
+  "viewports": [
+    {
+      "width": 390,
+      "height": 844
+    },
+    {
+      "width": 360,
+      "height": 800
+    }
+  ],
+  "sourceDocuments": {
+    "AGENTS.md": "c4374f749618d10136c24e720011df1c3f31a5880525989d99a0fad9c04d715b",
+    "docs/PRD.md": "44b85763b8874bbeaad4222749ceda3f94108b958412f724e064394839c6ab9e",
+    "docs/DESIGN.md": "b6929177e72f5387cd50148dbebb081e650d7bb3e5d250f6d5c830500a1a5bdd",
+    "docs/TDD.md": "e3360066d0219975ebb5ebee8b161a2c8c965c20634d7e6b1f594d76ecf238f8",
+    "docs/screens/login.md": "c27b2e429b5bbf0b0c267ed50b455d671296ad414900b83af83c9c340466a38b",
+    "docs/design-harness.md": "6c7ab19f446b1ee7b3c8ddd4dd8db7880c4a845fc8355936a8a6e368f32f7b89"
+  },
+  "referenceThread": "01a1bfa0-405f-7523-9db5-7644b9d34023",
+  "reviewMinScore": 4
+}

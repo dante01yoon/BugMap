@@ -1,0 +1,41 @@
+{
+  "at": "2026-11-12T19:27:01.534Z",
+  "mode": "direct-local-policy-invocation-only",
+  "actualFigmaWriteAttempted": false,
+  "runtimeHookInstallationVerified": false,
+  "pluginList": {
+    "installed": [],
+    "available": []
+  },
+  "preWrite": {
+    "toolName": "mcp__figma_agent_mcp__create_frame",
+    "result": {
+      "hookSpecificOutput": {
+        "hookEventName": "PreToolUse",
+        "permissionDecision": "deny",
+        "permissionDecisionReason": "Design system approval missing or stale. A human must approve the current inputs before Figma writes."
+      }
+    }
+  },
+  "stop": {
+    "systemMessage": "design-harness check (bugmap-login): prd [awaiting_approval]: Approval required: approve prd --by <name>. 사람 review/approve를 대행하지 말고 현재 상태와 남은 작업을 답변에 명시하세요."
+  },
+  "readToolCoverage": {
+    "list_files": {
+      "classifiedAsWrite": true
+    },
+    "get_selection": {
+      "classifiedAsWrite": true
+    },
+    "get_document": {
+      "classifiedAsWrite": true
+    },
+    "save_screenshots": {
+      "classifiedAsWrite": true
+    },
+    "get_metadata": {
+      "classifiedAsWrite": false
+    }
+  },
+  "knownLimit": "읽기용 브리지 도구 일부도 보수적으로 쓰기로 분류됨. 실제 플러그인 적용 후 초기 조회를 차단할 수 있어 향후 보완 필요. 이번에는 실제 read-only 도구만 호출했고 원격 쓰기를 하지 않음."
+}

@@ -1,0 +1,387 @@
+{
+  "status": "20 current Talk PNG captures; full raw export remains blocked",
+  "captures": [
+    {
+      "nodeId": "72:26",
+      "screen": "login",
+      "state": "default",
+      "path": "captures/talk/72-26.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 30042,
+      "sha256": "7e5143b91a4dace983ce83223c8f4b58aff9eca3a36c8cf2e74da118a0af6951",
+      "source": "Talk To Figma export_node_as_image scale=1",
+      "capturedAt": "2026-11-12T22:41:05.882Z"
+    },
+    {
+      "nodeId": "72:84",
+      "screen": "login",
+      "state": "loading_kakao",
+      "path": "captures/talk/72-84.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 30382,
+      "sha256": "50b98cddc8529db7190e0365458cb90f1016c9f2acad798426c0907135132a0a",
+      "source": "Talk To Figma export_node_as_image scale=1",
+      "capturedAt": "2026-11-12T22:41:05.966Z"
+    },
+    {
+      "nodeId": "72:145",
+      "screen": "login",
+      "state": "loading_naver",
+      "path": "captures/talk/72-145.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 30334,
+      "sha256": "0ada21fcb1ce6095881e367da36feaa0d250e1037cfbc22f2ae1694064b028e9",
+      "source": "Talk To Figma export_node_as_image scale=1",
+      "capturedAt": "2026-11-12T22:41:06.066Z"
+    },
+    {
+      "nodeId": "72:206",
+      "screen": "login",
+      "state": "loading_apple",
+      "path": "captures/talk/72-206.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 30477,
+      "sha256": "8747fa562bf4ea7d54472825c603a6eba33af4db21de95d1208f5bbb34b7a7cf",
+      "source": "Talk To Figma export_node_as_image scale=1",
+      "capturedAt": "2026-11-12T22:41:06.145Z"
+    },
+    {
+      "nodeId": "72:267",
+      "screen": "login",
+      "state": "cancelled",
+      "path": "captures/talk/72-267.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 30763,
+      "sha256": "f6cc076b02ead09746f68e64ca2116eeee29943d0046b2daffad1428c936e3d6",
+      "source": "Talk To Figma export_node_as_image scale=1",
+      "capturedAt": "2026-11-12T22:41:06.230Z"
+    },
+    {
+      "nodeId": "72:325",
+      "screen": "login",
+      "state": "network_error",
+      "path": "captures/talk/72-325.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 37054,
+      "sha256": "17b90b109bbb1283becbd8047e9d8c5e356ac0e64b12b94d824deede7fcdbe07",
+      "source": "Talk To Figma export_node_as_image scale=1",
+      "capturedAt": "2026-11-12T22:41:06.331Z"
+    },
+    {
+      "nodeId": "72:390",
+      "screen": "login",
+      "state": "unsupported",
+      "path": "captures/talk/72-390.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 35890,
+      "sha256": "614b8e29552d197655921787a57b2fe1f4ece6206349f23661f66b5286cf10bc",
+      "source": "Talk To Figma export_node_as_image scale=1",
+      "capturedAt": "2026-11-12T22:41:06.683Z"
+    },
+    {
+      "nodeId": "72:450",
+      "screen": "login",
+      "state": "service_outage",
+      "path": "captures/talk/72-450.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 37522,
+      "sha256": "b0f5dc766db802a726d16210da4e1dcae926e00cde1627d92512def93929ea5e",
+      "source": "Talk To Figma export_node_as_image scale=1",
+      "capturedAt": "2026-11-12T22:41:06.932Z"
+    },
+    {
+      "nodeId": "72:515",
+      "screen": "login",
+      "state": "success",
+      "path": "captures/talk/72-515.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 31243,
+      "sha256": "7c0fe8c53cfaee33d80d18d5ce51fc0ed3fe6fbfd9144f3f7df56d59d4406b26",
+      "source": "Talk To Figma export_node_as_image scale=1",
+      "capturedAt": "2026-11-12T22:41:07.038Z"
+    },
+    {
+      "nodeId": "72:573",
+      "screen": "login",
+      "state": "policy_pending",
+      "path": "captures/talk/72-573.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 31152,
+      "sha256": "c7676b13c0baca36f9ed8acfa78555c6687ba038b436cc77b130cc0fa10d966d",
+      "source": "Talk To Figma export_node_as_image scale=1",
+      "capturedAt": "2026-11-12T22:41:07.118Z"
+    },
+    {
+      "nodeId": "72:631",
+      "screen": "login-compact",
+      "state": "default",
+      "path": "captures/talk/72-631.png",
+      "width": 360,
+      "height": 800,
+      "bytes": 29543,
+      "sha256": "1d58cd1703a2a914afeeea43c9214ca25c7b353a8fc2f0d67b7abfa2032d2bc8",
+      "source": "Talk To Figma export_node_as_image scale=1",
+      "capturedAt": "2026-11-12T22:41:07.208Z"
+    },
+    {
+      "nodeId": "72:689",
+      "screen": "login-compact",
+      "state": "loading_kakao",
+      "path": "captures/talk/72-689.png",
+      "width": 360,
+      "height": 800,
+      "bytes": 29869,
+      "sha256": "414e62fa23c5d64e11aa2e960ccf1b972d64a955f281a766a5b660e5a9f9cb67",
+      "source": "Talk To Figma export_node_as_image scale=1",
+      "capturedAt": "2026-11-12T22:41:07.272Z"
+    },
+    {
+      "nodeId": "72:750",
+      "screen": "login-compact",
+      "state": "loading_naver",
+      "path": "captures/talk/72-750.png",
+      "width": 360,
+      "height": 800,
+      "bytes": 29818,
+      "sha256": "470f78e993adb92d84c577baa55666d1f08014f768e5552324573dd45a83f211",
+      "source": "Talk To Figma export_node_as_image scale=1",
+      "capturedAt": "2026-11-12T22:41:07.335Z"
+    },
+    {
+      "nodeId": "72:811",
+      "screen": "login-compact",
+      "state": "loading_apple",
+      "path": "captures/talk/72-811.png",
+      "width": 360,
+      "height": 800,
+      "bytes": 29962,
+      "sha256": "10f8456082a27400019fdc6dc42fd590c6fad75479b7e2457f3146438d6f573d",
+      "source": "Talk To Figma export_node_as_image scale=1",
+      "capturedAt": "2026-11-12T22:41:07.400Z"
+    },
+    {
+      "nodeId": "72:872",
+      "screen": "login-compact",
+      "state": "cancelled",
+      "path": "captures/talk/72-872.png",
+      "width": 360,
+      "height": 800,
+      "bytes": 30265,
+      "sha256": "5d54b75ddb019bed55a96578f89ef919245a3a7bdce663f24d43bf931f61fc06",
+      "source": "Talk To Figma export_node_as_image scale=1",
+      "capturedAt": "2026-11-12T22:41:07.467Z"
+    },
+    {
+      "nodeId": "72:930",
+      "screen": "login-compact",
+      "state": "network_error",
+      "path": "captures/talk/72-930.png",
+      "width": 360,
+      "height": 800,
+      "bytes": 36335,
+      "sha256": "c8e9ae76f1b7f62f70c88798168cb48c5dd62c47a1bf1d1544f0d3f30e6149c8",
+      "source": "Talk To Figma export_node_as_image scale=1",
+      "capturedAt": "2026-11-12T22:41:07.552Z"
+    },
+    {
+      "nodeId": "72:995",
+      "screen": "login-compact",
+      "state": "unsupported",
+      "path": "captures/talk/72-995.png",
+      "width": 360,
+      "height": 800,
+      "bytes": 35279,
+      "sha256": "587a3c43b62ad06a1b5489805d283791cad3fa37a6eca844edbcf8428765e705",
+      "source": "Talk To Figma export_node_as_image scale=1",
+      "capturedAt": "2026-11-12T22:41:07.632Z"
+    },
+    {
+      "nodeId": "72:1055",
+      "screen": "login-compact",
+      "state": "service_outage",
+      "path": "captures/talk/72-1055.png",
+      "width": 360,
+      "height": 800,
+      "bytes": 36734,
+      "sha256": "4e173c80a741b969f6011788739b6eb439297bccb30a820b00dd042ea2dec5f8",
+      "source": "Talk To Figma export_node_as_image scale=1",
+      "capturedAt": "2026-11-12T22:41:07.707Z"
+    },
+    {
+      "nodeId": "72:1120",
+      "screen": "login-compact",
+      "state": "success",
+      "path": "captures/talk/72-1120.png",
+      "width": 360,
+      "height": 800,
+      "bytes": 30736,
+      "sha256": "f0e22780190dc91d01cd8fa93a158def563dd32f179f2b527ef19a97166600f5",
+      "source": "Talk To Figma export_node_as_image scale=1",
+      "capturedAt": "2026-11-12T22:41:07.776Z"
+    },
+    {
+      "nodeId": "72:1178",
+      "screen": "login-compact",
+      "state": "policy_pending",
+      "path": "captures/talk/72-1178.png",
+      "width": 360,
+      "height": 800,
+      "bytes": 30655,
+      "sha256": "271cb9d27948f66193bd7ee97cfdd40bed4d1be4d66f90e82ccc11cc41b67452",
+      "source": "Talk To Figma export_node_as_image scale=1",
+      "capturedAt": "2026-11-12T22:41:07.845Z"
+    }
+  ],
+  "previousCaptures": [
+    {
+      "nodeId": "72:26",
+      "path": "captures/bridge/72:26.png",
+      "width": 390,
+      "height": 844,
+      "source": "figma-agent-mcp save_screenshots; parent read-only capture"
+    },
+    {
+      "nodeId": "72:84",
+      "path": "captures/bridge/72:84.png",
+      "width": 390,
+      "height": 844,
+      "source": "figma-agent-mcp save_screenshots; parent read-only capture"
+    },
+    {
+      "nodeId": "72:145",
+      "path": "captures/bridge/72:145.png",
+      "width": 390,
+      "height": 844,
+      "source": "figma-agent-mcp save_screenshots; parent read-only capture"
+    },
+    {
+      "nodeId": "72:206",
+      "path": "captures/bridge/72:206.png",
+      "width": 390,
+      "height": 844,
+      "source": "figma-agent-mcp save_screenshots; parent read-only capture"
+    },
+    {
+      "nodeId": "72:267",
+      "path": "captures/bridge/72:267.png",
+      "width": 390,
+      "height": 844,
+      "source": "figma-agent-mcp save_screenshots; parent read-only capture"
+    },
+    {
+      "nodeId": "72:325",
+      "path": "captures/bridge/72:325.png",
+      "width": 390,
+      "height": 844,
+      "source": "figma-agent-mcp save_screenshots; parent read-only capture"
+    },
+    {
+      "nodeId": "72:390",
+      "path": "captures/bridge/72:390.png",
+      "width": 390,
+      "height": 844,
+      "source": "figma-agent-mcp save_screenshots; parent read-only capture"
+    },
+    {
+      "nodeId": "72:450",
+      "path": "captures/bridge/72:450.png",
+      "width": 390,
+      "height": 844,
+      "source": "figma-agent-mcp save_screenshots; parent read-only capture"
+    },
+    {
+      "nodeId": "72:515",
+      "path": "captures/bridge/72:515.png",
+      "width": 390,
+      "height": 844,
+      "source": "figma-agent-mcp save_screenshots; parent read-only capture"
+    },
+    {
+      "nodeId": "72:573",
+      "path": "captures/bridge/72:573.png",
+      "width": 390,
+      "height": 844,
+      "source": "figma-agent-mcp save_screenshots; parent read-only capture"
+    },
+    {
+      "nodeId": "72:631",
+      "path": "captures/bridge/72:631.png",
+      "width": 360,
+      "height": 800,
+      "source": "figma-agent-mcp save_screenshots; parent read-only capture"
+    },
+    {
+      "nodeId": "72:689",
+      "path": "captures/bridge/72:689.png",
+      "width": 360,
+      "height": 800,
+      "source": "figma-agent-mcp save_screenshots; parent read-only capture"
+    },
+    {
+      "nodeId": "72:750",
+      "path": "captures/bridge/72:750.png",
+      "width": 360,
+      "height": 800,
+      "source": "figma-agent-mcp save_screenshots; parent read-only capture"
+    },
+    {
+      "nodeId": "72:811",
+      "path": "captures/bridge/72:811.png",
+      "width": 360,
+      "height": 800,
+      "source": "figma-agent-mcp save_screenshots; parent read-only capture"
+    },
+    {
+      "nodeId": "72:872",
+      "path": "captures/bridge/72:872.png",
+      "width": 360,
+      "height": 800,
+      "source": "figma-agent-mcp save_screenshots; parent read-only capture"
+    },
+    {
+      "nodeId": "72:930",
+      "path": "captures/bridge/72:930.png",
+      "width": 360,
+      "height": 800,
+      "source": "figma-agent-mcp save_screenshots; parent read-only capture"
+    },
+    {
+      "nodeId": "72:995",
+      "path": "captures/bridge/72:995.png",
+      "width": 360,
+      "height": 800,
+      "source": "figma-agent-mcp save_screenshots; parent read-only capture"
+    },
+    {
+      "nodeId": "72:1055",
+      "path": "captures/bridge/72:1055.png",
+      "width": 360,
+      "height": 800,
+      "source": "figma-agent-mcp save_screenshots; parent read-only capture"
+    },
+    {
+      "nodeId": "72:1120",
+      "path": "captures/bridge/72:1120.png",
+      "width": 360,
+      "height": 800,
+      "source": "figma-agent-mcp save_screenshots; parent read-only capture"
+    },
+    {
+      "nodeId": "72:1178",
+      "path": "captures/bridge/72:1178.png",
+      "width": 360,
+      "height": 800,
+      "source": "figma-agent-mcp save_screenshots; parent read-only capture"
+    }
+  ]
+}

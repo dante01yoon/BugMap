@@ -1,0 +1,108 @@
+{
+  "currentStage": "prd",
+  "stages": [
+    {
+      "stage": "prd",
+      "status": "needs_revision",
+      "issues": [
+        "Approval invalid: files or upstream approvals changed"
+      ],
+      "canApprove": true
+    },
+    {
+      "stage": "research",
+      "status": "blocked",
+      "issues": [
+        "Previous stage has not passed"
+      ],
+      "canApprove": false
+    },
+    {
+      "stage": "structure",
+      "status": "blocked",
+      "issues": [
+        "Previous stage has not passed"
+      ],
+      "canApprove": false
+    },
+    {
+      "stage": "wireframes",
+      "status": "blocked",
+      "issues": [
+        "Previous stage has not passed"
+      ],
+      "canApprove": false
+    },
+    {
+      "stage": "design-system",
+      "status": "blocked",
+      "issues": [
+        "Previous stage has not passed"
+      ],
+      "canApprove": false
+    },
+    {
+      "stage": "figma",
+      "status": "blocked",
+      "issues": [
+        "Missing file: 06-figma/nodes.json",
+        "Missing file: 06-figma/node-map.json",
+        "Missing file: 06-figma/change-log.md",
+        "Empty or missing directory: 06-figma/captures/",
+        "figma: Missing file: 06-figma/nodes.json",
+        "Previous stage has not passed"
+      ],
+      "canApprove": false
+    },
+    {
+      "stage": "validation",
+      "status": "blocked",
+      "issues": [
+        "Missing file: 07-validation/coverage.csv",
+        "Missing file: 07-validation/report.md",
+        "Missing file: 07-validation/issues.csv",
+        "Missing file: 07-validation/figma-lint.json",
+        "Missing file: 07-validation/web-lint.json",
+        "Missing file: 07-validation/reviews.json",
+        "Empty or missing directory: 07-validation/captures/",
+        "validation: No HTML screens in 06-figma/web/",
+        "Previous stage has not passed"
+      ],
+      "canApprove": false
+    },
+    {
+      "stage": "handoff",
+      "status": "blocked",
+      "issues": [
+        "Missing file: 08-handoff/HANDOFF.md",
+        "Missing file: 08-handoff/implementation-notes.md",
+        "Empty or missing directory: 08-handoff/assets/",
+        "Missing file: 08-handoff/manifest.json",
+        "Missing file: 08-handoff/open-items.md",
+        "handoff: Missing file: 08-handoff/implementation-notes.md",
+        "Previous stage has not passed"
+      ],
+      "canApprove": false
+    }
+  ],
+  "differences": [
+    {
+      "stage": "prd",
+      "changed": [
+        "control/figma.json"
+      ]
+    },
+    {
+      "stage": "wireframes",
+      "changed": [
+        "control/figma.json"
+      ]
+    },
+    {
+      "stage": "design-system",
+      "changed": [
+        "control/figma.json"
+      ]
+    }
+  ]
+}

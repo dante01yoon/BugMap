@@ -1,0 +1,167 @@
+{
+  "status": "partial",
+  "nodes": [
+    {
+      "screen": "login",
+      "state": "default",
+      "nodeId": "72:26",
+      "width": 390,
+      "height": 844,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-26"
+    },
+    {
+      "screen": "login",
+      "state": "loading_kakao",
+      "nodeId": "72:84",
+      "width": 390,
+      "height": 844,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-84"
+    },
+    {
+      "screen": "login",
+      "state": "loading_naver",
+      "nodeId": "72:145",
+      "width": 390,
+      "height": 844,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-145"
+    },
+    {
+      "screen": "login",
+      "state": "loading_apple",
+      "nodeId": "72:206",
+      "width": 390,
+      "height": 844,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-206"
+    },
+    {
+      "screen": "login",
+      "state": "cancelled",
+      "nodeId": "72:267",
+      "width": 390,
+      "height": 844,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-267"
+    },
+    {
+      "screen": "login",
+      "state": "network_error",
+      "nodeId": "72:325",
+      "width": 390,
+      "height": 844,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-325"
+    },
+    {
+      "screen": "login",
+      "state": "unsupported",
+      "nodeId": "72:390",
+      "width": 390,
+      "height": 844,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-390"
+    },
+    {
+      "screen": "login",
+      "state": "service_outage",
+      "nodeId": "72:450",
+      "width": 390,
+      "height": 844,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=72-450"
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "I72:71;70:81",
+      "fillIndex": 0,
+      "asset": "assets/NAVER_login_KR/NAVER_login_Light_KR_white_center_H48.png",
+      "imageHash": "0228cb73d8f09c52f14f94f4a855e7d13d448d2a"
+    },
+    {
+      "nodeId": "I72:73;70:83",
+      "fillIndex": 0,
+      "asset": "assets/apple-signin-ko-black-358x48@2x.png",
+      "imageHash": "7ddbd9ff52a137ffbdf4b63c57f9d958d783b616"
+    },
+    {
+      "nodeId": "I72:129;70:81",
+      "fillIndex": 0,
+      "asset": "assets/NAVER_login_KR/NAVER_login_Light_KR_white_center_H48.png",
+      "imageHash": "0228cb73d8f09c52f14f94f4a855e7d13d448d2a"
+    },
+    {
+      "nodeId": "I72:131;70:83",
+      "fillIndex": 0,
+      "asset": "assets/apple-signin-ko-black-358x48@2x.png",
+      "imageHash": "7ddbd9ff52a137ffbdf4b63c57f9d958d783b616"
+    },
+    {
+      "nodeId": "I72:190;70:81",
+      "fillIndex": 0,
+      "asset": "assets/NAVER_login_KR/NAVER_login_Light_KR_white_center_H48.png",
+      "imageHash": "0228cb73d8f09c52f14f94f4a855e7d13d448d2a"
+    },
+    {
+      "nodeId": "I72:192;70:83",
+      "fillIndex": 0,
+      "asset": "assets/apple-signin-ko-black-358x48@2x.png",
+      "imageHash": "7ddbd9ff52a137ffbdf4b63c57f9d958d783b616"
+    },
+    {
+      "nodeId": "I72:251;70:81",
+      "fillIndex": 0,
+      "asset": "assets/NAVER_login_KR/NAVER_login_Light_KR_white_center_H48.png",
+      "imageHash": "0228cb73d8f09c52f14f94f4a855e7d13d448d2a"
+    },
+    {
+      "nodeId": "I72:253;70:83",
+      "fillIndex": 0,
+      "asset": "assets/apple-signin-ko-black-358x48@2x.png",
+      "imageHash": "7ddbd9ff52a137ffbdf4b63c57f9d958d783b616"
+    },
+    {
+      "nodeId": "I72:312;70:81",
+      "fillIndex": 0,
+      "asset": "assets/NAVER_login_KR/NAVER_login_Light_KR_white_center_H48.png",
+      "imageHash": "0228cb73d8f09c52f14f94f4a855e7d13d448d2a"
+    },
+    {
+      "nodeId": "I72:314;70:83",
+      "fillIndex": 0,
+      "asset": "assets/apple-signin-ko-black-358x48@2x.png",
+      "imageHash": "7ddbd9ff52a137ffbdf4b63c57f9d958d783b616"
+    },
+    {
+      "nodeId": "I72:370;70:81",
+      "fillIndex": 0,
+      "asset": "assets/NAVER_login_KR/NAVER_login_Light_KR_white_center_H48.png",
+      "imageHash": "0228cb73d8f09c52f14f94f4a855e7d13d448d2a"
+    },
+    {
+      "nodeId": "I72:372;70:83",
+      "fillIndex": 0,
+      "asset": "assets/apple-signin-ko-black-358x48@2x.png",
+      "imageHash": "7ddbd9ff52a137ffbdf4b63c57f9d958d783b616"
+    },
+    {
+      "nodeId": "I72:435;70:81",
+      "fillIndex": 0,
+      "asset": "assets/NAVER_login_KR/NAVER_login_Light_KR_white_center_H48.png",
+      "imageHash": "0228cb73d8f09c52f14f94f4a855e7d13d448d2a"
+    },
+    {
+      "nodeId": "I72:437;70:83",
+      "fillIndex": 0,
+      "asset": "assets/apple-signin-ko-black-358x48@2x.png",
+      "imageHash": "7ddbd9ff52a137ffbdf4b63c57f9d958d783b616"
+    },
+    {
+      "nodeId": "I72:495;70:81",
+      "fillIndex": 0,
+      "asset": "assets/NAVER_login_KR/NAVER_login_Light_KR_white_center_H48.png",
+      "imageHash": "0228cb73d8f09c52f14f94f4a855e7d13d448d2a"
+    },
+    {
+      "nodeId": "I72:497;70:83",
+      "fillIndex": 0,
+      "asset": "assets/apple-signin-ko-black-358x48@2x.png",
+      "imageHash": "7ddbd9ff52a137ffbdf4b63c57f9d958d783b616"
+    }
+  ]
+}
